@@ -61,12 +61,23 @@ function convertPhysicalToHomogeneous(coordinateArray){
     return result;
 }
 
-function convertHomogeneousToPhysical(homogeneous, physical){
+function applyHomogeneousToPhysical(homogeneous, physical){
     for(var x = 0; x < homogeneous[0].length; x++){
         physical[x].setX(homogeneous[0][x]);
         physical[x].setY(homogeneous[1][x]);
         physical[x].setZ(homogeneous[2][x]); 
     }
+}
+
+function updateFaceNormals(normalMatrix, faces){
+    for(var i=0; i< faces.length; i++){
+        var face = faces[i];
+        face.normal.applyMatrix3(normalMatrix).normalize();
+
+        for ( var j = 0, jl = face.vertexNormals.length; j < jl; j ++ ) {
+            face.vertexNormals[ j ].applyMatrix3( normalMatrix ).normalize();
+        }
+      }
 }
 
 function multiplyMatrices(matrixOne, matrixTwo){

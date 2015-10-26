@@ -68,6 +68,34 @@ var angle = theta * (Math.PI / 180);
     ]; 
 }
 
+var rotationMatrix3 = new THREE.Matrix4();
+var rotationYMatrix3 = function (theta) {
+    var angle = theta * (Math.PI / 180);
+        
+        rotationMatrix4.set(
+            Math.cos(angle), 0, Math.sin(angle),
+            0,1,0,
+            -Math.sin(angle), 0, Math.cos(angle),
+            0,0,0
+            );
+        
+        return rotationMatrix3;
+}
+
+var rotationMatrix4 = new THREE.Matrix4();
+var rotationYMatrix4 = function (theta) {
+    var angle = theta * (Math.PI / 180);
+        
+        rotationMatrix4.set(
+            Math.cos(angle), 0, Math.sin(angle), 0,
+            0,1,0,0,
+            -Math.sin(angle), 0, Math.cos(angle), 0,
+            0,0,0,1
+            );
+        
+        return rotationMatrix4;
+}
+
 var rotationXTransformation = function (angle) {
     var theta = angle * (Math.PI / 180);
 

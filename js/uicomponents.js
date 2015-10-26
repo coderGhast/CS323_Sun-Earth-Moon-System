@@ -2,7 +2,6 @@
 var scene; 
 var camera;
 var renderer;
-var acolor, pcolor, dcolor;
 
 // Hide scrollbars when moving about the screen
 function unloadScrollBars() {
@@ -36,12 +35,4 @@ function setupUI(){
     scene.add(camera);
 
     controls = new THREE.OrbitControls( camera, renderer.domElement );
-
-   // deifne light sources
-    acolor=new THREE.Color(0x222222);
-    pcolor=new THREE.Color(0x00ffff);
-    dcolor=new THREE.Color(0x0000ff);
-    
-    var ambientLight = new THREE.AmbientLight(0xffffff);
-    scene.add(ambientLight);
 }
