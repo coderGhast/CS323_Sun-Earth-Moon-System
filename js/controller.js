@@ -61,8 +61,8 @@ function buildMoonMesh(){
 }
 
 function buildStarMapMesh(){
-  var starGeometry  = new THREE.SphereGeometry(90, 32, 32);
-  var starMaterial = new THREE.MeshBasicMaterial( {map: THREE.ImageUtils.loadTexture('images/galaxy_starfield.png')} );
+  var starGeometry  = new THREE.SphereGeometry(150, 32, 32);
+  var starMaterial = new THREE.MeshBasicMaterial( {map: THREE.ImageUtils.loadTexture('images/starmap_s.gif')} );
   starMaterial.side = THREE.BackSide;
   starMesh = new THREE.Mesh(starGeometry, starMaterial);
 }
