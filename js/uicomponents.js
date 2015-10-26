@@ -17,6 +17,8 @@ function setupUI(){
     
     renderer.setClearColor(0x000000, 1);
     renderer.setSize(WIDTH, HEIGHT);      
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMapSoft = true;
 
     unloadScrollBars();          
     
