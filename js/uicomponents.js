@@ -10,7 +10,7 @@ function unloadScrollBars() {
 }
 
 function setupUI(){
-    renderer = new THREE.WebGLRenderer({antialias:true}); 
+    renderer = new THREE.WebGLRenderer({ antialias:true }); 
                   
     var WIDTH  = window.innerWidth;
     var HEIGHT = window.innerHeight;
@@ -30,9 +30,9 @@ function setupUI(){
 
     // define a camera
     camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 1, 1000);
-    camera.position.y = 0;
-    camera.position.z = 120;
-    //camera.lookAt(scene.position);
+    camera.position.y = 150;
+    camera.position.z = 150;
+    camera.lookAt(scene.position);
 
     scene.add(camera);
 

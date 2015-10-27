@@ -7,7 +7,9 @@ var computableEarthVertices;
 var computableSunVertices;
 var computableMoonVertices;
 var sunLight;
+var sunCentreLight;
 var sunGlow;
+var sunFadeGlow;
 var customMaterial;
 
 function initScene() {
@@ -16,7 +18,7 @@ function initScene() {
 
 function setup() {
   setupUI();
-  var ambientLight = new THREE.AmbientLight(0x444444);
+  var ambientLight = new THREE.AmbientLight(0x222222);
   scene.add(ambientLight);
   setupScene();
 }
@@ -27,12 +29,13 @@ function setupScene(){
 
   buildSunGlow();
 
-  buildSunLight();
+
   buildEarthMesh();
   buildMoonMesh();  
+  buildSunLight();
 
   earthAndMoon = new THREE.Object3D();
-  earthAndMoon.add( earthMesh );
+  earthAndMoon.add( earthMesh )
   earthAndMoon.add( moonMesh );
   scene.add(earthAndMoon);
 
@@ -62,41 +65,59 @@ function buildSunGlow(){
 
   sunGlow = new THREE.Mesh( sunMesh.geometry.clone(), customMaterial.clone() );
     sunGlow.position = sunMesh.position;
-  sunGlow.scale.multiplyScalar(1.5);
+  sunGlow.scale.multiplyScalar(1.1);
   scene.add( sunGlow );
+
+  sunFadeGlow = new THREE.Mesh( sunMesh.geometry.clone(), customMaterial.clone() );
+    sunFadeGlow.position = sunMesh.position;
+  sunFadeGlow.scale.multiplyScalar(1.2);
+  scene.add( sunFadeGlow );
+
 }
 
 function buildSunMesh(){
   var sunGeometry = new THREE.SphereGeometry(sunSize, 32, 32 );
-  //sunGeometry.position.set(0,0,0);
   var sunMaterial = new THREE.MeshPhongMaterial( {map: THREE.ImageUtils.loadTexture('images/sunmap.jpg')} );
   sunMesh = new THREE.Mesh( sunGeometry, sunMaterial );
-  
+  sunMesh.position.set(0,0,0);
 }
 
 function buildSunLight(){
-    // hex, intensity, distance, decay
-    sunLight = new THREE.PointLight(0xFFE0CC, 10, 150, 5);
-    sunLight.position.set( 0, 0, 0);
-    scene.add(sunLight);
+  sunLight = new THREE.SpotLight(0xfff0e6, 0.7, 0, Math.PI / 2, 0);
+  sunLight.lookAt(earthMesh);
+  sunLight.castShadow = true;
+  sunLight.shadowBias = -0.0002;
+  sunLight.shadowDarkness = 0.5;
+  sunLight.shadowMapWidth = 1024;
+  sunLight.shadowMapHeight = 1024;
+  sunLight.onlyShadow = true;
 
-    var sunSelfIllumination = new THREE.PointLight(0xffffff, 10, 14, 0);
-    sunSelfIllumination.position = sunMesh.position;
+  sunLight.shadowCameraNear = 20;
+  sunLight.shadowCameraFar = 150;
+  sunLight.shadowCameraFov = 300;
+  // awesome for debugging - Shows the Shadow Camera lines
+  sunLight.shadowCameraVisible = false;        
+  scene.add(sunLight);
+
+  sunCentreLight = new THREE.PointLight(0xfff0e6);
+  sunCentreLight.position.set(0,0,0);
+  scene.add(sunCentreLight);
 }
 
 function buildEarthMesh(){
   var earthGeometry = new THREE.SphereGeometry(earthSize, 32, 32);
   earthGeometry.dynamic = true;
-  earthGeometry.verticesNeedUpdate = true;
   var earthDiffuseTexture = THREE.ImageUtils.loadTexture('images/earthmap1k.jpg');
   earthDiffuseTexture.minFilter = THREE.NearestFilter;
   var earthMaterial = new THREE.MeshPhongMaterial( {map: earthDiffuseTexture} );
   var earthBumpMap = THREE.ImageUtils.loadTexture('images/earthbump1k.jpg');
   earthBumpMap.minFilter = THREE.NearestFilter;
   earthMaterial.bumpMap = earthBumpMap;
-  earthMaterial.bumpScale = 1;
+  earthMaterial.bumpScale = 0.5;
   earthMaterial.specularMap = THREE.ImageUtils.loadTexture('images/earthspec1k.jpg');
-  earthMaterial.specular = new THREE.Color('grey');
+  earthMaterial.specular = new THREE.Color(0x66A3FF);
+  earthMaterial.shininess = 7;
+
   earthMesh = new THREE.Mesh( earthGeometry, earthMaterial );
   earthMesh.castShadow = true;
   earthMesh.receiveShadow = true;
@@ -104,14 +125,18 @@ function buildEarthMesh(){
 
 function buildMoonMesh(){
   var moonGeometry = new THREE.SphereGeometry( moonSize, 32, 32 );
-  var moonMaterial = new THREE.MeshPhongMaterial( {map: THREE.ImageUtils.loadTexture('images/moonmap1k.jpg')} );
+  var moonDiffuseTexture = THREE.ImageUtils.loadTexture('images/moonmap1k.jpg');
+  moonDiffuseTexture.minFilter = THREE.NearestFilter;
+  var moonMaterial = new THREE.MeshPhongMaterial( {map: moonDiffuseTexture} );
   moonMesh = new THREE.Mesh( moonGeometry, moonMaterial );
+  moonMesh.geometry.dynamic = true;
   moonMesh.castShadow = true;
   moonMesh.receiveShadow = true;
+
 }
 
 function buildStarMapMesh(){
-  var starGeometry  = new THREE.SphereGeometry(150, 32, 32);
+  var starGeometry  = new THREE.SphereGeometry(300, 32, 32);
   var starMaterial = new THREE.MeshBasicMaterial( {map: THREE.ImageUtils.loadTexture('images/starmap_s.png')} );
   starMaterial.side = THREE.BackSide;
   starMesh = new THREE.Mesh(starGeometry, starMaterial);
@@ -126,16 +151,19 @@ function setupHomogeoneousCoordinates(){
 function update() {
   updateSun();
   updateSunGlow();
+  sunLight.target = earthMesh;
   updateEarth();
   updateMoon();
+
+
 }
 
 function updateSun(){
-  var matrix = rotationYMatrix4(sunAxisRotationSpeed);
+  var matrix = rotationYMatrix4(sunAxisRotationSpeed * (Math.PI / 180));
   var normalMatrix = new THREE.Matrix3().getNormalMatrix( matrix );
 
   var transformationMatrix;
-  computableSunVertices = multiplyMatrices(rotationYTransformation(sunAxisRotationSpeed), computableSunVertices);
+  computableSunVertices = multiplyMatrices(rotationYTransformation(sunAxisRotationSpeed * (Math.PI / 180)), computableSunVertices);
   applyHomogeneousToPhysical(computableSunVertices, sunMesh.geometry.vertices);
 
     for ( var i = 0, il = sunMesh.geometry.faces.length; i < il; i ++ ) {
@@ -173,8 +201,9 @@ function randomIntFromInterval(min,max)
 }
 
 function updateSunGlow(){
-    sunGlow.material.uniforms.viewVector.value = 
-    new THREE.Vector3().subVectors( camera.position, sunGlow.position );
+   sunGlow.material.uniforms.viewVector.value =  new THREE.Vector3().subVectors( camera.position, sunGlow.position );
+
+   sunFadeGlow.material.uniforms.viewVector.value = new THREE.Vector3().subVectors( camera.position, sunFadeGlow.position );
 }
 
 
@@ -182,17 +211,17 @@ var earthRotationAngle = 0.0;
 function updateEarth(){
     var x = earthDistanceFromSun * -Math.cos(earthRotationAngle);
     var z = earthDistanceFromSun * -Math.sin(earthRotationAngle);
-    earthRotationAngle-= earthOrbitRotationSpeed;
+    earthRotationAngle-= earthOrbitRotationSpeed * (Math.PI / 180);
 
     earthAndMoon.position.x = sunMesh.position.x + x;
     earthAndMoon.position.z = sunMesh.position.z + z;
     earthMesh.rotation.x = (earthAxialTilt/180)*Math.PI;
 
-    var matrix = rotationYMatrix4(earthAxisRotationSpeed);
+    var matrix = rotationYMatrix4(earthAxisRotationSpeed* (Math.PI / 180));
     var normalMatrix = new THREE.Matrix3().getNormalMatrix( matrix );
 
     var transformationMatrix;
-    transformationMatrix = rotationYTransformation(earthAxisRotationSpeed);
+    transformationMatrix = rotationYTransformation(earthAxisRotationSpeed* (Math.PI / 180));
     computableEarthVertices = multiplyMatrices(transformationMatrix, computableEarthVertices);
     applyHomogeneousToPhysical(computableEarthVertices, earthMesh.geometry.vertices);
 
@@ -231,6 +260,11 @@ function updateMoon(){
   var x = moonDistanceFromEarth * -Math.cos(moonRotationAngle);
   var z = moonDistanceFromEarth * -Math.sin(moonRotationAngle);
   moonRotationAngle-= moonOrbitRotationSpeed;
+
+  moonMesh.position.x = earthMesh.position.x + x;
+  moonMesh.position.z = earthMesh.position.z + z;
+  moonMesh.rotation.x = (moonAxialTilt/180)*Math.PI;
+
   var transformationMatrix;
 
   var matrix = rotationYMatrix4(moonAxisRotationSpeed);
@@ -265,10 +299,6 @@ function updateMoon(){
         moonMesh.geometry.computeBoundingSphere();
 
     }
-
-  moonMesh.position.x = earthMesh.position.x + x;
-  moonMesh.position.z = earthMesh.position.z + z;
-  moonMesh.rotation.x = (moonAxialTilt/180)*Math.PI;
 
   moonMesh.geometry.normalsNeedUpdate = true;
   moonMesh.geometry.verticesNeedUpdate = true;
