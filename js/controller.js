@@ -5,8 +5,9 @@ var starMesh;
 var computableEarthVertices;
 var computableSunVertices;
 var computableMoonVertices;
-var earthFaces;
 var sunLight;
+var sunGlow;
+var customMaterial;
 
 function initScene() {
   setup();     
@@ -14,7 +15,7 @@ function initScene() {
 
 function setup() {
   setupUI();
-  var ambientLight = new THREE.AmbientLight(0x111111);
+  var ambientLight = new THREE.AmbientLight(0x444444);
   scene.add(ambientLight);
   setupScene();
 }
@@ -22,6 +23,9 @@ function setup() {
 function setupScene(){
   buildSunMesh();
   scene.add( sunMesh );
+
+  buildSunGlow();
+
   buildSunLight();
   buildEarthMesh();
   scene.add( earthMesh );
@@ -31,7 +35,30 @@ function setupScene(){
   scene.add( starMesh );
 
   setupHomogeoneousCoordinates();
-  getFaces();
+}
+
+function buildSunGlow(){
+  customMaterial = new THREE.ShaderMaterial( 
+  {
+      uniforms: 
+    { 
+      "c":   { type: "f", value: 0.2 },
+      "p":   { type: "f", value: 2 },
+      glowColor: { type: "c", value: new THREE.Color(0xeb7d30) },
+      viewVector: { type: "v3", value: camera.position }
+    },
+    vertexShader:   document.getElementById( 'vertexShader'   ).textContent,
+    fragmentShader: document.getElementById( 'fragmentShader' ).textContent,
+    side: THREE.FrontSide,
+    blending: THREE.AdditiveBlending,
+    transparent: true
+  }   );
+
+
+  sunGlow = new THREE.Mesh( sunMesh.geometry.clone(), customMaterial.clone() );
+    sunGlow.position = sunMesh.position;
+  sunGlow.scale.multiplyScalar(1.5);
+  scene.add( sunGlow );
 }
 
 function buildSunMesh(){
@@ -91,12 +118,9 @@ function setupHomogeoneousCoordinates(){
   computableMoonVertices = convertPhysicalToHomogeneous(moonMesh.geometry.vertices);
 }
 
-function getFaces(){
-    earthFaces = earthMesh.geometry.faces;
-}
-
 function update() {
   updateSun();
+  updateSunGlow();
   updateEarth();
   updateMoon();
 }
@@ -138,9 +162,19 @@ function updateSun(){
   sunMesh.geometry.normalsNeedUpdate = true;
 }
 
+function randomIntFromInterval(min,max)
+{
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+function updateSunGlow(){
+    sunGlow.material.uniforms.viewVector.value = 
+    new THREE.Vector3().subVectors( camera.position, sunGlow.position );
+}
 
 
 var earthRotationAngle = 0.0;
+var delta = new Date().getTime();
 function updateEarth(){
     var x = earthDistanceFromSun * -Math.cos(earthRotationAngle * (Math.PI / 180));
     var z = earthDistanceFromSun * -Math.sin(earthRotationAngle * (Math.PI / 180));
