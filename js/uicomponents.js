@@ -31,7 +31,7 @@ function setupUI(){
     // define a camera
     camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 1, 1000);
     camera.position.y = 0;
-    camera.position.z = 150;
+    camera.position.z = 120;
     //camera.lookAt(scene.position);
 
     scene.add(camera);

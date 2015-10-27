@@ -1,6 +1,7 @@
 var sunMesh;
 var earthMesh;
 var moonMesh;
+var earthAndMoon;
 var starMesh;
 var computableEarthVertices;
 var computableSunVertices;
@@ -28,9 +29,13 @@ function setupScene(){
 
   buildSunLight();
   buildEarthMesh();
-  scene.add( earthMesh );
   buildMoonMesh();  
-  scene.add( moonMesh );
+
+  earthAndMoon = new THREE.Object3D();
+  earthAndMoon.add( earthMesh );
+  earthAndMoon.add( moonMesh );
+  scene.add(earthAndMoon);
+
   buildStarMapMesh();
   scene.add( starMesh );
 
@@ -174,15 +179,14 @@ function updateSunGlow(){
 
 
 var earthRotationAngle = 0.0;
-var delta = new Date().getTime();
 function updateEarth(){
-    var x = earthDistanceFromSun * -Math.cos(earthRotationAngle * (Math.PI / 180));
-    var z = earthDistanceFromSun * -Math.sin(earthRotationAngle * (Math.PI / 180));
+    var x = earthDistanceFromSun * -Math.cos(earthRotationAngle);
+    var z = earthDistanceFromSun * -Math.sin(earthRotationAngle);
     earthRotationAngle-= earthOrbitRotationSpeed;
 
-    earthMesh.position.x = sunMesh.position.x + x;
-    earthMesh.position.z = sunMesh.position.z + z;
-    earthMesh.rotation.x = earthMesh.rotation.x = (earthAxialTilt/180)*Math.PI;
+    earthAndMoon.position.x = sunMesh.position.x + x;
+    earthAndMoon.position.z = sunMesh.position.z + z;
+    earthMesh.rotation.x = (earthAxialTilt/180)*Math.PI;
 
     var matrix = rotationYMatrix4(earthAxisRotationSpeed);
     var normalMatrix = new THREE.Matrix3().getNormalMatrix( matrix );
@@ -224,8 +228,8 @@ function updateEarth(){
 
 var moonRotationAngle = 0.0;
 function updateMoon(){
-  var x = moonDistanceFromEarth * -Math.cos(moonRotationAngle * (Math.PI / 180));
-  var z = moonDistanceFromEarth * -Math.sin(moonRotationAngle * (Math.PI / 180));
+  var x = moonDistanceFromEarth * -Math.cos(moonRotationAngle);
+  var z = moonDistanceFromEarth * -Math.sin(moonRotationAngle);
   moonRotationAngle-= moonOrbitRotationSpeed;
   var transformationMatrix;
 
@@ -264,7 +268,7 @@ function updateMoon(){
 
   moonMesh.position.x = earthMesh.position.x + x;
   moonMesh.position.z = earthMesh.position.z + z;
-  moonMesh.rotation.x = moonMesh.rotation.x = (moonAxialTilt/180)*Math.PI;
+  moonMesh.rotation.x = (moonAxialTilt/180)*Math.PI;
 
   moonMesh.geometry.normalsNeedUpdate = true;
   moonMesh.geometry.verticesNeedUpdate = true;

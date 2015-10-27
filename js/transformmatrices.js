@@ -58,8 +58,7 @@ var shiftByZMatrix = function (amount) {
     // return shiftMatrix;
 }
 
-var rotationYTransformation = function (theta) {
-var angle = theta * (Math.PI / 180);
+var rotationYTransformation = function (angle) {
     return [
         [Math.cos(angle), 0, Math.sin(angle), 0],
         [0,1,0,0],
@@ -69,9 +68,7 @@ var angle = theta * (Math.PI / 180);
 }
 
 var rotationMatrix3 = new THREE.Matrix4();
-var rotationYMatrix3 = function (theta) {
-    var angle = theta * (Math.PI / 180);
-        
+var rotationYMatrix3 = function (angle) {
         rotationMatrix4.set(
             Math.cos(angle), 0, Math.sin(angle),
             0,1,0,
@@ -83,9 +80,7 @@ var rotationYMatrix3 = function (theta) {
 }
 
 var rotationMatrix4 = new THREE.Matrix4();
-var rotationYMatrix4 = function (theta) {
-    var angle = theta * (Math.PI / 180);
-        
+var rotationYMatrix4 = function (angle) {     
         rotationMatrix4.set(
             Math.cos(angle), 0, Math.sin(angle), 0,
             0,1,0,0,
@@ -96,9 +91,7 @@ var rotationYMatrix4 = function (theta) {
         return rotationMatrix4;
 }
 
-var rotationXMatrix4 = function (theta) {
-    var angle = theta * (Math.PI / 180);
-        
+var rotationXMatrix4 = function (angle) {        
         rotationMatrix4.set(
             Math.cos(angle), -Math.sin(angle), 0, 0,
             Math.sin(angle), Math.cos(angle), 0, 0,
@@ -109,9 +102,7 @@ var rotationXMatrix4 = function (theta) {
         return rotationMatrix4;
 }
 
-var rotationXTransformation = function (theta) {
-    var angle = theta * (Math.PI / 180);
-
+var rotationXTransformation = function (angle) {
     return [
         [Math.cos(angle), -Math.sin(angle), 0, 0],
         [Math.sin(angle), Math.cos(angle), 0, 0],
@@ -121,11 +112,9 @@ var rotationXTransformation = function (theta) {
 }
 
 var rotationZTransformation = function (angle) {
-    var theta = angle  * (Math.PI/ 180)
-
     return [
-        [Math.cos(theta), -Math.sin(theta), 0, 0],
-        [Math.sin(theta), Math.cos(theta), 0, 0],
+        [Math.cos(angle), -Math.sin(angle), 0, 0],
+        [Math.sin(angle), Math.cos(angle), 0, 0],
         [0,0,1,0],
         [0,0,0,1]
     ];
