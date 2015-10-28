@@ -5,7 +5,7 @@ var sun = {
     sunMesh : buildSunMesh,
     computableSunVertices : [],
     updateSun : function(){
-        computableSunVertices = updateRotation(sunAxisRotationSpeed * (Math.PI / 180), sunMesh.geometry, computableSunVertices);
+        computableSunVertices = updateRotation(controlValues.sunAxisRotationSpeed * (Math.PI / 180), sunMesh.geometry, computableSunVertices);
     }
 }
 

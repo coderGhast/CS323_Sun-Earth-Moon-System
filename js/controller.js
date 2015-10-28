@@ -12,6 +12,7 @@ function update() {
 
 function renderScene() {
   requestAnimationFrame(renderScene); 
+  speedAdjustments(20);
   update(); 
   render();
 }

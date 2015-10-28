@@ -3,9 +3,9 @@ var moon = {
     computableMoonVertices : [],
     moonOrbitAngleThisStep : 0.0,
     updateMoon : function(){
-        this.moonOrbitAngleThisStep-= moonOrbitRotationSpeed;
+        this.moonOrbitAngleThisStep-= controlValues.moonOrbitRotationSpeed * (Math.PI / 180);
         updateOrbit(moonMesh, earth.earthMesh.position, moonDistanceFromEarth, this.moonOrbitAngleThisStep);
-        computableMoonVertices = updateRotation(moonAxisRotationSpeed, moonMesh.geometry, computableMoonVertices);
+        computableMoonVertices = updateRotation(controlValues.moonAxisRotationSpeed* (Math.PI / 180), moonMesh.geometry, computableMoonVertices);
     }
 }
 
@@ -14,6 +14,7 @@ function buildMoonMesh(){
     var moonMaterial = new THREE.MeshPhongMaterial( {map: textures.moonDiffuse} );
     moonMaterial.bumpMap = textures.moonBumpMap;
     moonMaterial.bumpScale = 0.3;
+    moonMaterial.shininess = 0;
     moonMesh = new THREE.Mesh( moonGeometry, moonMaterial );
     moonMesh.geometry.dynamic = true;
     moonMesh.castShadow = true;

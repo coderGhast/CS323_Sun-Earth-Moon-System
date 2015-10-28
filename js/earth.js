@@ -5,9 +5,9 @@ var earth = {
 
   earthOrbitAngleThisStep : 0.0,
     updateEarth : function(){
-        this.earthOrbitAngleThisStep-= earthOrbitRotationSpeed * (Math.PI / 180);
+        this.earthOrbitAngleThisStep-= controlValues.earthOrbitRotationSpeed * (Math.PI / 180);
         updateOrbit(earthAndMoon, sunMesh.position, earthDistanceFromSun, this.earthOrbitAngleThisStep);
-        computableEarthVertices = updateRotation(earthAxisRotationSpeed * (Math.PI / 180), earthMesh.geometry, computableEarthVertices);
+        computableEarthVertices = updateRotation(controlValues.earthAxisRotationSpeed * (Math.PI / 180), earthMesh.geometry, computableEarthVertices);
     }
   };
 
