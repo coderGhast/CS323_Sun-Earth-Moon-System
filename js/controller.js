@@ -50,7 +50,7 @@ function buildSunGlow(){
   {
       uniforms: 
     { 
-      "c":   { type: "f", value: 0.2 },
+      "c":   { type: "f", value: 0.1 },
       "p":   { type: "f", value: 2 },
       glowColor: { type: "c", value: new THREE.Color(0xeb7d30) },
       viewVector: { type: "v3", value: camera.position }
@@ -69,7 +69,7 @@ function buildSunGlow(){
   scene.add( sunGlow );
 
   sunFadeGlow = new THREE.Mesh( sunMesh.geometry.clone(), customMaterial.clone() );
-    sunFadeGlow.position = sunMesh.position;
+  sunFadeGlow.position = sunMesh.position;
   sunFadeGlow.scale.multiplyScalar(1.2);
   scene.add( sunFadeGlow );
 
@@ -77,7 +77,9 @@ function buildSunGlow(){
 
 function buildSunMesh(){
   var sunGeometry = new THREE.SphereGeometry(sunSize, 32, 32 );
-  var sunMaterial = new THREE.MeshPhongMaterial( {map: THREE.ImageUtils.loadTexture('images/sunmap.jpg')} );
+  var sunTexture = THREE.ImageUtils.loadTexture('images/sunmap.jpg');
+  sunTexture.minFilter = THREE.NearestFilter;
+  var sunMaterial = new THREE.MeshPhongMaterial( {map: sunTexture} );
   sunMesh = new THREE.Mesh( sunGeometry, sunMaterial );
   sunMesh.position.set(0,0,0);
 }
@@ -113,10 +115,12 @@ function buildEarthMesh(){
   var earthBumpMap = THREE.ImageUtils.loadTexture('images/earthbump1k.jpg');
   earthBumpMap.minFilter = THREE.NearestFilter;
   earthMaterial.bumpMap = earthBumpMap;
-  earthMaterial.bumpScale = 0.5;
-  earthMaterial.specularMap = THREE.ImageUtils.loadTexture('images/earthspec1k.jpg');
+  earthMaterial.bumpScale = 0.3;
+  var earthSpecularMap = THREE.ImageUtils.loadTexture('images/earthspec1k.jpg');
+  earthSpecularMap.minFilter = THREE.NearestFilter;
+  earthMaterial.specularMap = earthSpecularMap;
   earthMaterial.specular = new THREE.Color(0x66A3FF);
-  earthMaterial.shininess = 7;
+  earthMaterial.shininess = 5;
 
   earthMesh = new THREE.Mesh( earthGeometry, earthMaterial );
   earthMesh.castShadow = true;
@@ -200,6 +204,8 @@ function randomIntFromInterval(min,max)
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
+var glowSize = 1.1;;
+var fading = false;
 function updateSunGlow(){
    sunGlow.material.uniforms.viewVector.value =  new THREE.Vector3().subVectors( camera.position, sunGlow.position );
 
@@ -259,10 +265,12 @@ var moonRotationAngle = 0.0;
 function updateMoon(){
   var x = moonDistanceFromEarth * -Math.cos(moonRotationAngle);
   var z = moonDistanceFromEarth * -Math.sin(moonRotationAngle);
+  var y = moonAxialTilt * Math.sin(moonOrbitalTilt) * moonRotationAngle;
   moonRotationAngle-= moonOrbitRotationSpeed;
 
   moonMesh.position.x = earthMesh.position.x + x;
   moonMesh.position.z = earthMesh.position.z + z;
+  moonMesh.position.y = Math.cos(y);
   moonMesh.rotation.x = (moonAxialTilt/180)*Math.PI;
 
   var transformationMatrix;
