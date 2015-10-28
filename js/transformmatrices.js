@@ -1,61 +1,13 @@
-var shiftByXMatrix = function (amount) {
-    /*var shiftMatrix = new THREE.Matrix4();
-    
-    shiftMatrix.set(
-        1, 0, 0, amount,
-        0, 1, 0, 0,
-        0, 0, 1, 0,
-        0, 0, 0, 1
-        );
-    
-    return shiftMatrix; */
+var tempMatrix3 = new THREE.Matrix3();
+var tempMatrix4 = new THREE.Matrix4();
 
+var shiftMatrix = function (x, y, z) {
     return [
-        [1, 0, 0, amount],
-        [0, 1, 0, 0],
-        [0, 0, 1, 0],
+        [1, 0, 0, x],
+        [0, 1, 0, y],
+        [0, 0, 1, z],
         [0, 0, 0, 1]
     ];
-}
-
-var shiftByYMatrix = function (amount) {
-    return [
-        [1, 0, 0, 0],
-        [0, 1, 0, amount],
-        [0, 0, 1, 0],
-        [0, 0, 0, 1]
-    ];
-
-    // var shiftMatrix = new THREE.Matrix4();
-    
-    // shiftMatrix.set(
-    //     1, 0, 0, 0,
-    //     0, 1, 0, amount,
-    //     0, 0, 1, 0,
-    //     0, 0, 0, 1
-    //     );
-    
-    // return shiftMatrix;
-}
-
-var shiftByZMatrix = function (amount) {
-    return [
-        [1, 0, 0, 0],
-        [0, 1, 0, 0],
-        [0, 0, 1, amount],
-        [0, 0, 0, 1]
-    ];
-
-    // var shiftMatrix = new THREE.Matrix4();
-    
-    // shiftMatrix.set(
-    //     1, 0, 0, 0,
-    //     0, 1, 0, 0,
-    //     0, 0, 1, amount,
-    //     0, 0, 0, 1
-    //     );
-    
-    // return shiftMatrix;
 }
 
 var rotationYTransformation = function (angle) {
@@ -67,39 +19,26 @@ var rotationYTransformation = function (angle) {
     ]; 
 }
 
-var rotationMatrix3 = new THREE.Matrix4();
 var rotationYMatrix3 = function (angle) {
-        rotationMatrix4.set(
+        tempMatrix3.set(
             Math.cos(angle), 0, Math.sin(angle),
             0,1,0,
             -Math.sin(angle), 0, Math.cos(angle),
             0,0,0
             );
         
-        return rotationMatrix3;
+        return tempMatrix3;
 }
 
-var rotationMatrix4 = new THREE.Matrix4();
 var rotationYMatrix4 = function (angle) {     
-        rotationMatrix4.set(
+        tempMatrix4.set(
             Math.cos(angle), 0, Math.sin(angle), 0,
             0,1,0,0,
             -Math.sin(angle), 0, Math.cos(angle), 0,
             0,0,0,1
             );
         
-        return rotationMatrix4;
-}
-
-var rotationXMatrix4 = function (angle) {        
-        rotationMatrix4.set(
-            Math.cos(angle), -Math.sin(angle), 0, 0,
-            Math.sin(angle), Math.cos(angle), 0, 0,
-            0,0,1,0,
-            0,0,0,1
-            );
-        
-        return rotationMatrix4;
+        return tempMatrix4;
 }
 
 var rotationXTransformation = function (angle) {
@@ -111,28 +50,21 @@ var rotationXTransformation = function (angle) {
     ];
 }
 
+var rotationXMatrix4 = function (angle) {        
+        tempMatrix4.set(
+            Math.cos(angle), -Math.sin(angle), 0, 0,
+            Math.sin(angle), Math.cos(angle), 0, 0,
+            0,0,1,0,
+            0,0,0,1
+            );
+        
+        return tempMatrix4;
+}
+
 var rotationZTransformation = function (angle) {
     return [
         [Math.cos(angle), -Math.sin(angle), 0, 0],
         [Math.sin(angle), Math.cos(angle), 0, 0],
-        [0,0,1,0],
-        [0,0,0,1]
-    ];
-}
-
-var switchOperatorMatrix = function(){
-    return [
-        [0,0,1,0],
-        [1,0,0,0],
-        [0,1,0,0],
-        [0,0,0,1]
-    ]
-}
-
-var identityMatrix = function(){
-    return [
-        [1,0,0,0],
-        [0,1,0,0],
         [0,0,1,0],
         [0,0,0,1]
     ];

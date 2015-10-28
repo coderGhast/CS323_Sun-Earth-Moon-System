@@ -12,7 +12,13 @@
 <script src="js/projector.js"></script> 
 <script src="js/orbitcontrols.js"></script> 
 
+<script src="js/textures.js"></script>
 <script src="js/globalvariables.js"></script>
+<script src="js/earth.js"></script>
+<script src="js/moon.js"></script>
+<script src="js/sun.js"></script>
+<script src="js/lighting.js"></script>
+<script src="js/starmap.js"></script>
 <script src="js/uicomponents.js"></script>
 <script src="js/transformfunctions.js"></script>
 <script src="js/transformmatrices.js"></script>
@@ -28,6 +34,7 @@ body {
 </head>
 
 <body>
+<!-- Credit for vertex and fragment shaders to Lee Stemkoski: http://stemkoski.blogspot.co.uk/2013/07/shaders-in-threejs-glow-and-halo.html -->
 <script id="vertexShader" type="x-shader/x-vertex">
 uniform vec3 viewVector;
 uniform float c;
@@ -42,7 +49,6 @@ void main()
     gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
 }
 </script>
-
 <!-- fragment shader a.k.a. pixel shader -->
 <script id="fragmentShader" type="x-shader/x-vertex"> 
 uniform vec3 glowColor;
@@ -53,7 +59,6 @@ void main()
     gl_FragColor = vec4( glow, 1.0 );
 }
 </script>
-
 
 <div id="test"></div>
 <script>
