@@ -37,8 +37,7 @@ function setupScene(){
   scene.add(earthMesh);
   scene.add(moonMesh);
 
-  buildStarMapMesh();
-  scene.add( starMesh );
+  scene.add( buildStarMapMesh() );
 
   earthOrbitLine = drawOrbitLine(earthOrbitPoints);
   moonOrbitLine = drawOrbitLine(moonOrbitPoints);

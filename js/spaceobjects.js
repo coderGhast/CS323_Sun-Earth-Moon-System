@@ -1,10 +1,9 @@
 var earthAxisHelper;
 var moonAxisHelper;
 var sunAxisHelper;
-var orbitSteps = 400;
 
 var earthStep = 0;
-var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity * 50, earthDistanceFromSun);
+var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity, earthDistanceFromSun);
 var earth = {
   earthMesh : buildEarthMesh(),
   computableEarthVertices : [],
@@ -46,9 +45,9 @@ function buildEarthMesh(){
 
 var moonStep = 0;
 var moonOrbitLine;
-var moonOrbitPoints = calculateOrbitalPoints(orbitSteps, moonOrbitEccentricity * 50, moonDistanceFromEarth);
+var moonOrbitPoints = calculateOrbitalPoints(orbitSteps, moonOrbitEccentricity, moonDistanceFromEarth);
 for(var i = 0; i < moonOrbitPoints.length; i++){
-  moonOrbitPoints[i].applyMatrix4(rotationZMatrix4(moonOrbitalTilt * (Math.PI / 180)));
+  moonOrbitPoints[i].applyMatrix4(rotationZMatrix4(-(moonOrbitalTilt * (Math.PI / 180))));
 }
 
 var moon = {
@@ -148,9 +147,6 @@ function updateSunGlow(){
    sunFadeGlow.material.uniforms.viewVector.value = new THREE.Vector3().subVectors( camera.position, sunFadeGlow.position );
 }
 
-var starMap = {
-    starMesh : buildStarMapMesh()
-}
 
 function buildStarMapMesh(){
   var starGeometry  = new THREE.SphereGeometry(500, 32, 32);
@@ -158,6 +154,6 @@ function buildStarMapMesh(){
   starTexture.wrapS = starTexture.wrapT = THREE.RepeatWrapping; 
   var starMaterial = new THREE.MeshBasicMaterial( {map: starTexture } );
   starMaterial.side = THREE.BackSide;
-  starMesh = new THREE.Mesh(starGeometry, starMaterial);
+  var starMesh = new THREE.Mesh(starGeometry, starMaterial);
   return starMesh;
 }

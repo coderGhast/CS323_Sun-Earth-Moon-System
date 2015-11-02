@@ -9,20 +9,6 @@ function updateYRotation(rotation, geometry, computableVertices){
     return computableVertices;
 }
 
-function updateZRotation(rotation, geometry, computableVertices){
-    computableVertices = multiplyMatrices(rotationZTransformation(rotation), computableVertices);
-    if(geometry == null){
-
-    } else {
-        applyHomogeneousToPhysical(computableVertices, geometry.vertices);
-        var normalMatrix = tempMatrix3.getNormalMatrix(rotationZMatrix4(rotation));
-        updateFacesAndNormals(normalMatrix, geometry);
-        geometry.verticesNeedUpdate = true;
-        geometry.normalsNeedUpdate = true;
-    }
-    return computableVertices;
-}
-
 function updateFacesAndNormals(normalMatrix, geometry){
     for ( var i = 0, il = geometry.faces.length; i < il; i ++ ) {
         var face = geometry.faces[ i ];
@@ -38,11 +24,6 @@ function updateFacesAndNormals(normalMatrix, geometry){
     if ( geometry.boundingSphere !== null ) {
         geometry.computeBoundingSphere();
     }
-}
-
-function updateOrbit(objectToUpdate, pivotPosition, orbitDistanceFromPivot, orbitAngleThisStep){
-    objectToUpdate.position.x = pivotPosition.x + (orbitDistanceFromPivot * -Math.cos(orbitAngleThisStep));
-    objectToUpdate.position.z = pivotPosition.z + (orbitDistanceFromPivot * -Math.sin(orbitAngleThisStep));
 }
 
 function rearrangeVertices(coordinateArray){

@@ -72,7 +72,7 @@ function setupGUI() {
 
     gui.add( params, "speed" ).min(0).max(10).step(1).onChange( function( value ) {
         
-        speedAdjustments(value);
+        updateControlValues(value);
         
     } );
 

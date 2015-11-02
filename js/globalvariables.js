@@ -1,28 +1,26 @@
-var earthSize = 1 * 5;
-var earthDistanceFromSun = 23500 / 150;
-var earthOrbitRotationSpeed = 365.26 / 4000;
+var eccentricityModifier = 50; // Make the eccentricities larger so we can actually see something with our weird-scale model.
+var orbitSteps = 1000; // Used for making Elliptical orbits with Kepler's 2nd Law. Just the number of steps/points for an orbit.
+
+var earthSize = 5; /*1 * 5; */
+var earthDistanceFromSun = 156; /*23500 / 150; */
+var earthOrbitRotationSpeed = 0.089; /* 365.26 / 4000; */
 var earthAxisRotationSpeed= 9.972;
 var earthAxialTilt = 23.44;
-var earthOrbitEccentricity = 0.00167;
+var earthOrbitEccentricity = 0.00167 * eccentricityModifier;
 
-var moonSize = 0.277 * 7 ;
-var moonDistanceFromEarth = 60.3 / 2;
-var moonAxisRotationSpeed = 2.732 / 2.4;
+var moonSize = 3; /*0.277 * 7; */
+var moonDistanceFromEarth = 30; /* 60.3 / 2; */
+var moonAxisRotationSpeed = 1.2; /* 2.732 / 2.4; */
 var moonOrbitRotationSpeed = moonAxisRotationSpeed;
-var moonOrbitEccentricity = 0.00549;
+var moonOrbitEccentricity = 0.00549 * eccentricityModifier;
 var moonAxialTilt = 1.593;
 var moonOrbitalTilt = 5.145;
 
-var sunSize = 109 / 7;
-var sunAxisRotationSpeed = 0.25 / 4;
+var sunSize = 20; /* 109 / 7; */
+var sunAxisRotationSpeed = 0.05; /* 0.25 / 4; */
 
 var simulationPaused = false;
 var speed = 1;
-
-function speedAdjustments(speedAdjust){
-    speed = speedAdjust;
-    updateControlValues(speedAdjust);
-}
 
 var controlValues = {
     earthOrbitRotationSpeed : earthOrbitRotationSpeed * speed,
@@ -35,13 +33,14 @@ var controlValues = {
 }
 
 function updateControlValues(speedAdjust){
-	controlValues.earthOrbitRotationSpeed = earthOrbitRotationSpeed * speedAdjust;
-	controlValues.earthAxisRotationSpeed = earthAxisRotationSpeed * speedAdjust;
+    speed = speedAdjust;
+	controlValues.earthOrbitRotationSpeed = earthOrbitRotationSpeed * speed;
+	controlValues.earthAxisRotationSpeed = earthAxisRotationSpeed * speed;
 
-	controlValues.moonAxisRotationSpeed = moonAxisRotationSpeed * speedAdjust;
-	controlValues. moonOrbitRotationSpeed = moonAxisRotationSpeed * speedAdjust;
+	controlValues.moonAxisRotationSpeed = moonAxisRotationSpeed * speed;
+	controlValues. moonOrbitRotationSpeed = moonAxisRotationSpeed * speed;
 
-	controlValues.sunAxisRotationSpeed = sunAxisRotationSpeed * speedAdjust;
+	controlValues.sunAxisRotationSpeed = sunAxisRotationSpeed * speed;
 }
 
 var textures = {
