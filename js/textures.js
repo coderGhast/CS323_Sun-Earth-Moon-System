@@ -1,18 +1,14 @@
 var textures = {
-    loadTexture : function(imageLocation){
-        var texture =  THREE.ImageUtils.loadTexture(imageLocation);
-        texture.minFilter = THREE.NearestFilter;
-        return texture;
-    }
+    earthDiffuse : loadTexture('images/earthmap1k.jpg'),
+    earthBumpMap : loadTexture('images/earthbump1k.jpg'),
+    earthSpecularMap : loadTexture('images/earthspec1k.jpg'),
+    moonDiffuse : loadTexture('images/moonmap1k.jpg'),
+    moonBumpMap : loadTexture('images/moonbump1k.jpg'),
+    starMap : loadTexture('images/starmap_s.png'),
+    sunDiffuse : loadTexture('images/sunmap.jpg')
 }
 
-textures.earthDiffuse =  textures.loadTexture('images/earthmap1k.jpg');
-textures.earthBumpMap = textures.loadTexture('images/earthbump1k.jpg');
-textures.earthSpecularMap = textures.loadTexture('images/earthspec1k.jpg');
-
-textures.moonDiffuse = textures.loadTexture('images/moonmap1k.jpg');
-textures.moonBumpMap = textures.loadTexture('images/moonbump1k.jpg');
-
-textures.starMap = textures.loadTexture('images/starmap_s.png');
-
-textures.sunDiffuse = textures.loadTexture('images/sunmap.jpg');
+function loadTexture(texture){
+	var textureLoader = new THREE.TextureLoader();
+	return textureLoader.load(texture);
+}

@@ -1,13 +1,24 @@
+var earthAxisHelper;
+var moonAxisHelper;
+var sunAxisHelper;
+var orbitSteps = 400;
+
+var earthStep = 0;
+var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity * 50, earthDistanceFromSun);
 var earth = {
   earthMesh : buildEarthMesh(),
   computableEarthVertices : [],
+  updateEarth : function(){
+      earthStep+= speed;
+      if(earthStep >= earthOrbitPoints.length){
+        earthStep = 0;
+      }
+      var currentPosition = earthOrbitPoints[Math.floor(earthStep)];
+      earthMesh.position.set(currentPosition.x, currentPosition.y, currentPosition.z);
 
-  earthOrbitAngleThisStep : 0.0,
-    updateEarth : function(){
-        this.earthOrbitAngleThisStep-= controlValues.earthOrbitRotationSpeed * (Math.PI / 180);
-        updateOrbit(earthMesh, sunMesh.position, earthDistanceFromSun, this.earthOrbitAngleThisStep);
-        computableEarthVertices = updateRotation(controlValues.earthAxisRotationSpeed * (Math.PI / 180), earthMesh.geometry, computableEarthVertices);
-    }
+      computableEarthVertices = updateYRotation(controlValues.earthAxisRotationSpeed * (Math.PI / 180), earthMesh.geometry, computableEarthVertices);
+      earthAxisHelper.applyMatrix(rotationYMatrix4(controlValues.earthAxisRotationSpeed * (Math.PI / 180)));
+  }
   };
 
 function buildEarthMesh(){
@@ -26,17 +37,38 @@ function buildEarthMesh(){
       earthMesh.receiveShadow = true;
 
       earthMesh.rotation.x = (earthAxialTilt/180)*Math.PI;
+
+      earthAxisHelper = new THREE.AxisHelper( earthSize * 2 );
+      earthAxisHelper.visible = false;
+      earthMesh.add( earthAxisHelper );
       return earthMesh;
     }
+
+var moonStep = 0;
+var moonOrbitLine;
+var moonOrbitPoints = calculateOrbitalPoints(orbitSteps, moonOrbitEccentricity * 50, moonDistanceFromEarth);
+for(var i = 0; i < moonOrbitPoints.length; i++){
+  moonOrbitPoints[i].applyMatrix4(rotationZMatrix4(moonOrbitalTilt * (Math.PI / 180)));
+}
 
 var moon = {
     moonMesh : buildMoonMesh(),
     computableMoonVertices : [],
     moonOrbitAngleThisStep : 0.0,
     updateMoon : function(){
-        this.moonOrbitAngleThisStep-= controlValues.moonOrbitRotationSpeed * (Math.PI / 180);
-        updateOrbit(moonMesh, earthMesh.position, moonDistanceFromEarth, this.moonOrbitAngleThisStep);
-        computableMoonVertices = updateRotation(controlValues.moonAxisRotationSpeed* (Math.PI / 180), moonMesh.geometry, computableMoonVertices);
+      moonStep+= speed * 15;
+      if(moonStep >= moonOrbitPoints.length){
+        moonStep = 0;
+      }
+      var currentPosition = moonOrbitPoints[Math.floor(moonStep)];
+      moonMesh.position.set(currentPosition.x + earthMesh.position.x, currentPosition.y, currentPosition.z + earthMesh.position.z);
+
+      // sneaky way of keeping the face of the Moon seen on Earth always the same.
+      moonMesh.lookAt(earthMesh.position);
+    },
+    updateMoonOrbitLine: function(){
+        moonOrbitLine.position.x = earthMesh.position.x;
+        moonOrbitLine.position.z = earthMesh.position.z;
     }
 }
 
@@ -51,6 +83,10 @@ function buildMoonMesh(){
     moonMesh.castShadow = true;
     moonMesh.receiveShadow = true;
     moonMesh.rotation.x = (moonAxialTilt/180)*Math.PI;
+
+    moonAxisHelper = new THREE.AxisHelper( moonSize * 2 );
+    moonAxisHelper.visible = false;
+    moonMesh.add( moonAxisHelper );
     return moonMesh;
 }
 
@@ -61,7 +97,8 @@ var sun = {
     sunMesh : buildSunMesh,
     computableSunVertices : [],
     updateSun : function(){
-        computableSunVertices = updateRotation(controlValues.sunAxisRotationSpeed * (Math.PI / 180), sunMesh.geometry, computableSunVertices);
+        computableSunVertices = updateYRotation(controlValues.sunAxisRotationSpeed * (Math.PI / 180), sunMesh.geometry, computableSunVertices);
+        sunAxisHelper.applyMatrix(rotationYMatrix4(controlValues.sunAxisRotationSpeed * (Math.PI / 180)));
     }
 }
 
@@ -70,6 +107,10 @@ function buildSunMesh(){
   var sunMaterial = new THREE.MeshPhongMaterial( {emissive: 0xeb7d30, emissiveMap: textures.sunDiffuse} );
   sunMesh = new THREE.Mesh( sunGeometry, sunMaterial );
   sunMesh.position.set(0,0,0);
+
+  sunAxisHelper = new THREE.AxisHelper(sunSize * 2);
+  sunAxisHelper.visible = false;
+  sunMesh.add(sunAxisHelper);
   return sunMesh;
 }
 
@@ -105,4 +146,18 @@ function buildSunGlow(){
 function updateSunGlow(){
    sunGlow.material.uniforms.viewVector.value =  new THREE.Vector3().subVectors( camera.position, sunGlow.position );
    sunFadeGlow.material.uniforms.viewVector.value = new THREE.Vector3().subVectors( camera.position, sunFadeGlow.position );
+}
+
+var starMap = {
+    starMesh : buildStarMapMesh()
+}
+
+function buildStarMapMesh(){
+  var starGeometry  = new THREE.SphereGeometry(500, 32, 32);
+  var starTexture = textures.starMap;
+  starTexture.wrapS = starTexture.wrapT = THREE.RepeatWrapping; 
+  var starMaterial = new THREE.MeshBasicMaterial( {map: starTexture } );
+  starMaterial.side = THREE.BackSide;
+  starMesh = new THREE.Mesh(starGeometry, starMaterial);
+  return starMesh;
 }

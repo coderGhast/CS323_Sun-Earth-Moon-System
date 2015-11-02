@@ -7,21 +7,16 @@
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1"> 
           
 <script src="js/three.min.js"></script>
-<script src="js/detector.js"></script>
-<script src="js/canvasrenderer.js"></script> 
-<script src="js/projector.js"></script> 
+<script type='text/javascript' src='js/DAT.GUI.min.js'></script>
 <script src="js/orbitcontrols.js"></script> 
 
-<script src="js/textures.js"></script>
 <script src="js/globalvariables.js"></script>
-<script src="js/earth.js"></script>
-<script src="js/moon.js"></script>
-<script src="js/sun.js"></script>
-<script src="js/lighting.js"></script>
-<script src="js/starmap.js"></script>
-<script src="js/uicomponents.js"></script>
 <script src="js/transformfunctions.js"></script>
 <script src="js/transformmatrices.js"></script>
+<script src="js/orbitcalculations.js"></script>
+<script src="js/spaceobjects.js"></script>
+<script src="js/lighting.js"></script>
+<script src="js/uicomponents.js"></script>
 <script src="js/controller.js"></script>
 
 <style>
@@ -60,7 +55,8 @@ void main()
 }
 </script>
 
-<div id="test"></div>
+<div id="controlsCanvas"></div>
+<div id="threeCanvas"></div>
 <script>
     initScene();
     renderScene();

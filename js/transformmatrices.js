@@ -69,3 +69,25 @@ var rotationZTransformation = function (angle) {
         [0,0,0,1]
     ];
 }
+
+var rotationZMatrix3 = function (angle) {     
+        tempMatrix4.set(
+            Math.cos(angle), -Math.sin(angle), 0,
+            -Math.sin(angle), Math.cos(angle), 0,
+            0,0,1,
+            0,0,0
+            );
+        
+        return tempMatrix4;
+}
+
+var rotationZMatrix4 = function (angle) {     
+        tempMatrix4.set(
+            Math.cos(angle), -Math.sin(angle), 0, 0,
+            -Math.sin(angle), Math.cos(angle), 0, 0,
+            0,0,1,0,
+            0,0,0,1
+            );
+        
+        return tempMatrix4;
+}

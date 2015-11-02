@@ -5,15 +5,17 @@ function initScene() {
 function update() {
   sun.updateSun();
   updateSunGlow();
-  updateSunLight();
   earth.updateEarth();
   moon.updateMoon();
+  moon.updateMoonOrbitLine();
 }
 
 function renderScene() {
   requestAnimationFrame(renderScene); 
-  speedAdjustments(20);
-  update(); 
+  if(!simulationPaused){
+      update(); 
+  }
+  controls.update();
   render();
 }
 
@@ -28,23 +30,25 @@ function setupScene(){
 
   buildSunGlow();
 
+  buildEarthMesh();
   buildMoonMesh();  
   buildSunLight();
 
-  earthAndMoon = new THREE.Object3D();
-  earthAndMoon.add( earth.earthMesh )
-  earthAndMoon.add( moonMesh );
-  scene.add(earthAndMoon);
+  scene.add(earthMesh);
+  scene.add(moonMesh);
 
   buildStarMapMesh();
   scene.add( starMesh );
+
+  earthOrbitLine = drawOrbitLine(earthOrbitPoints);
+  moonOrbitLine = drawOrbitLine(moonOrbitPoints);
 
   setupHomogeoneousCoordinates();
 }
 
 function setupHomogeoneousCoordinates(){
   computableSunVertices = convertPhysicalToHomogeneous(sunMesh.geometry.vertices);
-  computableEarthVertices = convertPhysicalToHomogeneous(earth.earthMesh.geometry.vertices);
+  computableEarthVertices = convertPhysicalToHomogeneous(earthMesh.geometry.vertices);
   computableMoonVertices = convertPhysicalToHomogeneous(moonMesh.geometry.vertices);
 }
 

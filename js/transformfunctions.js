@@ -1,10 +1,25 @@
-function updateRotation(rotation, geometry, computableVertices){
+function updateYRotation(rotation, geometry, computableVertices){
     computableVertices = multiplyMatrices(rotationYTransformation(rotation), computableVertices);
     applyHomogeneousToPhysical(computableVertices, geometry.vertices);
     var normalMatrix = tempMatrix3.getNormalMatrix(rotationYMatrix4(rotation));
     updateFacesAndNormals(normalMatrix, geometry);
-    updateFlags(geometry);
+    geometry.verticesNeedUpdate = true;
+    geometry.normalsNeedUpdate = true;
 
+    return computableVertices;
+}
+
+function updateZRotation(rotation, geometry, computableVertices){
+    computableVertices = multiplyMatrices(rotationZTransformation(rotation), computableVertices);
+    if(geometry == null){
+
+    } else {
+        applyHomogeneousToPhysical(computableVertices, geometry.vertices);
+        var normalMatrix = tempMatrix3.getNormalMatrix(rotationZMatrix4(rotation));
+        updateFacesAndNormals(normalMatrix, geometry);
+        geometry.verticesNeedUpdate = true;
+        geometry.normalsNeedUpdate = true;
+    }
     return computableVertices;
 }
 
@@ -23,10 +38,6 @@ function updateFacesAndNormals(normalMatrix, geometry){
     if ( geometry.boundingSphere !== null ) {
         geometry.computeBoundingSphere();
     }
-}
-function updateFlags(geometry){
-    geometry.verticesNeedUpdate = true;
-    geometry.normalsNeedUpdate = true;
 }
 
 function updateOrbit(objectToUpdate, pivotPosition, orbitDistanceFromPivot, orbitAngleThisStep){
@@ -97,45 +108,3 @@ function multiplyMatrices(matrixOne, matrixTwo){
     return result;
     }
 }
-
-// function updateFaceNormals(normalMatrix, faces){
-//     for(var i=0; i< faces.length; i++){
-//         var face = faces[i];
-//         face.normal.applyMatrix3(normalMatrix).normalize();
-
-//         for ( var j = 0, jl = face.vertexNormals.length; j < jl; j ++ ) {
-//             face.vertexNormals[ j ].applyMatrix3( normalMatrix ).normalize();
-//         }
-//       }
-// }
-
-// function applyMatrix(rawVertices, transformationMatrix){
-//     for(var i= 0; i < rawVertices.length; i++){
-//         var rawVerticesW = 1;
-
-//         rawVertices[i].x = rawVertices[i].x *transformationMatrix[0][0] +
-//                         rawVertices[i].y *transformationMatrix[0][1] +
-//                         rawVertices[i].z *transformationMatrix[0][2] +
-//                         1 * transformationMatrix[0][3];
-
-//         rawVertices[i].y = rawVertices[i].x *transformationMatrix[1][0] +
-//                         rawVertices[i].y *transformationMatrix[1][1] +
-//                         rawVertices[i].z *transformationMatrix[1][2] +
-//                         1 * transformationMatrix[1][3];
-
-//         rawVertices[i].z = rawVertices[i].x *transformationMatrix[2][0] +
-//                         rawVertices[i].y *transformationMatrix[2][1] +
-//                         rawVertices[i].z *transformationMatrix[2][2] +
-//                         1 * transformationMatrix[2][3];
-
-//         rawVerticesW =  rawVertices.x * transformationMatrix[3][0] +
-//                         rawVertices.y * transformationMatrix[3][1] +
-//                         rawVertices.z * transformationMatrix[3][2] +
-//                         1 * transformationMatrix[3][3];
-
-//         rawVertices.x = rawVertices.x / rawVerticesW;
-//         rawVertices.y = rawVertices.y / rawVerticesW;
-//         rawVertices.z = rawVertices.z / rawVerticesW;
-//     }
-
-// }

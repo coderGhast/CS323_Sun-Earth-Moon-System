@@ -11,7 +11,7 @@ var sun = {
 
 function buildSunMesh(){
   var sunGeometry = new THREE.SphereGeometry(sunSize, 32, 32 );
-  var sunMaterial = new THREE.MeshPhongMaterial( {map: textures.sunDiffuse} );
+  var sunMaterial = new THREE.MeshPhongMaterial( {emissive: 0xeb7d30, emissiveMap: textures.sunDiffuse} );
   sunMesh = new THREE.Mesh( sunGeometry, sunMaterial );
   sunMesh.position.set(0,0,0);
   return sunMesh;
