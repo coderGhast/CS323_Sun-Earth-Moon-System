@@ -1,4 +1,4 @@
-var WIDTH  =  window.innerWidth - (window.innerWidth / 20);
+var WIDTH  = window.innerWidth - ((window.innerWidth / 100) * 20);
 var HEIGHT = window.innerHeight;
 
 var renderer = createRenderer();
@@ -31,7 +31,7 @@ function createScene(){
 function createCamera(){
     var camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 0.1, 1000);
     camera.position.y = 150;
-    camera.position.z = 150;
+    camera.position.z = 250;
     camera.lookAt(scene.position);
     return camera;
 }
