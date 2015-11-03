@@ -4,7 +4,7 @@ var orbitSteps = 1000; // Used for making Elliptical orbits with Kepler's 2nd La
 var earthSize = 5; /*1 * 5; */
 var earthDistanceFromSun = 156; /*23500 / 150; */
 var earthOrbitRotationSpeed = 0.089; /* 365.26 / 4000; */
-var earthAxisRotationSpeed= 9.972;
+var earthAxisRotationSpeed= 4.5; /* 9.972 / 2; */
 var earthAxialTilt = 23.44;
 var earthOrbitEccentricity = 0.00167 * eccentricityModifier;
 
@@ -18,6 +18,8 @@ var moonOrbitalTilt = 5.145;
 
 var sunSize = 20; /* 109 / 7; */
 var sunAxisRotationSpeed = 0.05; /* 0.25 / 4; */
+
+var starMapSize = 500;
 
 var simulationPaused = false;
 var speed = 1;

@@ -1,15 +1,6 @@
 var tempMatrix3 = new THREE.Matrix3();
 var tempMatrix4 = new THREE.Matrix4();
 
-var shiftMatrix = function (x, y, z) {
-    return [
-        [1, 0, 0, x],
-        [0, 1, 0, y],
-        [0, 0, 1, z],
-        [0, 0, 0, 1]
-    ];
-}
-
 var rotationYTransformation = function (angle) {
     return [
         [Math.cos(angle), 0, Math.sin(angle), 0],

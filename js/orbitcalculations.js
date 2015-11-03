@@ -1,3 +1,4 @@
+// Kepler's 2nd Law calculations (for all points along an orbital rotation, in n (timeStep) steps).
 function calculateOrbitalPoints(timeStep, eccentricity, semiMajorAxis){
 	 // 2 * Pi is radians for 360 circle;
 	var completeCircle = Math.PI * 2;
@@ -8,7 +9,6 @@ function calculateOrbitalPoints(timeStep, eccentricity, semiMajorAxis){
 	while(theta <= completeCircle){
 		theta += calculateTheta(timeStep, eccentricity, theta);
 		r = calculateR(semiMajorAxis, eccentricity, theta);
-
 		orbitPoints.push(new THREE.Vector3(r * -Math.cos(theta), 0, r * Math.sin(theta)));
 	}
 	return orbitPoints;

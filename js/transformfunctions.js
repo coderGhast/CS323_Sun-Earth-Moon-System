@@ -2,14 +2,15 @@ function updateYRotation(rotation, geometry, computableVertices){
     computableVertices = multiplyMatrices(rotationYTransformation(rotation), computableVertices);
     applyHomogeneousToPhysical(computableVertices, geometry.vertices);
     var normalMatrix = tempMatrix3.getNormalMatrix(rotationYMatrix4(rotation));
-    updateFacesAndNormals(normalMatrix, geometry);
+    updateFaceAndVertexNormals(normalMatrix, geometry);
     geometry.verticesNeedUpdate = true;
     geometry.normalsNeedUpdate = true;
 
     return computableVertices;
 }
 
-function updateFacesAndNormals(normalMatrix, geometry){
+// Pretty much from three.js Matrix4 / Geometry maths. Need to manually update the face and vertex normals after a matrix transformation.
+function updateFaceAndVertexNormals(normalMatrix, geometry){
     for ( var i = 0, il = geometry.faces.length; i < il; i ++ ) {
         var face = geometry.faces[ i ];
         face.normal.applyMatrix3( normalMatrix ).normalize();
@@ -58,11 +59,12 @@ function convertPhysicalToHomogeneous(coordinateArray){
     return result;
 }
 
+// Turn the homogeneous coordinates into physical coordinates.
 function applyHomogeneousToPhysical(homogeneous, physical){
     for(var x = 0; x < homogeneous[0].length; x++){
-        physical[x].setX(homogeneous[0][x]);
-        physical[x].setY(homogeneous[1][x]);
-        physical[x].setZ(homogeneous[2][x]); 
+        physical[x].setX(homogeneous[0][x] / homogeneous[3][x]);
+        physical[x].setY(homogeneous[1][x] / homogeneous[3][x]);
+        physical[x].setZ(homogeneous[2][x] / homogeneous[3][x]); 
     }
 }
 
