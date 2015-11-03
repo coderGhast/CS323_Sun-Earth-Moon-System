@@ -58,30 +58,22 @@ var resetCamera = function(){
 var pauseSimulation = function(){
     if(simulationPaused){
         simulationPaused = false;
-        //gui.add(params, 'pause');
-        //gui.remove('unpause');
     } else {
         simulationPaused = true;
-        //gui.add(params, 'unpause');
-        //gui.remove('pause');
     }
 }
-
 
 var params = {
     "speed": 1,
     "cameraFocus": 0,
     "resetCamera" : resetCamera,
-    "pause": pauseSimulation,
-    "unpause": pauseSimulation,
+    "pause": false,
     "orbitHelpers": true,
     "axisHelpers": false
 };
 
-var gui;
 function setupGUI() {
-    
-    gui = new dat.GUI();
+    var gui = new dat.GUI();
 
     gui.add( params, "speed" ).min(1).max(10).step(1).name('Change speed').onChange( function( value ) {
         updateControlValues(value);
@@ -99,9 +91,9 @@ function setupGUI() {
 
     gui.add(params, 'resetCamera').name('Reset Camera');
 
-    // gui.add(params, 'pause').onChange( function( value ){
-    //     simulationPaused = value;
-    // });
+    gui.add(params, 'pause').name('Pause').onChange( function( value ){
+        simulationPaused = value;
+    });
     
     gui.add(params, 'orbitHelpers').onChange( function( value ){
         earthOrbitLine.visible = value;
@@ -113,6 +105,4 @@ function setupGUI() {
         moonAxisHelper.visible = value;
         sunAxisHelper.visible = value;
     }).name('Axis helpers');    
-
-    gui.add(params, 'pause').name('Pause');
 }
