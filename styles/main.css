@@ -1,0 +1,38 @@
+body {
+    padding:0px;
+    margin:0px;
+    background-color:#000000;
+}
+
+#infoOverlay{
+    position:absolute;
+    left:81%;
+    width:19%;
+    height:100%;
+    color:#ffffff;
+    background-color: #111111;
+    padding:6px;
+    padding-top:15%;
+    border-bottom:1px solid;
+    border-right:1px solid;
+    border-color: #111111;
+    font-family: Verdana;
+    font-size: 11px;
+}
+
+h2{
+    margin:0.5px;
+}
+
+p{
+    margin:0.3px;
+}
+
+ul{
+    margin:0.3px;
+    padding-left:20px;
+}
+
+#threeCanvas{
+    width:80%;
+}

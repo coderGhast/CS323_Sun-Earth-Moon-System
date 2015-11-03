@@ -19,13 +19,7 @@
 <script type='text/javascript' src="js/uicomponents.js"></script>
 <script type='text/javascript' src="js/controller.js"></script>
 
-<style>
-body {
-    padding:0px;
-    margin:0px;
-    background-color:#000000;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="styles/main.css">
 </head>
 
 <body>
@@ -56,6 +50,16 @@ void main()
 </script>
 
 <div id="controlsCanvas"></div>
+<div id="infoOverlay">
+    <h2>CS323 Assignment</h2>
+    <h3><i>'Sun Earth Moon' visualisation</i></h3>
+    <h3>James Euesden (jee22)</h3>
+    <ul>
+    <li>Hold and drag left-mouse button to navigate camera around focus point</li>
+    <li>Hold and drag right-mouse button or use arrow keys to move camera focus point.</li>
+    <li>Use middle mouse button and scroll wheel to zoom in/out</li>
+    </ul>
+</div>
 <div id="threeCanvas"></div>
 <script>
     initScene();

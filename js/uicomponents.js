@@ -1,4 +1,4 @@
-var WIDTH  = window.innerWidth;
+var WIDTH  =  window.innerWidth - (window.innerWidth / 20);
 var HEIGHT = window.innerHeight;
 
 var renderer = createRenderer();
@@ -55,28 +55,39 @@ var resetCamera = function(){
     controls.reset()
 }
 
+var pauseSimulation = function(){
+    if(simulationPaused){
+        simulationPaused = false;
+        //gui.add(params, 'pause');
+        //gui.remove('unpause');
+    } else {
+        simulationPaused = true;
+        //gui.add(params, 'unpause');
+        //gui.remove('pause');
+    }
+}
+
 
 var params = {
     "speed": 1,
     "cameraFocus": 0,
     "resetCamera" : resetCamera,
-    "pause": false,
+    "pause": pauseSimulation,
+    "unpause": pauseSimulation,
     "orbitHelpers": true,
     "axisHelpers": false
 };
 
-
+var gui;
 function setupGUI() {
     
-    var gui = new dat.GUI();
+    gui = new dat.GUI();
 
-    gui.add( params, "speed" ).min(0).max(10).step(1).onChange( function( value ) {
-        
+    gui.add( params, "speed" ).min(1).max(10).step(1).name('Change speed').onChange( function( value ) {
         updateControlValues(value);
-        
     } );
 
-    gui.add( params, 'cameraFocus', {Sun: 0, Earth: 1, Moon: 2} ).onChange( function(value) {
+    gui.add( params, 'cameraFocus', {Sun: 0, Earth: 1, Moon: 2} ).name('Change camera focus').onChange( function(value) {
       if(value == 0){
         controls.target = sunMesh.position;
       } else if(value == 1){
@@ -86,20 +97,22 @@ function setupGUI() {
       }
     });
 
-    gui.add(params, 'resetCamera');
+    gui.add(params, 'resetCamera').name('Reset Camera');
 
-    gui.add(params, 'pause').onChange( function( value ){
-        simulationPaused = value;
-    });
+    // gui.add(params, 'pause').onChange( function( value ){
+    //     simulationPaused = value;
+    // });
     
     gui.add(params, 'orbitHelpers').onChange( function( value ){
         earthOrbitLine.visible = value;
         moonOrbitLine.visible = value;
-    });
+    }).name('Orbit helpers');
 
     gui.add(params, 'axisHelpers').onChange( function( value ){
         earthAxisHelper.visible = value;
         moonAxisHelper.visible = value;
         sunAxisHelper.visible = value;
-    });    
+    }).name('Axis helpers');    
+
+    gui.add(params, 'pause').name('Pause');
 }
