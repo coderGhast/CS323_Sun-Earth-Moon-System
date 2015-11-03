@@ -132,7 +132,7 @@ function buildSunGlow(){
 
 
   sunGlow = new THREE.Mesh( sunMesh.geometry.clone(), customMaterial.clone() );
-    sunGlow.position = sunMesh.position;
+  sunGlow.position.set(sunMesh.position.x, sunMesh.position.y, sunMesh.position.z);
   sunGlow.scale.multiplyScalar(1.1);
   scene.add( sunGlow );
 
