@@ -1,4 +1,4 @@
-var WIDTH  = window.innerWidth - ((window.innerWidth / 100) * 20);
+var WIDTH  = window.innerWidth - 250;
 var HEIGHT = window.innerHeight;
 
 var renderer = createRenderer();
