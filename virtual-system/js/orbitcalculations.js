@@ -7,7 +7,7 @@ function calculateOrbitalPoints(timeStep, eccentricity, semiMajorAxis){
 	var orbitPoints = [];
 
 	// +1 to ensure a complete circle with no gaps.
-	while(theta <= completeCircle + 1){
+	while(theta <= completeCircle){
 		theta += calculateTheta(timeStep, eccentricity, theta);
 		r = calculateR(semiMajorAxis, eccentricity, theta);
 		orbitPoints.push(new THREE.Vector3(r * -Math.cos(theta), 0, r * Math.sin(theta)));
