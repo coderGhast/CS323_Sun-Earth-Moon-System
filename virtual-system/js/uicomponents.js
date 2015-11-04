@@ -47,8 +47,6 @@ function setupUI(){
 
 function setupControls(){
     controls = new THREE.OrbitControls( camera, renderer.domElement );
-    controls.maxDistance = 300;
-    controls.minDistance = 10;
 }
 
 var resetCamera = function(){
