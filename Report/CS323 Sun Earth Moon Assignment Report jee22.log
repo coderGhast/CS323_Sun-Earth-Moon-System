@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  4 NOV 2015 15:31
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  4 NOV 2015 17:02
 entering extended mode
 **D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/CS323*Sun*Earth*Moon*Assig
 nment*Report*jee22.tex
@@ -585,36 +585,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.toc")
 \tf@toc=\write3
- [2] [3] [4
+ [2] [3] [4] [5] [6] [7
 
 ]
 
-LaTeX Warning: Empty `thebibliography' environment on input line 225.
-
-
 AED: lastpage setting LastPage
-[5
+[8
 
 ]
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux") ) 
 Here is how much of TeX's memory you used:
- 4894 strings out of 493921
- 71429 string characters out of 3144866
- 117340 words of memory out of 3000000
- 8142 multiletter control sequences out of 15000+200000
- 10410 words of font info for 39 fonts, out of 3000000 for 9000
+ 4905 strings out of 493921
+ 71547 string characters out of 3144866
+ 123340 words of memory out of 3000000
+ 8151 multiletter control sequences out of 15000+200000
+ 12109 words of font info for 47 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,10n,43p,327b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,43p,1547b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/a
 msfonts/cm/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmr9.pfb>
-Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (5 pages, 
-62130 bytes).
+Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (8 pages, 
+85975 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
