@@ -287,8 +287,36 @@ To present the Sun as a self-illuminated sphere, I first used an emissive map, w
 \end{figure}
 
 \subsection{Earth and Moon lit by a single point light source located at the centre of the Sun}
-All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. This is discussed more in Additional Features.
-All objects lit by a dark ambient light, but light source for the Sun that lights the Earth and Moon is at the centre of the Sun. However, not a Point Light. Point Lights are bad, they don't cast shadows, so I used a Spot Light. Here, look, you can see the Shadow Camera, so that they are hit by light, and also cast shadow within the confines of this camera. The smaller the camera, the less expensive it is to compute. More on this in Additional Features. To achieve this, we just have a spot light follow the Earth `.target.set(earthMesh.position)' that tracks the Earth every update.
+All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. In order to light the Earth and Moon with the Spot Light, I have the light starting at the centre of the Sun (0,0,0) and its target set as the position of the Earth, tracking it every animation frame.
+\begin{lstlisting}
+sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
+  sunLight.castShadow = true;
+  sunLight.shadowBias = -0.0002;
+  sunLight.shadowDarkness = 0.5;
+  sunLight.shadowMapWidth = 1024;
+  sunLight.shadowMapHeight = 1024;
+
+  sunLight.shadowCameraNear = 20;
+  sunLight.shadowCameraFar = 200;
+  sunLight.shadowCameraFov = 300;
+  // awesome for debugging - Shows the Shadow Camera lines
+  // scene.add(new THREE.CameraHelper( sunLight.shadow.camera ));
+
+  sunLight.target = earthMesh;    
+  sunLight.position.set(0, 0, 0);
+  sunMesh.add(sunLight);
+\end{lstlisting}
+
+\begin{figure}[H]
+        \centering
+       
+                \includegraphics[width=0.5\textwidth]{images/shadowcamera}
+                \caption{The Sun light Shadow Camera, showing where shadow casting will be computed.}
+                \label{fig: The Shadow Camera.}
+      
+\end{figure}
+
+You can see the ShadowCamera of the Spot Light inthe figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchement area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
 
 
 %----------------------------------------------------------------------------------------

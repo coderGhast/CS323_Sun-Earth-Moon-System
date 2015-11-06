@@ -7,7 +7,15 @@ function buildSunLight(){
 
   sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
   sunLight.castShadow = true;
-  sunLight.position.set(0, 0, 0);
+
+  sunLight.shadowCameraNear = 20;
+  sunLight.shadowCameraFar = 190;
+  sunLight.shadowCameraFov = 45;
+  // awesome for debugging - Shows the Shadow Camera lines
+   //scene.add(new THREE.CameraHelper( sunLight.shadow.camera ));
+
   sunLight.target = earthMesh;    
+  sunLight.position.set(0, 0, 0);
   sunMesh.add(sunLight);
+
 }
