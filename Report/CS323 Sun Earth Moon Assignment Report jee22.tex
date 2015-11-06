@@ -287,7 +287,9 @@ To present the Sun as a self-illuminated sphere, I first used an emissive map, w
 \end{figure}
 
 \subsection{Earth and Moon lit by a single point light source located at the centre of the Sun}
-All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. In order to light the Earth and Moon with the Spot Light, I have the light starting at the centre of the Sun (0,0,0) and its target set as the position of the Earth, tracking it every animation frame.
+All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. 
+
+In order to light the Earth and Moon with the Spot Light, I have the light starting at the centre of the Sun (0,0,0) and added as part of the SunMesh for rendering efficiency, and its target set as the position of the Earth, tracking it every animation frame to give the illusion of a single light source at the centre of the Sun.
 \begin{lstlisting}
 sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
   sunLight.castShadow = true;
