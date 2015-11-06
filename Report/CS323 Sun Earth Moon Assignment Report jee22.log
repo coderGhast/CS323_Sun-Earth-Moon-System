@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  6 NOV 2015 23:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  6 NOV 2015 23:15
 entering extended mode
 **CS323*Sun*Earth*Moon*Assignment*Report*jee22.tex
 
@@ -802,31 +802,31 @@ pui.png (PNG copy)>] [8]
 File: images/shadowcamera.png Graphic file (type png)
 
 <use images/shadowcamera.png>
-Package pdftex.def Info: images/shadowcamera.png used on input line 353.
+Package pdftex.def Info: images/shadowcamera.png used on input line 352.
 (pdftex.def)             Requested size: 234.87749pt x 205.71164pt.
  [9] [10 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamer
 a.png (PNG copy)>] [11] [12
 
 ]
-Underfull \hbox (badness 2521) in paragraph at lines 406--407
+Underfull \hbox (badness 2521) in paragraph at lines 405--406
 []\OT1/cmr/m/n/12 XAMPP In-stallers and Down-loads for Apache Friends, \OT1/cmr
 /m/it/12 apachefriends\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 408--410
+Underfull \hbox (badness 2990) in paragraph at lines 407--409
 []\OT1/cmr/m/n/12 Computational Con-tem-pla-tions: Us-ing Shaders and Se-lec-ti
 ve Glow Ef-fects in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
 []\OT1/cmr/m/n/12 three.js/dat.gui.min.js at mas-ter . mr-doob/three.js, \OT1/c
 mr/m/it/12 github\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--413
+Underfull \hbox (badness 10000) in paragraph at lines 410--412
 \OT1/cmr/m/n/12 https://github.com/mrdoob/three.js/blob/master/examples/js/libs
 /dat.gui.min.js
  []
@@ -836,13 +836,13 @@ AED: lastpage setting LastPage
 [13
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 418.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 418.
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 418.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 418.
 Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 .out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -850,12 +850,12 @@ Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 418.
  ) 
 Here is how much of TeX's memory you used:
  9116 strings out of 493921
  134776 string characters out of 3144875
- 285085 words of memory out of 3000000
+ 285103 words of memory out of 3000000
  12225 multiletter control sequences out of 15000+200000
  13694 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
