@@ -297,7 +297,22 @@ In order to light the Earth and Moon with the Spot Light, I have the light start
 
 \section{Additional Features}
 \subsection{User Interface}
-Shiny UI, look at this picture. You can change speed, move the camera to look at the Sun, Earth or Moon, move the camera around the setting, reset the camera, pause the simulation (pauses the updating of values while still rendering the scene) and turn on or off helpers to visually see the orbital rotations and the axes of the objects. See image
+Shiny UI, look at this picture. You can change speed, move the camera to look at the Sun, Earth or Moon, move the camera around the setting, reset the camera, pause the simulation (pauses the updating of values while still rendering the scene) and turn on or off helpers to visually see the orbital rotations and the axes of the objects. Uses dat.gui \cite{datgui} which makes for quick and easy gui by adding controls and parameters for them, including values and functions.
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/userinterface}
+                \caption{The user interface on the page.}
+                \label{fig: The user interface.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/closeupui}
+                \caption{The user interface up close.}
+                \label{fig: Close up of the user interface.}
+	 \end{subfigure}
+      
+\end{figure}
 
 \subsection{Synchronous orbital and axial rotation of the Moon}
 Well, I did this at first by keeping the speed of the Moon's rotation and it's orbit the same, which worked perfectly. However, when I switched to pre-computing the elliptical orbit, the orbit and rotation no longer matched. I could compute the new rotation by rotating the Moon on the Y axis by the same amount of time steps and speed as the orbit, but I don't believe it would look too accurate, and with the orbital rotation also titled, it would mean calculating how the x and z axis should also be rotated. While possible to do this, for this simple visualisation, I chose to achieve this by using a tool in the three.js library `.lookAt()'. This method updates the rotation of an object to always face the target. In this case, it keeps the synchronus axial and orbital rotation of the moon so the same face is always pointing towards the Earth. Look at this cool set of images that shows the Moon always facing the Earth! Wow!
@@ -392,6 +407,9 @@ Here is my self-assessment form, including what has been documented, implemented
 
 \bibitem{sunglow} Computational Contemplations: Using Shaders and Selective Glow Effects in Three.js, {\em stemkoski}, [online],
 http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html (Accessed 11/06/2015)
+
+\bibitem{datgui} three.js/dat.gui.min.js at master . mrdoob/three.js, {\em github}, [online],
+https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/205)
 
 \bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online], http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
 
