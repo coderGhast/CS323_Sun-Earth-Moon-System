@@ -67,7 +67,7 @@ var params = {
     "resetCamera" : resetCamera,
     "pause": false,
     "orbitHelpers": true,
-    "axisHelpers": false
+    "axisHelpers": true
 };
 
 function setupGUI() {

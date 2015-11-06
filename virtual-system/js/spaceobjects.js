@@ -34,7 +34,7 @@ function buildEarthMesh(){
   earthMesh.rotation.x = (earthAxialTilt/180)*Math.PI;
 
   earthAxisHelper = new THREE.AxisHelper( earthSize * 2 );
-  earthAxisHelper.visible = false;
+  earthAxisHelper.visible = true;
   earthMesh.add( earthAxisHelper );
   return earthMesh;
 }
@@ -83,7 +83,7 @@ function buildMoonMesh(){
     moonMesh.rotation.x = (moonAxialTilt/180) * Math.PI;
 
     moonAxisHelper = new THREE.AxisHelper( moonSize * 2 );
-    moonAxisHelper.visible = false;
+    moonAxisHelper.visible = true;
     moonMesh.add( moonAxisHelper );
     return moonMesh;
 }
@@ -107,7 +107,7 @@ function buildSunMesh(){
   sunMesh.position.set(0,0,0);
 
   sunAxisHelper = new THREE.AxisHelper(sunSize * 2);
-  sunAxisHelper.visible = false;
+  sunAxisHelper.visible = true;
   sunMesh.add(sunAxisHelper);
   return sunMesh;
 }

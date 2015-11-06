@@ -34,8 +34,10 @@ function setupScene(){
   buildMoonMesh();  
   buildSunLight();
 
-  scene.add(earthMesh);
-  scene.add(moonMesh);
+  var earthAndMoon = new THREE.Object3D();
+  earthAndMoon.add(earthMesh);
+  earthAndMoon.add(moonMesh);
+  scene.add(earthAndMoon);
 
   scene.add( buildStarMapMesh() );
 
