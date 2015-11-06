@@ -384,11 +384,34 @@ To see the Moon's axial rotation, we can best view it from above, such as with t
 \end{figure}
 
 \subsection{The sun shown as a self-illuminated sphere}
-Totally is. Look at this picture, have you ever seen something so alike the Sun? Yes, well. Anyway. It's done with a texture, ambient light to show it, two ways of making the Sun 'glow' that help illuminate it, but it is also self-illuminated through the use of the emissive map texture, here, look, some code. Shiny!
+To present the Sun as a self-illuminated sphere, I first used an emissive map, which lights the texture applied to the Mesh, and then added some Ambient lighting, for the purpose of showing the Sun as if it had it's own light and also to help the viewer see the backs of the planets somewhat too. Additionally, I thought it looked good to have a glowing effect around the Sun. I achieved this using the technique by using examples from Lee Stemkoski\cite{sunglow}. I created two glow effects, one larger than the other, to give the impression of the light being more intense as the viewer looked directly at the Sun. 
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/sunemissive}
+                \caption{The Sun with just an emissive map for self-illiminating}
+                \label{fig:Self-illuminating Sun with emissive map.}
+       \end{subfigure}
+       %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+         %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/sunemissiveandambient}
+                \caption{The Sun with emissive map and ambient lighting.}
+                \label{fig:Self-illuminating Sun with emissive map.}
+       \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/sunwithglow}
+                \caption{The Sun with emissive map, ambient lighting and glow effect.}
+                \label{fig:Self-illuminating Sun with emissive map.}
+       \end{subfigure}
+        \caption{The Sun with the three ways it is presented as self-illuminated.}\label{fig:Self-illuminated Sun}
+\end{figure}
 
 \subsection{Earth and Moon lit by a single point light source located at the centre of the Sun}
-All objects lit by a dark ambient light, but light source for the Sun that lights the Earth and Moon is at the centre of the Sun. However, not a Point Light. Point Lights are bad, they don't cast shadows, so I used a Spot Light. Here, look, you can see the Shadow Camera, so that they are hit by light, and also cast shadow within the confines of this camera. The smaller the camera, the less expensive it is to compute. More on this in Additional Features. To achieve this, we just have a spot light follow the Earth `.target.set(earthMesh.position)' that tracks the Earth every update.
+All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. 
 
+In order to light the Earth and Moon with the Spot Light, I have the light starting at the centre of the Sun (0,0,0) and added as part of the SunMesh for rendering efficiency, and its target set as the position of the Earth, tracking it every animation frame to give the illusion of a single light source at the centre of the Sun.
 
 %----------------------------------------------------------------------------------------
 %	Additional Features
@@ -396,7 +419,21 @@ All objects lit by a dark ambient light, but light source for the Sun that light
 
 \section{Additional Features}
 \subsection{User Interface}
-Shiny UI, look at this picture. You can change speed, move the camera to look at the Sun, Earth or Moon, move the camera around the setting, reset the camera, pause the simulation (pauses the updating of values while still rendering the scene) and turn on or off helpers to visually see the orbital rotations and the axes of the objects. See image
+Shiny UI, look at this picture. You can change speed, move the camera to look at the Sun, Earth or Moon, move the camera around the setting, reset the camera, pause the simulation (pauses the updating of values while still rendering the scene) and turn on or off helpers to visually see the orbital rotations and the axes of the objects. Uses dat.gui \cite{datgui} which makes for quick and easy gui by adding controls and parameters for them, including values and functions.
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/userinterface}
+                \caption{The user interface on the page.}
+                \label{fig: The user interface.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/closeupui}
+                \caption{The user interface up close.}
+                \label{fig: Close up of the user interface.}
+	 \end{subfigure}
+\end{figure}
 
 \subsection{Synchronous orbital and axial rotation of the Moon}
 Well, I did this at first by keeping the speed of the Moon's rotation and it's orbit the same, which worked perfectly. However, when I switched to pre-computing the elliptical orbit, the orbit and rotation no longer matched. I could compute the new rotation by rotating the Moon on the Y axis by the same amount of time steps and speed as the orbit, but I don't believe it would look too accurate, and with the orbital rotation also titled, it would mean calculating how the x and z axis should also be rotated. While possible to do this, for this simple visualisation, I chose to achieve this by using a tool in the three.js library `.lookAt()'. This method updates the rotation of an object to always face the target. In this case, it keeps the synchronus axial and orbital rotation of the moon so the same face is always pointing towards the Earth. Look at this cool set of images that shows the Moon always facing the Earth! Wow!
@@ -418,6 +455,29 @@ For both of these additonal points, they tie together. Through calculating one, 
 
 \subsection{Eclipse Shadows}
 Through the use of a SpotLight and its shadow camera, turning the ShadowMap of the renderer on, we get this effect: Here, look at some screenshots of it happening. Very easy to achieve. However, previously encountered issues with double shadows, with a WebGL issue that I couldn't fix in my own code. Struggled for a long time with it (others did too, see this link and this link), until an update to three.js fixed it. Relief at fixing it, also frustration at it being something I thought was in my code but turned out not to be. Much time wasted. But it works now, and it's super pretty how it does it with the spot light. Here, you can see my testing with the ShadowCamera, how the shadows are presented within the camera, but not outside of it. COOL!
+\begin{lstlisting}
+sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
+sunLight.castShadow = true;
+sunLight.shadowCameraNear = 20;
+sunLight.shadowCameraFar = 190;
+sunLight.shadowCameraFov = 45;
+// awesome for debugging - Shows the Shadow Camera lines
+//scene.add(new THREE.CameraHelper( sunLight.shadow.camera ));
+sunLight.target = earthMesh;    
+sunLight.position.set(0, 0, 0);
+sunMesh.add(sunLight);
+\end{lstlisting}
+
+\begin{figure}[H]
+        \centering
+       
+                \includegraphics[width=0.5\textwidth]{images/shadowcamera}
+                \caption{The Sun light Shadow Camera, showing where shadow casting will be computed.}
+                \label{fig: The Shadow Camera.}
+      
+\end{figure}
+
+You can see the ShadowCamera of the Spot Light in the figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
 
 \subsection{Other features of my choice}
 Mainly matrix transformations. Previously mentioned them, but I want to express that I wanted to fit them into my assignment. Before I pre-computed the orbits of the Earth and Moon, I was also working on their orbits with matrix transformations, but it became unnecessary once I changed how the orbit was calculated. I still stuck with using matrix transformations for axial rotations, however (where appropriate) and spent some time learning about how to do this. One problem I encountered when working with them was my lighting would not update during an Object's orbit around the light source. This was due to me updating the Geometries vertices but not the face and vertex normals. Once I started updating the Face and Vertex normals (like in three.js own method) see this code here: CODE, it worked as expected. I did test my transformations to check they gave the expected results too (4x4 matrix calculation for each matrix with result HERE PLZ). Many weird attempts with matrix transformations: Working directily with vertices, or working with the Matrix of the object, or working with the Mesh - Flying away Earth, Earth eventually shrinking at the middle (becoming a tube), irregular orbits, etc - Most overcome through looking at the matrix multiply method where I'd inccorectly done the multiplication ordering, or not properly applied the w coordinate on shift translations for the orbital rotations. Happy with the results though.
@@ -480,7 +540,17 @@ https://www.nasa.gov/sites/default/files/images/700328main\_20121014\_003615\_fl
 
 javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online],
 
+<<<<<<< HEAD
   http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
+=======
+\bibitem{sunglow} Computational Contemplations: Using Shaders and Selective Glow Effects in Three.js, {\em stemkoski}, [online],
+http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html (Accessed 11/06/2015)
+
+\bibitem{datgui} three.js/dat.gui.min.js at master . mrdoob/three.js, {\em github}, [online],
+https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/205)
+
+\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online], http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
+>>>>>>> origin/master
 
 \end{thebibliography}
 
