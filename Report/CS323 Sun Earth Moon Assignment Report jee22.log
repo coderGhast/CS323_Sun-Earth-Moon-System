@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  6 NOV 2015 14:57
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  6 NOV 2015 23:35
 entering extended mode
 **CS323*Sun*Earth*Moon*Assignment*Report*jee22.tex
 
@@ -8,17 +8,17 @@ LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
 ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
  lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
 Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size10.clo"
-File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -249,7 +249,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -260,13 +260,12 @@ Now handling font encoding U ...
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage.sty
 Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\extramarks.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\extramarks.sty
 \@temptokenb=\toks16
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
@@ -298,10 +297,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen105
@@ -322,7 +321,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks19
 \@floatcapt=\box27
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
 \lst@mode=\count90
 \lst@gtempboxa=\box28
 \lst@token=\toks20
@@ -336,27 +335,25 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \lst@lineno=\count95
 \lst@maxwidth=\dimen115
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count96
 \lst@skipnumbers=\count97
 \lst@framebox=\box29
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count98
 \c@subtable=\count99
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
@@ -646,7 +643,70 @@ Package hyperref Info: Option `colorlinks' set `false' on input line 77.
 \c@homeworkProblemCounter=\count110
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
-nment Report jee22.aux")
+nment Report jee22.aux"
+
+LaTeX Warning: Label `fig:The Earth orbiting the Sun' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:The Earth orbiting the Sun' multiply defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+
+LaTeX Warning: Label `fig: The axial spin of the Earth and moon.' multiply defi
+ned.
+
+
+LaTeX Warning: Label `sub@fig: The axial spin of the Earth and moon.' multiply 
+defined.
+
+)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
 LaTeX Font Info:    ... okay on input line 173.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
@@ -662,8 +722,7 @@ LaTeX Font Info:    ... okay on input line 173.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 173.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 173.
 
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 173.
@@ -677,7 +736,7 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
 (lastpage)             ! on input line 173.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count111
 \scratchdimen=\dimen120
@@ -727,64 +786,203 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 176.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Narctiss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.toc")
 \tf@toc=\write4
- [2]
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <8> not available
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[2]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 205.
- [3] [4] [5] [6] [7] [8
+ [3] [4] <images/earthorbitsun1.png, id=184, 665.48625pt x 575.14874pt>
+File: images/earthorbitsun1.png Graphic file (type png)
+
+<use images/earthorbitsun1.png>
+Package pdftex.def Info: images/earthorbitsun1.png used on input line 254.
+(pdftex.def)             Requested size: 187.89912pt x 162.39206pt.
+
+<images/earthorbitsun2.png, id=185, 708.6475pt x 551.05875pt>
+File: images/earthorbitsun2.png Graphic file (type png)
+
+<use images/earthorbitsun2.png>
+Package pdftex.def Info: images/earthorbitsun2.png used on input line 261.
+(pdftex.def)             Requested size: 187.89912pt x 146.11395pt.
+
+<images/moonorbitearth1.png, id=186, 511.9125pt x 502.87875pt>
+File: images/moonorbitearth1.png Graphic file (type png)
+
+<use images/moonorbitearth1.png>
+Package pdftex.def Info: images/moonorbitearth1.png used on input line 276.
+(pdftex.def)             Requested size: 187.89912pt x 184.58127pt.
+
+<images/moonorbitearth2.png, id=187, 687.56876pt x 477.785pt>
+File: images/moonorbitearth2.png Graphic file (type png)
+
+<use images/moonorbitearth2.png>
+Package pdftex.def Info: images/moonorbitearth2.png used on input line 283.
+(pdftex.def)             Requested size: 187.89912pt x 130.56381pt.
+ [5 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthorbitsun1.p
+ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earth
+orbitsun2.png (PNG copy)>] [6 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
+rt/images/moonorbitearth1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon
+-System/Report/images/moonorbitearth2.png (PNG copy)>] <images/earthtexture.png
+, id=207, 767.86874pt x 721.69624pt>
+File: images/earthtexture.png Graphic file (type png)
+
+<use images/earthtexture.png>
+Package pdftex.def Info: images/earthtexture.png used on input line 311.
+(pdftex.def)             Requested size: 187.89912pt x 176.59137pt.
+
+<images/suntexture.png, id=208, 962.59625pt x 907.39pt>
+File: images/suntexture.png Graphic file (type png)
+
+<use images/suntexture.png>
+Package pdftex.def Info: images/suntexture.png used on input line 318.
+(pdftex.def)             Requested size: 187.89912pt x 177.1134pt.
+
+<images/moontexture.png, id=209, 764.8575pt x 805.0075pt>
+File: images/moontexture.png Graphic file (type png)
+
+<use images/moontexture.png>
+Package pdftex.def Info: images/moontexture.png used on input line 323.
+(pdftex.def)             Requested size: 187.89912pt x 197.7629pt.
+ [7 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtexture.png
+ (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/suntext
+ure.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/
+moontexture.png (PNG copy)>]
+<images/earthandmoonaxisspin1.png, id=219, 859.21pt x 720.6925pt>
+File: images/earthandmoonaxisspin1.png Graphic file (type png)
+
+<use images/earthandmoonaxisspin1.png>
+Package pdftex.def Info: images/earthandmoonaxisspin1.png used on input line 33
+7.
+(pdftex.def)             Requested size: 187.89912pt x 157.6071pt.
+
+<images/earthandmoonaxisspin2.png, id=220, 932.48375pt x 701.62125pt>
+File: images/earthandmoonaxisspin2.png Graphic file (type png)
+
+<use images/earthandmoonaxisspin2.png>
+Package pdftex.def Info: images/earthandmoonaxisspin2.png used on input line 34
+2.
+(pdftex.def)             Requested size: 187.89912pt x 141.37093pt.
+
+<images/earthandmoonaxisspin3.png, id=221, 806.01125pt x 740.7675pt>
+File: images/earthandmoonaxisspin3.png Graphic file (type png)
+
+<use images/earthandmoonaxisspin3.png>
+Package pdftex.def Info: images/earthandmoonaxisspin3.png used on input line 34
+7.
+(pdftex.def)             Requested size: 187.89912pt x 172.6901pt.
+
+<images/earthandmoonaxisspin4.png, id=222, 808.01875pt x 725.71124pt>
+File: images/earthandmoonaxisspin4.png Graphic file (type png)
+
+<use images/earthandmoonaxisspin4.png>
+Package pdftex.def Info: images/earthandmoonaxisspin4.png used on input line 35
+2.
+(pdftex.def)             Requested size: 187.89912pt x 168.74826pt.
+
+<images/earthandmoonaxisspinabove1.png, id=223, 644.4075pt x 636.3775pt>
+File: images/earthandmoonaxisspinabove1.png Graphic file (type png)
+
+<use images/earthandmoonaxisspinabove1.png>
+Package pdftex.def Info: images/earthandmoonaxisspinabove1.png used on input li
+ne 364.
+(pdftex.def)             Requested size: 187.89912pt x 185.55461pt.
+
+<images/earthandmoonaxisspinabove2.png, id=224, 492.84125pt x 460.72125pt>
+File: images/earthandmoonaxisspinabove2.png Graphic file (type png)
+
+<use images/earthandmoonaxisspinabove2.png>
+Package pdftex.def Info: images/earthandmoonaxisspinabove2.png used on input li
+ne 369.
+(pdftex.def)             Requested size: 187.89912pt x 175.65236pt.
+
+<images/earthandmoonaxisspinabove3.png, id=225, 578.16pt x 573.14125pt>
+File: images/earthandmoonaxisspinabove3.png Graphic file (type png)
+
+<use images/earthandmoonaxisspinabove3.png>
+Package pdftex.def Info: images/earthandmoonaxisspinabove3.png used on input li
+ne 374.
+(pdftex.def)             Requested size: 187.89912pt x 186.26869pt.
+
+<images/earthandmoonaxisspinabove4.png, id=226, 493.845pt x 463.7325pt>
+File: images/earthandmoonaxisspinabove4.png Graphic file (type png)
+
+<use images/earthandmoonaxisspinabove4.png>
+Package pdftex.def Info: images/earthandmoonaxisspinabove4.png used on input li
+ne 379.
+(pdftex.def)             Requested size: 187.89912pt x 176.43953pt.
+ [8 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxis
+spin1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/image
+s/earthandmoonaxisspin2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-S
+ystem/Report/images/earthandmoonaxisspin3.png (PNG copy)> <D:/xampp/htdocs/CS32
+3_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspin4.png (PNG copy)>] [9
+ <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspi
+nabove1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/ima
+ges/earthandmoonaxisspinabove2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth
+-Moon-System/Report/images/earthandmoonaxisspinabove3.png (PNG copy)> <D:/xampp
+/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspinabove4.pn
+g (PNG copy)>] [10] [11] [12]
+[13
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
-[]\OT1/cmr/m/n/10 XAMPP In-stallers and Down-loads for Apache Friends, \OT1/cmr
-/m/it/10 apachefriends\OT1/cmr/m/n/10 , [on-line],
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+[]\OT1/cmr/m/n/12 https://www.nasa.gov/sites/default/files/images/700328main[]2
+0121014[]003615[]flat.jpg
  []
 
 
-Underfull \hbox (badness 1259) in paragraph at lines 347--348
-\OT1/cmr/m/n/10 line], http://tex.stackexchange.com/questions/89574/language-op
-tion-supported-in-listings (Ac-cessed:
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
+[]\OT1/cmr/m/n/12 http://tex.stackexchange.com/questions/89574/language-option-
+supported-in-listings
  []
 
 
 AED: lastpage setting LastPage
-[9
+[14
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 352.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 352.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 488.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 488.
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 352.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 352.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 488.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 488.
 Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 .out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 352.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 488.
  ) 
 Here is how much of TeX's memory you used:
- 9026 strings out of 493921
- 132941 string characters out of 3144875
- 285330 words of memory out of 3000000
- 12159 multiletter control sequences out of 15000+200000
- 12791 words of font info for 50 fonts, out of 3000000 for 9000
+ 9166 strings out of 493921
+ 137040 string characters out of 3144866
+ 284792 words of memory out of 3000000
+ 12270 multiletter control sequences out of 15000+200000
+ 13694 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,11n,43p,1496b,1132s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
-rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program Files
- (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (9 pages, 
-160421 bytes).
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (14 pages,
+ 1914120 bytes).
 PDF statistics:
- 257 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
- 193 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 81 named destinations out of 1000 (max. 500000)
+ 268 words of extra memory for PDF output out of 10000 (max. 10000000)
 

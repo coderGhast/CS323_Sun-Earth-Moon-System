@@ -22,7 +22,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 
 \usepackage{fancyhdr} % Required for custom headers
@@ -216,8 +216,7 @@ var earthOrbitEccentricity = 0.00167 * eccentricityModifier;
 var moonSize = 6; // from -> 0.277 * 21;
 var moonDistanceFromEarth = 40; // from -> 60.3 / 1.5
 var moonAxisRotationSpeed = 1.2; // from -> 2.732 / 2.4;
-// No Longer needed !
-// var moonOrbitRotationSpeed = moonAxisRotationSpeed;
+// var moonOrbitRotationSpeed=moonAxisRotationSpeed; // No Longer needed!
 var moonOrbitEccentricity = 0.00549 * eccentricityModifier;
 var moonAxialTilt = 1.593;
 var moonOrbitalTilt = 5.145;
@@ -238,7 +237,7 @@ Most of the values that parameters for controlling speed, size and the tilts of 
 The Earth and Moon mesh objects have also been added into one single Object3D, earthAndMoon, and then that object has been added to the scene, instead of adding the two individually. Originally, this helped me with orbital rotations, acting on both of the objects using one object, however it is not necessary with my final version of the application. I have kept them as part of the same Object3D though, as this increases the efficiency of the rendering, as they are rendered as one item. While not necessary for such a small simulation, if the application were expanded upon in the future to include many, maybe thousands, of additional planets, this style of structure would be much easier to maintain. It would also help group planets and their moons together, meaning they could be added and removed with their satellites easily.
 
 \subsection{Running the program}
-For demonstation, go to this address, hosted on my university filestore: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/} . For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56 using any of the provided browsers. Chrome and Firefox are recommended. No additional downloading is required. There is also a Credits page any textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}
+For demonstation, go to this address, hosted on my university filestore: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/}. For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56 using any of the provided browsers. Chrome and Firefox are recommended. No additional downloading is required. There is also a Credits page any textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}.
 
 
 %----------------------------------------------------------------------------------------
@@ -247,19 +246,142 @@ For demonstation, go to this address, hosted on my university filestore: \url{ht
 
 \section{Basic Features}
 \subsection{The earth orbits the centre of the Sun}
-It does: Picture. It moves it's position on x and z using this update method and with this distance to the Sun. It moves around a set of pre-computed points. Previously moved with this function (sin/cos thing), but now moves by going through these points step by step (see here). More on this in additional features.
+The Earth has a clear orbit around the centre of the Sun, although it is an elliptical orbit and so looks a little off centre, it is not. If you view the images below, you can see how the orbit is set up around the Sun. This is achieved through pre-computed points on the orbital rotation using Kepler's 2nd Law of planetary motion (more on this in Additional Features section), which generates an elliptical orbit with varying speeds depending on the point of orbit.
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthorbitsun1}
+                \caption{View from above.}
+                \label{fig: The Earth orbiting the Sun}
+       \end{subfigure}
+       %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+         %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthorbitsun2}
+                \caption{View from the side.}
+                \label{fig:The Earth orbiting the Sun}
+       \end{subfigure}
+       \caption{Views of the Earth's Orbit around the centre of the Sun (elliptical), shown by the orbit lines.}\label{fig: The Earth orbitng the centre of the Sun}
+\end{figure}
+
+Originally, the Earth orbited the Sun through updating the x and z coordinates, each animation frame updating the new position of the Earth by shifting it a certain amount, using the distance from the Sun, the speed of rotation the current x and z position and using radians to create the next step on the full anti-clockwise orbit.
 
 \subsection{The moon orbits the centre of the Earth}
-It does: Picture of Earth in multiple places with orbit lines on. See my previous thing about the Earth orbiting around the Sun? Same thing applies, except now we also take into account the Earth's current location. See here!
+The Moon orbits the centre of the Earth in much the same way that the Earth orbits the Sun. The points are pre-computed, yet take into account the Earth's current position too. The orbit is ellipitcal, and as in reality, doesn't sit squarely 'centrally circling' the Earth. More information can be found out about this later in the report.
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/moonorbitearth1}
+                \caption{View from above.}
+                \label{fig: The Moon orbiting the Earth.}
+       \end{subfigure}
+       %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+         %(or a blank line to force the subfigure onto a new line)
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/moonorbitearth2}
+                \caption{View from the side.}
+                \label{fig:The Earth orbiting the Sun}
+       \end{subfigure}
+       \caption{Views of the Moon's Orbit around the centre of the Earth (elliptical), shown by the orbit lines.}\label{fig: The Moon orbitng the centre of the Earth}
+\end{figure}
 
 \subsection{Circular orbits}
-Orbits are complete, but Elliptical, see Additional point for information. When they were circular though, they were done like this: (Sin/Cos thing, moving on position x and y). If I were to do this in matrix transformations, it would look like this - (Make matrix homogeneous from object geometry, multiply that by shift to pivot point, rotate on axis for orbital step, shift back to position) OR (calculate next orbital step with x and y, then shift it to there with matrix). Seems legit.
+When I first built the simulation, the orbits were completely circular, but for a challenge I made them Elliptical, you can see Additional Features for more information. When they were circular though, they were done like this: 
+
+\begin{lstlisting}
+function updateOrbit(objectToUpdate, pivotPosition, orbitDistanceFromPivot, orbitAngleThisStep){
+     objectToUpdate.position.x = pivotPosition.x + (orbitDistanceFromPivot * -Math.cos(orbitAngleThisStep));
+     objectToUpdate.position.z = pivotPosition.z + (orbitDistanceFromPivot * -Math.sin(orbitAngleThisStep));
+ }
+ \end{lstlisting}
+Where objectToUpdate was the Earth or Moon, pivotPosition the centre of the orbit, orbitDistanceFromPivot the distance between the centre of orbit and the object to orbit and the orbitAngleThisStep being the angle of rotation for the next position for the object to move, in radians.
+ 
+If I were to do this in matrix transformations, I would do a similar process to updating the x and z position, but rather than updating them with .x and .z =, I would turn the coordinates into a homogeneous matrix and then multiply a shift on the x matrix and z matrix transformations together, apply that to the homogeneous coordinates, then convert them back to physical coordinates, update the object's vertices with its new position and then update the face and vertex normals with the normal of the transformation matrix. 
+ 
+Doing this is not necessary for the orbital rotations as they are pre-computed. I have, however, done this for axial rotations and this can be seen in the subsection for the Sun, Earth and Moon spinning on their own axes.
 
 \subsection{The Sun, Earth and Moon shown as texture mapped spheres}
-They are. Look at some pictures. The Earth and Moon even have bump maps. The Earth additionally has a specular map! Isn't that cool? textures are from here and credited on my credits page here.
+As shown below, each object has it's own texture mapped to the surface. As an addition to this, the Earth and Moon have bump maps which make it look like their surfaces are not completely flat. The Earth additionally has a specular map, which allows the light from the Phong lighting and shading to reflect off of the reflective water of the Earth but not so much the land masses. The textures for the Earth and Moon come from planetpixel \cite{earthtextures}, while the Sun texture comes from NASA\cite{suntexture}
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthtexture}
+                \caption{Earth texture maps}
+                \label{fig: The Earth texture mapped.}
+       \end{subfigure}
+       %add desired spacing between images, e. g. ~, \quad, \qquad etc.
+         %(or a blank line to force the subfigure onto a new line)
+                 \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/suntexture}
+                \caption{Sun texture map}
+                \label{fig: The Sun texture mapped}
+       \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/moontexture}
+                \caption{Moon texture maps}
+                \label{fig: The Moon texture mapped}
+       \end{subfigure}
+       \caption{The objects of the simulation, texture mapped to look like the planets they represent.}\label{fig: Texture mapped Sun, Earth and Moon.}
+\end{figure}
 
 \subsection{The Sun, Earth and Moon each spinning on their own axes}
 They do, here, look at this picture of the Axis Helper showing that they're spinning on their axes. they do this through matrix transformation of rotation, as can be seen here: We turn Object geometry vertices into homogeneous coordinates (unnecessary for rotation, but for the sake of allowing for future adaptations that may wish to use translate transformations that need the 'w' coordinate too, we do this), multiply by the rotation this step (which is multiplied by the speed of the objects rotation) and then applied back to the Object geometries coordinates. Rotation!
+
+While difficult to show in just images, you can see from the figure below that the Earth spins on it's own axis.
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspin1}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspin2}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+               \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspin3}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+               \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspin4}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+       \caption{Collections of images to present the Earth spinning on its own axis.}\label{fig: The Earth's individual rotation.}
+\end{figure}
+
+To see the Moon's axial rotation, we can best view it from above, such as with the figure below, showing the full axial rotation (in this case in sync with the orbital rotation around the Earth too. This is covered in more detail in Additional Features).
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspinabove1}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspinabove2}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+               \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspinabove3}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+               \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthandmoonaxisspinabove4}
+                \caption{The Earth and Moon spinning on their own axes}
+                \label{fig: The axial spin of the Earth and moon.}
+       \end{subfigure}
+       \caption{Collections of images to present the Moon spinning on its own axis.}\label{fig: The Moon's axial rotation.}
+\end{figure}
 
 \subsection{The sun shown as a self-illuminated sphere}
 Totally is. Look at this picture, have you ever seen something so alike the Sun? Yes, well. Anyway. It's done with a texture, ambient light to show it, two ways of making the Sun 'glow' that help illuminate it, but it is also self-illuminated through the use of the emissive map texture, here, look, some code. Shiny!
@@ -338,13 +460,27 @@ Here is my self-assessment form, including what has been documented, implemented
 %	REFERENCES
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{1}
+\begin{thebibliography}{5}
 
 \bibitem{assignment} H. Holstein and Y. Liu, ``A virtual Sun-Earth-Moon system'', CS32310 Advanced Computer Graphics Assignment Semester 1 2015, October 14 2015
 
-\bibitem{xampp} XAMPP Installers and Downloads for Apache Friends, {\em apachefriends}, [online], https://www.apachefriends.org/index.html (Accessed 11/06/2015)
+\bibitem{xampp} XAMPP Installers and Downloads for Apache Friends, {\em apachefriends}, [online], 
 
-\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online], http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
+https://www.apachefriends.org/index.html (Accessed 11/06/2015)
+
+\bibitem{earthtextures} Planet Texture Map Collection, {\em planetpixelemporium}, [online],
+
+http://planetpixelemporium.com/planets.html (Accessed 11/06/2015)
+
+\bibitem{suntexture} NASA, {\em NASA}, [online], 
+
+https://www.nasa.gov/sites/default/files/images/700328main\_20121014\_003615\_flat.jpg (Accessed 11/06/2015)
+
+\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: 
+
+javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online],
+
+  http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
 
 \end{thebibliography}
 

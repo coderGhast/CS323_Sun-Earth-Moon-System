@@ -5,20 +5,20 @@
 \BOOKMARK [2][-]{section*.6}{Running the program}{section*.3}% 5
 \BOOKMARK [1][-]{section*.7}{Basic Features}{}% 6
 \BOOKMARK [2][-]{section*.8}{The earth orbits the centre of the Sun}{section*.7}% 7
-\BOOKMARK [2][-]{section*.9}{The moon orbits the centre of the Earth}{section*.7}% 8
-\BOOKMARK [2][-]{section*.10}{Circular orbits}{section*.7}% 9
-\BOOKMARK [2][-]{section*.11}{The Sun, Earth and Moon shown as texture mapped spheres}{section*.7}% 10
-\BOOKMARK [2][-]{section*.12}{The Sun, Earth and Moon each spinning on their own axes}{section*.7}% 11
-\BOOKMARK [2][-]{section*.13}{The sun shown as a self-illuminated sphere}{section*.7}% 12
-\BOOKMARK [2][-]{section*.14}{Earth and Moon lit by a single point light source located at the centre of the Sun}{section*.7}% 13
-\BOOKMARK [1][-]{section*.15}{Additional Features}{}% 14
-\BOOKMARK [2][-]{section*.16}{User Interface}{section*.15}% 15
-\BOOKMARK [2][-]{section*.17}{Synchronous orbital and axial rotation of the Moon}{section*.15}% 16
-\BOOKMARK [2][-]{section*.18}{Lighting of the Earth and Moon in Phong shading}{section*.15}% 17
-\BOOKMARK [2][-]{section*.19}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{section*.15}% 18
-\BOOKMARK [2][-]{section*.20}{Constant tilt of the Earth's axis}{section*.15}% 19
-\BOOKMARK [2][-]{section*.21}{Constant tilt of the Moon's orbit}{section*.15}% 20
-\BOOKMARK [2][-]{section*.22}{Elliptical Orbits \046 Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{section*.15}% 21
-\BOOKMARK [2][-]{section*.23}{Eclipse Shadows}{section*.15}% 22
-\BOOKMARK [2][-]{section*.24}{Other features of my choice}{section*.15}% 23
-\BOOKMARK [1][-]{section*.25}{Self Assessment}{}% 24
+\BOOKMARK [2][-]{section*.10}{The moon orbits the centre of the Earth}{section*.7}% 8
+\BOOKMARK [2][-]{section*.12}{Circular orbits}{section*.7}% 9
+\BOOKMARK [2][-]{section*.13}{The Sun, Earth and Moon shown as texture mapped spheres}{section*.7}% 10
+\BOOKMARK [2][-]{section*.15}{The Sun, Earth and Moon each spinning on their own axes}{section*.7}% 11
+\BOOKMARK [2][-]{section*.18}{The sun shown as a self-illuminated sphere}{section*.7}% 12
+\BOOKMARK [2][-]{section*.19}{Earth and Moon lit by a single point light source located at the centre of the Sun}{section*.7}% 13
+\BOOKMARK [1][-]{section*.20}{Additional Features}{}% 14
+\BOOKMARK [2][-]{section*.21}{User Interface}{section*.20}% 15
+\BOOKMARK [2][-]{section*.22}{Synchronous orbital and axial rotation of the Moon}{section*.20}% 16
+\BOOKMARK [2][-]{section*.23}{Lighting of the Earth and Moon in Phong shading}{section*.20}% 17
+\BOOKMARK [2][-]{section*.24}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{section*.20}% 18
+\BOOKMARK [2][-]{section*.25}{Constant tilt of the Earth's axis}{section*.20}% 19
+\BOOKMARK [2][-]{section*.26}{Constant tilt of the Moon's orbit}{section*.20}% 20
+\BOOKMARK [2][-]{section*.27}{Elliptical Orbits \046 Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{section*.20}% 21
+\BOOKMARK [2][-]{section*.28}{Eclipse Shadows}{section*.20}% 22
+\BOOKMARK [2][-]{section*.29}{Other features of my choice}{section*.20}% 23
+\BOOKMARK [1][-]{section*.30}{Self Assessment}{}% 24
