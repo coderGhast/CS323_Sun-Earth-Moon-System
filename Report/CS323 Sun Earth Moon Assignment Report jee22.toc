@@ -1,24 +1,24 @@
-\contentsline {section}{Introduction}{3}
-\contentsline {section}{Simulation}{3}
-\contentsline {subsection}{Parameters}{3}
-\contentsline {subsection}{Structure}{3}
-\contentsline {subsection}{Running the program}{3}
-\contentsline {section}{Basic Features}{3}
-\contentsline {subsection}{The earth orbits the centre of the Sun}{3}
-\contentsline {subsection}{The moon orbits the centre of the Earth}{3}
-\contentsline {subsection}{Circular orbits}{4}
-\contentsline {subsection}{The Sun, Earth and Moon shown as texture mapped spheres}{4}
-\contentsline {subsection}{The Sun, Earth and Moon each spinning on their own axes}{4}
-\contentsline {subsection}{The sun shown as a self-illuminated sphere}{4}
-\contentsline {subsection}{Earth and Moon lit by a single point light source located at the centre of the Sun}{4}
-\contentsline {section}{Additional Features}{4}
-\contentsline {subsection}{User Interface}{4}
-\contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{4}
-\contentsline {subsection}{Lighting of the Earth and Moon in Phong shading}{5}
-\contentsline {subsection}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{5}
-\contentsline {subsection}{Constant tilt of the Earth's axis}{5}
-\contentsline {subsection}{Constant tilt of the Moon's orbit}{5}
-\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{5}
-\contentsline {subsection}{Eclipse Shadows}{6}
-\contentsline {subsection}{Other features of my choice}{6}
-\contentsline {section}{Self Assessment}{7}
+\contentsline {section}{Introduction}{3}{section*.2}
+\contentsline {section}{Simulation}{3}{section*.3}
+\contentsline {subsection}{Parameters}{3}{section*.4}
+\contentsline {subsection}{Structure}{3}{section*.5}
+\contentsline {subsection}{Running the program}{4}{section*.6}
+\contentsline {section}{Basic Features}{4}{section*.7}
+\contentsline {subsection}{The earth orbits the centre of the Sun}{4}{section*.8}
+\contentsline {subsection}{The moon orbits the centre of the Earth}{4}{section*.9}
+\contentsline {subsection}{Circular orbits}{4}{section*.10}
+\contentsline {subsection}{The Sun, Earth and Moon shown as texture mapped spheres}{4}{section*.11}
+\contentsline {subsection}{The Sun, Earth and Moon each spinning on their own axes}{5}{section*.12}
+\contentsline {subsection}{The sun shown as a self-illuminated sphere}{5}{section*.13}
+\contentsline {subsection}{Earth and Moon lit by a single point light source located at the centre of the Sun}{5}{section*.14}
+\contentsline {section}{Additional Features}{5}{section*.15}
+\contentsline {subsection}{User Interface}{5}{section*.16}
+\contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{5}{section*.17}
+\contentsline {subsection}{Lighting of the Earth and Moon in Phong shading}{5}{section*.18}
+\contentsline {subsection}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{6}{section*.19}
+\contentsline {subsection}{Constant tilt of the Earth's axis}{6}{section*.20}
+\contentsline {subsection}{Constant tilt of the Moon's orbit}{6}{section*.21}
+\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{6}{section*.22}
+\contentsline {subsection}{Eclipse Shadows}{6}{section*.23}
+\contentsline {subsection}{Other features of my choice}{6}{section*.24}
+\contentsline {section}{Self Assessment}{8}{section*.25}

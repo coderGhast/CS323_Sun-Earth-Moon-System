@@ -36,7 +36,45 @@
 \usepackage{subcaption}
 \usepackage{amssymb}
 \usepackage{textcomp}
+\usepackage{color}
+\usepackage[hidelinks]{hyperref}
 
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+   numbers=left,
+   numberstyle=\footnotesize,
+   numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+\hypersetup{colorlinks=false}
 
 % Margins
 \topmargin=-0.45in
@@ -153,26 +191,54 @@
 % To have just one problem per page, simply put a \clearpage after each problem
 
 \section{Introduction}
-This assignment tasked me with using WebGL to create and display a simple animated model of the Sun-Earth-Moon system\cite{assignment}.
+This assignment tasked me with using WebGL to create and display a simple animated model of the Sun-Earth-Moon system \cite{assignment}, requesting the basic features of display (three spheres with textures, orbits and rotations). There was also the option to implement additional functionality (lighting and shading, tilted axial and orbital rotations, etc). The model was not requested to be accurate in sizes, distances or times of rotations, although real world values were provided for reference.
 
 %----------------------------------------------------------------------------------------
 %	Basic Features
 %----------------------------------------------------------------------------------------
 \section{Simulation}
 \subsection{Parameters}
-I used arbitary values that made the system look somewhat accurate, without being accurate values. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
+In order to create the simple model, I used some arbitary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
 
-SOME THINGS FROM GLOBAL VALUES
+\begin{lstlisting}
+// Large, so we can actually see something with our model.
+var eccentricityModifier = 50; 
+// For Elliptical orbits/Kepler's 2nd Law. Number of steps for an orbit.
+var orbitSteps = 1000;
+
+var earthSize = 10; // from -> 1 * 10; 
+var earthDistanceFromSun = 156; // from -> 23500 / 150; 
+var earthOrbitRotationSpeed = 0.089; // from -> 365.26 / 4000; 
+var earthAxisRotationSpeed= 4.5; // from -> 9.972 / 2; 
+var earthAxialTilt = 23.44;
+var earthOrbitEccentricity = 0.00167 * eccentricityModifier;
+
+var moonSize = 6; // from -> 0.277 * 21;
+var moonDistanceFromEarth = 40; // from -> 60.3 / 1.5
+var moonAxisRotationSpeed = 1.2; // from -> 2.732 / 2.4;
+// No Longer needed !
+// var moonOrbitRotationSpeed = moonAxisRotationSpeed;
+var moonOrbitEccentricity = 0.00549 * eccentricityModifier;
+var moonAxialTilt = 1.593;
+var moonOrbitalTilt = 5.145;
+
+var sunSize = 20; // from -> 109 / 7;
+var sunAxisRotationSpeed = 0.05; // from -> 0.25 / 4;
+
+var starMapSize = 500;
+\end{lstlisting}
+
+As you can see, the Sun is much smaller than it should be, as are the distances between the Sun, Earth and Moon. I felt these numbers gave a good representation for this model, but should not be used if the model were intended to be an accurate representation of the system.
 
 \subsection{Structure}
-Space objects in a file - Mesh built, update functions for each. UI file with functions of UI there, global variables for easy testing and checking, controller for the main application running and calls to setup and update all features (objects and renderer alike), a lighting file to easily change for testing and using OrbitControls and three.js.
+I have structured my JavaScript code such that there are files for each major component of the model (user interface, Sun-Earth-Moon in one file, Controller, etc) that handles the responsibilty of those components, for initiation and updating on each animation loop. Fror the Sun, Earth and Moon, each is held in their own object, which contains data of their Mesh, a constant reference to their homogeneous coordinates and their update methods.
 
-Objects to represent each object in the simulation (Earth, Sun, Moon objects), that hold the data for their Mesh (which holds Geometry and Material), computable vertices (homogeneous vertices of the object) and the update function for that particular object).
+Most of the values that parameters for controlling speed, size and the tilts of the planets are contained in a single global variable file, for easy access when I was building and testing my simulation. The setup and main rendering loop are in a single Controller file, and this calls to methods in the other files in the order that things should be initialised and updated. This made it easier to ensure the correct ordering of events.
 
-I chose to not have the Earth and Moon as children of a single Object3D. While I could do this, leading to a joint rotation around the Sun and just needing then to calculate the orbit of the Moon, it was unnecessary for my application as the orbits were pre-computed individually and no operations are needing to be performed on both objects at the same time.
+The Earth and Moon mesh objects have also been added into one single Object3D, earthAndMoon, and then that object has been added to the scene, instead of adding the two individually. Originally, this helped me with orbital rotations, acting on both of the objects using one object, however it is not necessary with my final version of the application. I have kept them as part of the same Object3D though, as this increases the efficiency of the rendering, as they are rendered as one item. While not necessary for such a small simulation, if the application were expanded upon in the future to include many, maybe thousands, of additional planets, this style of structure would be much easier to maintain. It would also help group planets and their moons together, meaning they could be added and removed with their satellites easily.
 
 \subsection{Running the program}
-For demonstation, go to this address, hosted on my university filestore: SOME WEB ADDRESS. For building and testing, I ran it locally using xampp (SEE HERE LINK). You should be able to see the application in full working order in both B59 and C56 using any of the provided browsers. Chrome and Firefox are recommended. No additional downloading is required. There is also a Credits page any textures and code used in the application here: CREDITS LINK
+For demonstation, go to this address, hosted on my university filestore: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/} . For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56 using any of the provided browsers. Chrome and Firefox are recommended. No additional downloading is required. There is also a Credits page any textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}
 
 
 %----------------------------------------------------------------------------------------
@@ -276,8 +342,9 @@ Here is my self-assessment form, including what has been documented, implemented
 
 \bibitem{assignment} H. Holstein and Y. Liu, ``A virtual Sun-Earth-Moon system'', CS32310 Advanced Computer Graphics Assignment Semester 1 2015, October 14 2015
 
-%\bibitem{ctime} ctime - cppreference, {\em cppreference},[online], http://en.cppreference.com/w/c/chrono/ctime (Accessed:10/12/2013)
+\bibitem{xampp} XAMPP Installers and Downloads for Apache Friends, {\em apachefriends}, [online], https://www.apachefriends.org/index.html (Accessed 11/06/2015)
 
+\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online], http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
 
 \end{thebibliography}
 
