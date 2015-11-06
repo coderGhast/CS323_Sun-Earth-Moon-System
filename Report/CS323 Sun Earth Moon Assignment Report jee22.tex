@@ -290,36 +290,6 @@ To present the Sun as a self-illuminated sphere, I first used an emissive map, w
 All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. 
 
 In order to light the Earth and Moon with the Spot Light, I have the light starting at the centre of the Sun (0,0,0) and added as part of the SunMesh for rendering efficiency, and its target set as the position of the Earth, tracking it every animation frame to give the illusion of a single light source at the centre of the Sun.
-\begin{lstlisting}
-sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
-  sunLight.castShadow = true;
-  sunLight.shadowBias = -0.0002;
-  sunLight.shadowDarkness = 0.5;
-  sunLight.shadowMapWidth = 1024;
-  sunLight.shadowMapHeight = 1024;
-
-  sunLight.shadowCameraNear = 20;
-  sunLight.shadowCameraFar = 200;
-  sunLight.shadowCameraFov = 300;
-  // awesome for debugging - Shows the Shadow Camera lines
-  // scene.add(new THREE.CameraHelper( sunLight.shadow.camera ));
-
-  sunLight.target = earthMesh;    
-  sunLight.position.set(0, 0, 0);
-  sunMesh.add(sunLight);
-\end{lstlisting}
-
-\begin{figure}[H]
-        \centering
-       
-                \includegraphics[width=0.5\textwidth]{images/shadowcamera}
-                \caption{The Sun light Shadow Camera, showing where shadow casting will be computed.}
-                \label{fig: The Shadow Camera.}
-      
-\end{figure}
-
-You can see the ShadowCamera of the Spot Light inthe figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchement area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
-
 
 %----------------------------------------------------------------------------------------
 %	Additional Features
@@ -349,6 +319,29 @@ For both of these additonal points, they tie together. Through calculating one, 
 
 \subsection{Eclipse Shadows}
 Through the use of a SpotLight and its shadow camera, turning the ShadowMap of the renderer on, we get this effect: Here, look at some screenshots of it happening. Very easy to achieve. However, previously encountered issues with double shadows, with a WebGL issue that I couldn't fix in my own code. Struggled for a long time with it (others did too, see this link and this link), until an update to three.js fixed it. Relief at fixing it, also frustration at it being something I thought was in my code but turned out not to be. Much time wasted. But it works now, and it's super pretty how it does it with the spot light. Here, you can see my testing with the ShadowCamera, how the shadows are presented within the camera, but not outside of it. COOL!
+\begin{lstlisting}
+sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
+sunLight.castShadow = true;
+sunLight.shadowCameraNear = 20;
+sunLight.shadowCameraFar = 190;
+sunLight.shadowCameraFov = 45;
+// awesome for debugging - Shows the Shadow Camera lines
+//scene.add(new THREE.CameraHelper( sunLight.shadow.camera ));
+sunLight.target = earthMesh;    
+sunLight.position.set(0, 0, 0);
+sunMesh.add(sunLight);
+\end{lstlisting}
+
+\begin{figure}[H]
+        \centering
+       
+                \includegraphics[width=0.5\textwidth]{images/shadowcamera}
+                \caption{The Sun light Shadow Camera, showing where shadow casting will be computed.}
+                \label{fig: The Shadow Camera.}
+      
+\end{figure}
+
+You can see the ShadowCamera of the Spot Light in the figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
 
 \subsection{Other features of my choice}
 Mainly matrix transformations. Previously mentioned them, but I want to express that I wanted to fit them into my assignment. Before I pre-computed the orbits of the Earth and Moon, I was also working on their orbits with matrix transformations, but it became unnecessary once I changed how the orbit was calculated. I still stuck with using matrix transformations for axial rotations, however (where appropriate) and spent some time learning about how to do this. One problem I encountered when working with them was my lighting would not update during an Object's orbit around the light source. This was due to me updating the Geometries vertices but not the face and vertex normals. Once I started updating the Face and Vertex normals (like in three.js own method) see this code here: CODE, it worked as expected. I did test my transformations to check they gave the expected results too (4x4 matrix calculation for each matrix with result HERE PLZ). Many weird attempts with matrix transformations: Working directily with vertices, or working with the Matrix of the object, or working with the Mesh - Flying away Earth, Earth eventually shrinking at the middle (becoming a tube), irregular orbits, etc - Most overcome through looking at the matrix multiply method where I'd inccorectly done the multiplication ordering, or not properly applied the w coordinate on shift translations for the orbital rotations. Happy with the results though.

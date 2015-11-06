@@ -11,14 +11,14 @@
 \contentsline {subsection}{The Sun, Earth and Moon each spinning on their own axes}{5}{section*.12}
 \contentsline {subsection}{The sun shown as a self-illuminated sphere}{6}{section*.13}
 \contentsline {subsection}{Earth and Moon lit by a single point light source located at the centre of the Sun}{7}{section*.15}
-\contentsline {section}{Additional Features}{8}{section*.17}
-\contentsline {subsection}{User Interface}{8}{section*.18}
-\contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{8}{section*.19}
-\contentsline {subsection}{Lighting of the Earth and Moon in Phong shading}{8}{section*.20}
-\contentsline {subsection}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{8}{section*.21}
-\contentsline {subsection}{Constant tilt of the Earth's axis}{9}{section*.22}
-\contentsline {subsection}{Constant tilt of the Moon's orbit}{9}{section*.23}
-\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{9}{section*.24}
-\contentsline {subsection}{Eclipse Shadows}{9}{section*.25}
+\contentsline {section}{Additional Features}{7}{section*.16}
+\contentsline {subsection}{User Interface}{7}{section*.17}
+\contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{7}{section*.18}
+\contentsline {subsection}{Lighting of the Earth and Moon in Phong shading}{7}{section*.19}
+\contentsline {subsection}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{8}{section*.20}
+\contentsline {subsection}{Constant tilt of the Earth's axis}{8}{section*.21}
+\contentsline {subsection}{Constant tilt of the Moon's orbit}{8}{section*.22}
+\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{8}{section*.23}
+\contentsline {subsection}{Eclipse Shadows}{9}{section*.24}
 \contentsline {subsection}{Other features of my choice}{10}{section*.26}
 \contentsline {section}{Self Assessment}{11}{section*.27}
