@@ -559,8 +559,6 @@ One option I could take is to continue computing the axial rotation every animat
 	 \caption{You can see the blue axial line, always pointing out from the same face, is always pointing at the Earth.}
 \end{figure}
 
-
-
 \subsection{Lighting of the Earth and Moon in Phong shading \& Non-illuminated parts of the Earth and Moon to be shown in shadow}
 The Materials of the Earth and Moon are made from PhongMaterial, and so Phong lighting and shading is applied through this. Through using Phong shading I was able to better represent how the system looks in reality, with the parts of the Earth and Moon not in the light shown in shadow, and those in the light being brighter.
 
@@ -797,11 +795,9 @@ sunMesh.add(sunLight);
 
 \begin{figure}[H]
         \centering
-       
                 \includegraphics[width=0.5\textwidth]{images/shadowcamera}
                 \caption{The Sun light Shadow Camera, showing where shadow casting will be computed.}
                 \label{fig: The Shadow Camera.}
-      
 \end{figure}
 
 You can see the ShadowCamera of the SpotLight in the figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
@@ -955,35 +951,37 @@ While this may not be the most efficient way, it was how I found I was able to e
 
 I am aware that there are better methods of applying matrices provided by three.js, and that for just rotation matrices I could also remove the step of converting to and from homogeneous coordinates. However, for the sake of the simulation, the potential for expansion in the future and my own challenge, I have kept the process this way.
 
- As a final additional step, I added a star map to surround the simulation, to help the user navigate around the scene easier and give a tiny bit more visual interest and realism. CODE AND IMAGE
+As a final additional step, I added a star map to surround the simulation, to help the user navigate around the scene easier and give a tiny bit more visual interest and realism. The inspiration for this came from `learningthreejs'\cite{learningthreejs}. The star map texture is from Paul Bourke\cite{startexture}.
 
-%--------------------------------------------
+\begin{figure}[H]
+        \centering
+                \includegraphics[width=0.5\textwidth]{images/stars}
+                \caption{A portion of the star texture map.}
+                \label{fig: Star map.} 
+\end{figure}
 
-%\begin{figure}[H]
-%        \centering
-%        \begin{subfigure}[b]{0.5\textwidth}
-%                \includegraphics[width=\textwidth]{images/compile1}
-%                \caption{Cleaning and building}
-%                \label{fig:Compile1}
-%       \end{subfigure}%
-%       ~ %add desired spacing between images, e. g. ~, \quad, \qquad etc.
-%         %(or a blank line to force the subfigure onto a new line)
-%        \begin{subfigure}[b]{0.5\textwidth}
-%                \includegraphics[width=\textwidth]{images/compile2}
-%                \caption{Finishing compiling}
-%                \label{fig:Compile2}
- %       \end{subfigure}
- %       \caption{Compilation of the program and the output from within the NetBeans IDE on Linux using the 'Clean and Build' function}\label{fig:Compiling the code}
-%\end{figure}
-
-
+\begin{lstlisting}
+// Simple sphere that surrounds the simulation, to give the appearance that all takes place within the universe and the camera can move around it.
+function buildStarMapMesh(){
+  var starGeometry  = new THREE.SphereGeometry(starMapSize, 32, 32);
+  var starTexture = textures.starMap;
+  starTexture.wrapS = starTexture.wrapT = THREE.RepeatWrapping; 
+  var starMaterial = new THREE.MeshBasicMaterial( {map: starTexture } );
+  starMaterial.side = THREE.BackSide;
+  var starMesh = new THREE.Mesh(starGeometry, starMaterial);
+  return starMesh;
+}
+\end{lstlisting}
 %----------------------------------------------------------------------------------------
 %	SELF ASSESSMENT
 %----------------------------------------------------------------------------------------
-\clearpage
 
 \section{Self Assessment}
-Here is my self-assessment form, including what has been documented, implemented, whether it can be run, if I referenced all my sources and what grade I would give myself out of 50 (and why that mark in text underneath this neat little table, kthnx).
+\begin{tabular}{ | l | c | r |}
+\hline	
+ 1 & 2 & 3 \\
+ \hline	
+\end{tabular}
 
 
 %----------------------------------------------------------------------------------------
@@ -997,33 +995,42 @@ Here is my self-assessment form, including what has been documented, implemented
 
 \bibitem{assignment} H. Holstein and Y. Liu, ``A virtual Sun-Earth-Moon system'', CS32310 Advanced Computer Graphics Assignment Semester 1 2015, October 14 2015
 
-\bibitem{xampp} XAMPP Installers and Downloads for Apache Friends, {\em apachefriends}, [online], 
-https://www.apachefriends.org/index.html (Accessed 11/06/2015)
+\bibitem{xampp} ApacheFriends.org, {\em `XAMPP Installers and Downloads for Apache Friends' }, [online], 
+Available: https://www.apachefriends.org/index.html [Accessed 11/06/2015]
 
-\bibitem{earthtextures} Planet Texture Map Collection, {\em planetpixelemporium}, [online],
-http://planetpixelemporium.com/planets.html (Accessed 11/06/2015)
+\bibitem{earthtextures} PlanetPixelEmporium.com, {\em `Planet Texture Map Collection'}, [online],
+Available: http://planetpixelemporium.com/planets.html [Accessed 11/06/2015]
 
-\bibitem{suntexture} NASA, {\em NASA}, [online], 
-https://www.nasa.gov/sites/default/files/images/700328main\_20121014\_003615\_flat.jpg (Accessed 11/06/2015)
+\bibitem{suntexture} NASA.gov, {\em `NASA'}, [online], Available: 
 
-\bibitem{sunglow} Computational Contemplations: Using Shaders and Selective Glow Effects in Three.js, {\em stemkoski}, [online],
-http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html (Accessed 11/06/2015)
+https://www.nasa.gov/sites/default/files/images/700328main\_20121014\_003615\_flat.jpg [Accessed 11/06/2015]
 
-\bibitem{datgui} three.js/dat.gui.min.js at master . mrdoob/three.js, {\em github}, [online],
-https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/2015)
+\bibitem{sunglow} Stemkoski.Blogspot.co.uk, {\em `Computational Contemplations: Using Shaders and Selective Glow Effects in Three.js'}, [online],
+Available: http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html [Accessed 11/06/2015]
 
-\bibitem{orbitcontrols} three.js/OrbitControls.js at master . mrdoob/three.js {\em github}, [online],
-https://github.com/mrdoob/three.js/blob/master/examples/js/controls/OrbitControls.js (Accessed 11/06/2015)
+\bibitem{datgui}, GitHub.com {\em `three.js/dat.gui.min.js at master . mrdoob/three.js'}, [online],
+Available: https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js [Accessed 11/06/2015]
 
-\bibitem{shadow1} webgl - THREE.JS Shadow on opposite side of light - Stack Overflow, {\em stackoverflow}, [online],
-http://stackoverflow.com/a/12602143 (Accessed 11/07/2015)
+\bibitem{orbitcontrols} GitHub.com {\em `three.js/OrbitControls.js at master . mrdoob/three.js'}, [online],
+Available: https://github.com/mrdoob/three.js/blob/master/examples/js/controls/OrbitControls.js [Accessed 11/06/2015]
 
-\bibitem{shadow2} Three.js DoubleSided material doesn't cast shadow on both sides of planar parametric geometry, {\em stackoverflow}, [online],
-http://stackoverflow.com/a/20473174 (Accessed 11/07/2015)
+\bibitem{shadow1} StackOverflow.com, {\em `webgl - THREE.JS Shadow on opposite side of light - Stack Overflow'}, [online],
+Available: http://stackoverflow.com/a/12602143 [Accessed 11/07/2015]
+
+\bibitem{shadow2} StackOverflow.com, {\em `Three.js DoubleSided material doesn't cast shadow on both sides of planar parametric geometry'}, [online],
+Available: http://stackoverflow.com/a/20473174 [Accessed 11/07/2015]
+
+\bibitem{learningthreejs} LearningThreeJS.com, {\em `How To Make The Earth In WebGL? - Learning Three.js'}, [online],
+Available: http://learningthreejs.com/blog/2013/09/16/how-to-make-the-earth-in-webgl/ [Accessed 11/07/2015]
+
+\bibitem{startexture} PaulBourke.net, {\em `Representing star fields'}, [online],
+Available: http://paulbourke.net/miscellaneous/starfield/ [Accessed 11/07/2015]
 
 \bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: 
-javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online],
-http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
+
+TeX.StackExchange.com, {\em `javascript - language option supported in listings - TeX - LaTeX Stack Exchange'}, [online],
+
+Available: http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings [Accessed: 11/06/2015]
 
 \end{thebibliography}
 

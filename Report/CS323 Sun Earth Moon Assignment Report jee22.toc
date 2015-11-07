@@ -20,4 +20,4 @@
 \contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{18}{section*.36}
 \contentsline {subsection}{Eclipse Shadows}{21}{section*.38}
 \contentsline {subsection}{Other features of my choice}{23}{section*.41}
-\contentsline {section}{Self Assessment}{27}{section*.42}
+\contentsline {section}{Self Assessment}{27}{section*.43}
