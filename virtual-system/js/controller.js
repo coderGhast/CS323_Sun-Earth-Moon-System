@@ -12,11 +12,11 @@ function update() {
 
 function renderScene() {
   requestAnimationFrame(renderScene); 
+  render();
+  controls.update();
   if(!simulationPaused){
       update(); 
   }
-  controls.update();
-  render();
 }
 
 function setup() {

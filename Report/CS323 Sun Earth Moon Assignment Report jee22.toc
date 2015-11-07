@@ -9,16 +9,16 @@
 \contentsline {subsection}{Circular orbits}{6}{section*.12}
 \contentsline {subsection}{The Sun, Earth and Moon shown as texture mapped spheres}{7}{section*.13}
 \contentsline {subsection}{The Sun, Earth and Moon each spinning on their own axes}{8}{section*.15}
-\contentsline {subsection}{The sun shown as a self-illuminated sphere}{9}{section*.18}
-\contentsline {subsection}{Earth and Moon lit by a single point light source located at the centre of the Sun}{10}{section*.20}
-\contentsline {section}{Additional Features}{11}{section*.21}
-\contentsline {subsection}{User Interface}{11}{section*.22}
-\contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{11}{section*.24}
-\contentsline {subsection}{Lighting of the Earth and Moon in Phong shading}{12}{section*.25}
-\contentsline {subsection}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{12}{section*.26}
-\contentsline {subsection}{Constant tilt of the Earth's axis}{12}{section*.27}
-\contentsline {subsection}{Constant tilt of the Moon's orbit}{12}{section*.28}
-\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{12}{section*.29}
-\contentsline {subsection}{Eclipse Shadows}{13}{section*.30}
-\contentsline {subsection}{Other features of my choice}{14}{section*.32}
-\contentsline {section}{Self Assessment}{16}{section*.33}
+\contentsline {subsection}{The sun shown as a self-illuminated sphere}{10}{section*.19}
+\contentsline {subsection}{Earth and Moon lit by a single point light source located at the centre of the Sun}{11}{section*.21}
+\contentsline {section}{Additional Features}{12}{section*.22}
+\contentsline {subsection}{User Interface}{12}{section*.23}
+\contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{12}{section*.25}
+\contentsline {subsection}{Lighting of the Earth and Moon in Phong shading}{13}{section*.26}
+\contentsline {subsection}{Non-illuminated parts of the Earth and Moon to be shown in shadow}{13}{section*.27}
+\contentsline {subsection}{Constant tilt of the Earth's axis}{13}{section*.28}
+\contentsline {subsection}{Constant tilt of the Moon's orbit}{13}{section*.29}
+\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{13}{section*.30}
+\contentsline {subsection}{Eclipse Shadows}{14}{section*.31}
+\contentsline {subsection}{Other features of my choice}{15}{section*.33}
+\contentsline {section}{Self Assessment}{17}{section*.34}

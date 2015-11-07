@@ -117,8 +117,8 @@ function buildSunGlow(){
   {
       uniforms: 
     { 
-      "c":   { type: "f", value: 0.1 },
-      "p":   { type: "f", value: 2 },
+      "c":   { type: "f", value: 1 },
+      "p":   { type: "f", value: 0.8 },
       glowColor: { type: "c", value: new THREE.Color(0xeb7d30) },
       viewVector: { type: "v3", value: camera.position }
     },

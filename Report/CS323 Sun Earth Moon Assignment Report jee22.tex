@@ -328,7 +328,11 @@ As shown below, each object has it's own texture mapped to the surface. As an ad
 \end{figure}
 
 \subsection{The Sun, Earth and Moon each spinning on their own axes}
-They do, here, look at this picture of the Axis Helper showing that they're spinning on their axes. they do this through matrix transformation of rotation, as can be seen here: We turn Object geometry vertices into homogeneous coordinates (unnecessary for rotation, but for the sake of allowing for future adaptations that may wish to use translate transformations that need the 'w' coordinate too, we do this), multiply by the rotation this step (which is multiplied by the speed of the objects rotation) and then applied back to the Object geometries coordinates. Rotation!
+The Sun, Earth and Moon each spin on their own axis by a rotation on the Y axis. In my first version of the application, this was done through updating the object.rotation.y in increments, based on the objets rotation speed, every animation frame.
+\begin{lstlisting}
+earthMesh.rotation.y += controlValues.earthAxisRotationSpeed * (Math.PI / 180); // rotate Earth on axis
+\end{lstlisting}
+This ensured that each planet would rotate (anti-clockwise) based on the global variables provided (combined with the speed of animation via controlValues) and not affect the position or the axial tilt. Later, I changed the process of updating the rotation to using Matrix transformations, and this is covered in Additional Features.
 
 While difficult to show in just images, you can see from the figure below that the Earth spins on it's own axis.
 \begin{figure}[H]
@@ -381,6 +385,28 @@ To see the Moon's axial rotation, we can best view it from above, such as with t
                 \label{fig: The axial spin of the Earth and moon.}
        \end{subfigure}
        \caption{Collections of images to present the Moon spinning on its own axis.}\label{fig: The Moon's axial rotation.}
+\end{figure}
+
+The Sun also spins on its own axis, as seen below.
+
+\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/sunaxialrotation1}
+                \caption{The Sun spinning on its own axis 1}
+                \label{fig: The axial spin of the Sun.}
+       \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/sunaxialrotation2}
+                \caption{The Sun spinning on its own axis 2}
+                \label{fig: The axial spin of the Sun.}
+       \end{subfigure}
+               \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/sunaxialrotation3}
+                \caption{The Sun spinning on its own axis 3}
+                \label{fig: The axial spin of the Sun.}
+       \end{subfigure}
+       \caption{Collections of images to present the Sun spinning on its own axis.}\label{fig: The Sun's axial rotation.}
 \end{figure}
 
 \subsection{The sun shown as a self-illuminated sphere}
@@ -481,6 +507,8 @@ You can see the ShadowCamera of the Spot Light in the figure above, as displayed
 
 \subsection{Other features of my choice}
 Mainly matrix transformations. Previously mentioned them, but I want to express that I wanted to fit them into my assignment. Before I pre-computed the orbits of the Earth and Moon, I was also working on their orbits with matrix transformations, but it became unnecessary once I changed how the orbit was calculated. I still stuck with using matrix transformations for axial rotations, however (where appropriate) and spent some time learning about how to do this. One problem I encountered when working with them was my lighting would not update during an Object's orbit around the light source. This was due to me updating the Geometries vertices but not the face and vertex normals. Once I started updating the Face and Vertex normals (like in three.js own method) see this code here: CODE, it worked as expected. I did test my transformations to check they gave the expected results too (4x4 matrix calculation for each matrix with result HERE PLZ). Many weird attempts with matrix transformations: Working directily with vertices, or working with the Matrix of the object, or working with the Mesh - Flying away Earth, Earth eventually shrinking at the middle (becoming a tube), irregular orbits, etc - Most overcome through looking at the matrix multiply method where I'd inccorectly done the multiplication ordering, or not properly applied the w coordinate on shift translations for the orbital rotations. Happy with the results though.
+
+We turn Object geometry vertices into homogeneous coordinates (unnecessary for rotation, but for the sake of allowing for future adaptations that may wish to use translate transformations that need the 'w' coordinate too, we do this), multiply by the rotation this step (which is multiplied by the speed of the objects rotation) and then applied back to the Object geometries coordinates. Rotation!
 
 Sun glow: Just wanted it look cool. While not my own implementation, it was something I felt gave the simulation a little more interest. Code can be found here: SOME CITE. Also cool star map because it looks a little more `real'. Idea for this came from here: CITE LINK.
 
