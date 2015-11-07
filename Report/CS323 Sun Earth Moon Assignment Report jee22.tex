@@ -561,7 +561,7 @@ One option I could take is to continue computing the axial rotation every animat
 
 
 \subsection{Lighting of the Earth and Moon in Phong shading \& Non-illuminated parts of the Earth and Moon to be shown in shadow}
-The Materials of the Earth and Moon are made from PhongMaterial, and so Phong lighting and shading is applied through this. Through using Phong shading I was able to better represent how the system looks in reality, with the parts of the Earth and Moon not in the light shown in shadow, and those in the light being brighter. In particular, where I have used a specular map for the Earth's ocean, you can see the shiny light reflection. During my testing, I changed the value of the shininess of the Earth to see how it would look, which can be seen below.
+The Materials of the Earth and Moon are made from PhongMaterial, and so Phong lighting and shading is applied through this. Through using Phong shading I was able to better represent how the system looks in reality, with the parts of the Earth and Moon not in the light shown in shadow, and those in the light being brighter.
 
  \begin{figure}[H]
         \centering
@@ -578,7 +578,39 @@ The Materials of the Earth and Moon are made from PhongMaterial, and so Phong li
 	 \caption{The effect of light on the PhongMaterial causing phong shading.}
 \end{figure}
 
-As an effect of using a SpotLight and Phong Material, the sides facing away from the Sun are non-illuminated, and so shown in shadow, no matter where the objects are in relation to the Sun (and so the light), the opposite side is in shadow. There is still Ambient Light to display some detail of the shadow sections, but otherwise they are shown to be dark.
+In particular, where I have used a specular map for the Earth's ocean, you can see the shiny light reflection. During my testing, I changed the value of the shininess of the Earth to see how it would look, which can be seen below.
+
+ \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/specular1}
+                \caption{How the specular light is set on my simulation.}
+                \label{fig:Specular 1.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/specular2}
+                \caption{With no shininess.}
+                \label{fig:Specular 2.}
+	 \end{subfigure}
+	         \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/specular3}
+                \caption{High shininess.}
+                \label{fig:Specular 3.}
+	 \end{subfigure}
+	         \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/specular4}
+                \caption{Maximum shininess.}
+                \label{fig:Specular 4.}
+	 \end{subfigure}
+	         \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/specular5}
+                \caption{Showing the landmasses do no reflect the light as much.}
+                \label{fig:Specular 5.}
+	 \end{subfigure}
+	 \caption{Testing what happens when the shininess is turned up on the Phong material with a specular map.}
+\end{figure}
+
+As an effect of using a SpotLight and Phong Material, the sides facing away from the Sun are non-illuminated, and so shown in shadow, no matter where the objects are in relation to the Sun (and so the light), the opposite side is in shadow. There is still Ambient Light to display some detail of the shadow sections, but otherwise they are shown to be dark. This happens automatically when using any light that has a direction (Spot, Directional, Point, but not Ambient) and Phong (or Lambert) material.
 
  \begin{figure}[H]
         \centering
