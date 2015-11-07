@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 17:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 17:41
 entering extended mode
 **CS323*Sun*Earth*Moon*Assignment*Report*jee22.tex
 
@@ -642,77 +642,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `colorlinks' set `false' on input line 77.
 \c@homeworkProblemCounter=\count110
 
-("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
-nment Report jee22.aux"
-
-LaTeX Warning: Label `fig:The Earth orbiting the Sun' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:The Earth orbiting the Sun' multiply defined.
-
-
-LaTeX Warning: Label `fig: The axial spin of the Moon.' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: The axial spin of the Moon.' multiply defined.
-
-
-LaTeX Warning: Label `fig: The axial spin of the Moon.' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: The axial spin of the Moon.' multiply defined.
-
-
-LaTeX Warning: Label `fig: The axial spin of the Moon.' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: The axial spin of the Moon.' multiply defined.
-
-
-LaTeX Warning: Label `fig: The axial spin of the Sun.' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: The axial spin of the Sun.' multiply defined.
-
-
-LaTeX Warning: Label `fig: The axial spin of the Sun.' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: The axial spin of the Sun.' multiply defined.
-
-
-LaTeX Warning: Label `fig:Self-illuminating Sun with emissive map.' multiply de
-fined.
-
-
-LaTeX Warning: Label `sub@fig:Self-illuminating Sun with emissive map.' multipl
-y defined.
-
-
-LaTeX Warning: Label `fig:Self-illuminating Sun with emissive map.' multiply de
-fined.
-
-
-LaTeX Warning: Label `sub@fig:Self-illuminating Sun with emissive map.' multipl
-y defined.
-
-
-LaTeX Warning: Label `fig: Synchronus axial and orbital rotation of the Moon.' 
-multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: Synchronus axial and orbital rotation of the Moo
-n.' multiply defined.
-
-
-LaTeX Warning: Label `fig: Synchronus axial and orbital rotation of the Moon.' 
-multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: Synchronus axial and orbital rotation of the Moo
-n.' multiply defined.
-
-)
+No file CS323*Sun*Earth*Moon*Assignment*Report*jee22.aux.
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
 LaTeX Font Info:    ... okay on input line 173.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 173.
@@ -728,7 +658,7 @@ LaTeX Font Info:    ... okay on input line 173.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 173.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 173.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 173.
@@ -775,11 +705,6 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 173.
 LaTeX Info: Redefining \pageref on input line 173.
 LaTeX Info: Redefining \nameref on input line 173.
-
-("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
-nment Report jee22.out")
-("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
-nment Report jee22.out")
 \@outlinefile=\write3
 LaTeX Font Info:    Try loading font information for U+msa on input line 176.
 
@@ -793,8 +718,6 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/Narctiss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
-nment Report jee22.toc")
 \tf@toc=\write4
 
 
@@ -803,74 +726,107 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
+
+LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 185.
+
 [2]
+
+LaTeX Warning: Citation `assignment' on page 3 undefined on input line 194.
+
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 205.
- [3] <images/scales.png, id=168, 1170.3725pt x 624.3325pt>
+
+LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 230.
+
+[3] <images/scales.png, id=49, 1170.3725pt x 624.3325pt>
 File: images/scales.png Graphic file (type png)
 
 <use images/scales.png>
 Package pdftex.def Info: images/scales.png used on input line 235.
 (pdftex.def)             Requested size: 234.87749pt x 125.29298pt.
- [4 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/scales.png (PNG 
-copy)>]
-<images/earthorbitsun1.png, id=181, 665.48625pt x 575.14874pt>
+
+
+LaTeX Warning: Citation `xampp' on page 4 undefined on input line 249.
+
+
+LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 250.
+
+[4 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/scales.png (PNG c
+opy)>] <images/earthorbitsun1.png, id=61, 665.48625pt x 575.14874pt>
 File: images/earthorbitsun1.png Graphic file (type png)
 
 <use images/earthorbitsun1.png>
 Package pdftex.def Info: images/earthorbitsun1.png used on input line 263.
 (pdftex.def)             Requested size: 187.89912pt x 162.39206pt.
 
-<images/earthorbitsun2.png, id=182, 708.6475pt x 551.05875pt>
+<images/earthorbitsun2.png, id=62, 708.6475pt x 551.05875pt>
 File: images/earthorbitsun2.png Graphic file (type png)
 
 <use images/earthorbitsun2.png>
 Package pdftex.def Info: images/earthorbitsun2.png used on input line 270.
 (pdftex.def)             Requested size: 187.89912pt x 146.11395pt.
 
-<images/moonorbitearth1.png, id=183, 511.9125pt x 502.87875pt>
+<images/moonorbitearth1.png, id=63, 511.9125pt x 502.87875pt>
 File: images/moonorbitearth1.png Graphic file (type png)
 
 <use images/moonorbitearth1.png>
 Package pdftex.def Info: images/moonorbitearth1.png used on input line 285.
 (pdftex.def)             Requested size: 187.89912pt x 184.58127pt.
 
-<images/moonorbitearth2.png, id=184, 687.56876pt x 477.785pt>
+<images/moonorbitearth2.png, id=64, 687.56876pt x 477.785pt>
 File: images/moonorbitearth2.png Graphic file (type png)
 
 <use images/moonorbitearth2.png>
 Package pdftex.def Info: images/moonorbitearth2.png used on input line 292.
 (pdftex.def)             Requested size: 187.89912pt x 130.56381pt.
- [5 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthorbitsun1.p
-ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earth
-orbitsun2.png (PNG copy)>] [6 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
-rt/images/moonorbitearth1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon
--System/Report/images/moonorbitearth2.png (PNG copy)>] <images/earthtexture.png
-, id=204, 767.86874pt x 721.69624pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 298.
+
+[5 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthorbitsun1.pn
+g (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eartho
+rbitsun2.png (PNG copy)>]
+
+LaTeX Warning: Citation `earthtextures' on page 6 undefined on input line 315.
+
+
+LaTeX Warning: Citation `suntexture' on page 6 undefined on input line 315.
+
+
+LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 316.
+
+[6 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moonorbitearth1.p
+ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moono
+rbitearth2.png (PNG copy)>]
+<images/earthtexture.png, id=84, 767.86874pt x 721.69624pt>
 File: images/earthtexture.png Graphic file (type png)
 
 <use images/earthtexture.png>
 Package pdftex.def Info: images/earthtexture.png used on input line 320.
 (pdftex.def)             Requested size: 187.89912pt x 176.59137pt.
 
-<images/suntexture.png, id=205, 565.11125pt x 559.08875pt>
+<images/suntexture.png, id=85, 565.11125pt x 559.08875pt>
 File: images/suntexture.png Graphic file (type png)
 
 <use images/suntexture.png>
 Package pdftex.def Info: images/suntexture.png used on input line 327.
 (pdftex.def)             Requested size: 187.89912pt x 185.8904pt.
 
-<images/moontexture.png, id=206, 764.8575pt x 805.0075pt>
+<images/moontexture.png, id=86, 764.8575pt x 805.0075pt>
 File: images/moontexture.png Graphic file (type png)
 
 <use images/moontexture.png>
 Package pdftex.def Info: images/moontexture.png used on input line 332.
 (pdftex.def)             Requested size: 187.89912pt x 197.7629pt.
- [7 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtexture.png
- (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/suntext
-ure.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/
-moontexture.png (PNG copy)>]
-<images/earthandmoonaxisspin1.png, id=216, 859.21pt x 720.6925pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 341.
+
+[7 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtexture.png 
+(PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/suntextu
+re.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/m
+oontexture.png (PNG copy)>]
+<images/earthandmoonaxisspin1.png, id=94, 859.21pt x 720.6925pt>
 File: images/earthandmoonaxisspin1.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin1.png>
@@ -878,7 +834,7 @@ Package pdftex.def Info: images/earthandmoonaxisspin1.png used on input line 35
 0.
 (pdftex.def)             Requested size: 187.89912pt x 157.6071pt.
 
-<images/earthandmoonaxisspin2.png, id=217, 932.48375pt x 701.62125pt>
+<images/earthandmoonaxisspin2.png, id=95, 932.48375pt x 701.62125pt>
 File: images/earthandmoonaxisspin2.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin2.png>
@@ -886,7 +842,7 @@ Package pdftex.def Info: images/earthandmoonaxisspin2.png used on input line 35
 5.
 (pdftex.def)             Requested size: 187.89912pt x 141.37093pt.
 
-<images/earthandmoonaxisspin3.png, id=218, 806.01125pt x 740.7675pt>
+<images/earthandmoonaxisspin3.png, id=96, 806.01125pt x 740.7675pt>
 File: images/earthandmoonaxisspin3.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin3.png>
@@ -894,19 +850,23 @@ Package pdftex.def Info: images/earthandmoonaxisspin3.png used on input line 36
 0.
 (pdftex.def)             Requested size: 187.89912pt x 172.6901pt.
 
-<images/earthandmoonaxisspin4.png, id=219, 808.01875pt x 725.71124pt>
+<images/earthandmoonaxisspin4.png, id=97, 808.01875pt x 725.71124pt>
 File: images/earthandmoonaxisspin4.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin4.png>
 Package pdftex.def Info: images/earthandmoonaxisspin4.png used on input line 36
 5.
 (pdftex.def)             Requested size: 187.89912pt x 168.74826pt.
- [8 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxis
-spin1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/image
-s/earthandmoonaxisspin2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-S
-ystem/Report/images/earthandmoonaxisspin3.png (PNG copy)> <D:/xampp/htdocs/CS32
-3_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspin4.png (PNG copy)>]
-<images/earthandmoonaxisspinabove1.png, id=228, 644.4075pt x 636.3775pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 373.
+
+[8 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxiss
+pin1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images
+/earthandmoonaxisspin2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-Sy
+stem/Report/images/earthandmoonaxisspin3.png (PNG copy)> <D:/xampp/htdocs/CS323
+_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspin4.png (PNG copy)>]
+<images/earthandmoonaxisspinabove1.png, id=106, 644.4075pt x 636.3775pt>
 File: images/earthandmoonaxisspinabove1.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove1.png>
@@ -914,7 +874,7 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove1.png used on input li
 ne 377.
 (pdftex.def)             Requested size: 187.89912pt x 185.55461pt.
 
-<images/earthandmoonaxisspinabove2.png, id=229, 492.84125pt x 460.72125pt>
+<images/earthandmoonaxisspinabove2.png, id=107, 492.84125pt x 460.72125pt>
 File: images/earthandmoonaxisspinabove2.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove2.png>
@@ -922,7 +882,7 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove2.png used on input li
 ne 382.
 (pdftex.def)             Requested size: 187.89912pt x 175.65236pt.
 
-<images/earthandmoonaxisspinabove3.png, id=230, 578.16pt x 573.14125pt>
+<images/earthandmoonaxisspinabove3.png, id=108, 578.16pt x 573.14125pt>
 File: images/earthandmoonaxisspinabove3.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove3.png>
@@ -930,7 +890,7 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove3.png used on input li
 ne 387.
 (pdftex.def)             Requested size: 187.89912pt x 186.26869pt.
 
-<images/earthandmoonaxisspinabove4.png, id=231, 493.845pt x 463.7325pt>
+<images/earthandmoonaxisspinabove4.png, id=109, 493.845pt x 463.7325pt>
 File: images/earthandmoonaxisspinabove4.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove4.png>
@@ -938,40 +898,47 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove4.png used on input li
 ne 392.
 (pdftex.def)             Requested size: 187.89912pt x 176.43953pt.
 
-<images/sunaxialrotation1.png, id=232, 624.3325pt x 610.28pt>
+<images/sunaxialrotation1.png, id=110, 624.3325pt x 610.28pt>
 File: images/sunaxialrotation1.png Graphic file (type png)
 
 <use images/sunaxialrotation1.png>
 Package pdftex.def Info: images/sunaxialrotation1.png used on input line 404.
 (pdftex.def)             Requested size: 187.89912pt x 183.66275pt.
 
-<images/sunaxialrotation2.png, id=233, 565.11125pt x 537.00626pt>
+<images/sunaxialrotation2.png, id=111, 565.11125pt x 537.00626pt>
 File: images/sunaxialrotation2.png Graphic file (type png)
 
 <use images/sunaxialrotation2.png>
 Package pdftex.def Info: images/sunaxialrotation2.png used on input line 409.
 (pdftex.def)             Requested size: 187.89912pt x 178.54823pt.
 
-<images/sunaxialrotation3.png, id=234, 563.10374pt x 548.0475pt>
+<images/sunaxialrotation3.png, id=112, 563.10374pt x 548.0475pt>
 File: images/sunaxialrotation3.png Graphic file (type png)
 
 <use images/sunaxialrotation3.png>
 Package pdftex.def Info: images/sunaxialrotation3.png used on input line 414.
 (pdftex.def)             Requested size: 187.89912pt x 182.8716pt.
- [9 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxis
-spinabove1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/
-images/earthandmoonaxisspinabove2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Ea
-rth-Moon-System/Report/images/earthandmoonaxisspinabove3.png (PNG copy)> <D:/xa
-mpp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspinabove4
-.png (PNG copy)>]
-<images/sunemissive.png, id=242, 516.93124pt x 489.83pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 420.
+
+[9 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxiss
+pinabove1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/i
+mages/earthandmoonaxisspinabove2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Ear
+th-Moon-System/Report/images/earthandmoonaxisspinabove3.png (PNG copy)> <D:/xam
+pp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspinabove4.
+png (PNG copy)>]
+
+LaTeX Warning: Citation `sunglow' on page 10 undefined on input line 422.
+
+<images/sunemissive.png, id=118, 516.93124pt x 489.83pt>
 File: images/sunemissive.png Graphic file (type png)
 
 <use images/sunemissive.png>
 Package pdftex.def Info: images/sunemissive.png used on input line 427.
 (pdftex.def)             Requested size: 187.89912pt x 178.05025pt.
 
-<images/sunemissiveandambient.png, id=243, 588.1975pt x 558.085pt>
+<images/sunemissiveandambient.png, id=119, 588.1975pt x 558.085pt>
 File: images/sunemissiveandambient.png Graphic file (type png)
 
 <use images/sunemissiveandambient.png>
@@ -979,119 +946,150 @@ Package pdftex.def Info: images/sunemissiveandambient.png used on input line 43
 4.
 (pdftex.def)             Requested size: 187.89912pt x 178.27577pt.
 
-<images/sunwithglow.png, id=244, 640.3925pt x 646.415pt>
+<images/sunwithglow.png, id=120, 640.3925pt x 646.415pt>
 File: images/sunwithglow.png Graphic file (type png)
 
 <use images/sunwithglow.png>
 Package pdftex.def Info: images/sunwithglow.png used on input line 439.
 (pdftex.def)             Requested size: 187.89912pt x 189.66496pt.
- [10 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunaxialrotatio
-n1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/s
-unaxialrotation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/R
-eport/images/sunaxialrotation3.png (PNG copy)>]
+
+
+LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 445.
+
+[10 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunaxialrotation
+1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/su
+naxialrotation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Re
+port/images/sunaxialrotation3.png (PNG copy)>]
+
+LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 451.
+
 [11 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunemissive.png 
 (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunemiss
 iveandambient.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
 rt/images/sunwithglow.png (PNG copy)>]
-<images/userinterface.png, id=259, 1186.4325pt x 634.37pt>
+
+LaTeX Warning: Citation `datgui' on page 12 undefined on input line 471.
+
+<images/userinterface.png, id=133, 1186.4325pt x 634.37pt>
 File: images/userinterface.png Graphic file (type png)
 
 <use images/userinterface.png>
 Package pdftex.def Info: images/userinterface.png used on input line 476.
 (pdftex.def)             Requested size: 187.89912pt x 100.46555pt.
 
-<images/closeupui.png, id=260, 254.9525pt x 196.735pt>
+<images/closeupui.png, id=134, 254.9525pt x 196.735pt>
 File: images/closeupui.png Graphic file (type png)
 
 <use images/closeupui.png>
 Package pdftex.def Info: images/closeupui.png used on input line 481.
 (pdftex.def)             Requested size: 187.89912pt x 144.99922pt.
- [12 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/userinterface.p
-ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/close
-upui.png (PNG copy)>] [13]
-<images/syncrotation1.png, id=330, 793.96625pt x 809.0225pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 495.
+
+[12 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/userinterface.pn
+g (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/closeu
+pui.png (PNG copy)>]
+
+LaTeX Warning: Citation `orbitcontrols' on page 13 undefined on input line 532.
+
+
+
+LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 536.
+
+[13] <images/syncrotation1.png, id=203, 793.96625pt x 809.0225pt>
 File: images/syncrotation1.png Graphic file (type png)
 
 <use images/syncrotation1.png>
-Package pdftex.def Info: images/syncrotation1.png used on input line 544.
-(pdftex.def)             Requested size: 187.89912pt x 191.45354pt.
+Package pdftex.def Info: images/syncrotation1.png used on input line 545.
+(pdftex.def)             Requested size: 178.50919pt x 181.88641pt.
 
-<images/syncrotation2.png, id=331, 839.135pt x 766.865pt>
+<images/syncrotation2.png, id=204, 839.135pt x 766.865pt>
 File: images/syncrotation2.png Graphic file (type png)
 
 <use images/syncrotation2.png>
-Package pdftex.def Info: images/syncrotation2.png used on input line 549.
-(pdftex.def)             Requested size: 187.89912pt x 171.70638pt.
+Package pdftex.def Info: images/syncrotation2.png used on input line 550.
+(pdftex.def)             Requested size: 178.50919pt x 163.12926pt.
 
-<images/syncrotation3.png, id=332, 794.97pt x 783.92876pt>
+<images/syncrotation3.png, id=205, 794.97pt x 783.92876pt>
 File: images/syncrotation3.png Graphic file (type png)
 
 <use images/syncrotation3.png>
-Package pdftex.def Info: images/syncrotation3.png used on input line 554.
-(pdftex.def)             Requested size: 187.89912pt x 185.28787pt.
+Package pdftex.def Info: images/syncrotation3.png used on input line 555.
+(pdftex.def)             Requested size: 178.50919pt x 176.02946pt.
 
-Overfull \hbox (8.55112pt too wide) in paragraph at lines 563--563
+Overfull \hbox (8.55112pt too wide) in paragraph at lines 564--564
 [][]\OT1/cmr/bx/n/14.4 Lighting of the Earth and Moon in Phong shad-ing & Non-i
 lluminated
  []
+
+
+LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 566.
 
 [14 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncrotation1.pn
 g (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncro
 tation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/ima
 ges/syncrotation3.png (PNG copy)>]
-<images/lightfromphong1.png, id=341, 793.96625pt x 607.26875pt>
+<images/lightfromphong1.png, id=213, 793.96625pt x 607.26875pt>
 File: images/lightfromphong1.png Graphic file (type png)
 
 <use images/lightfromphong1.png>
-Package pdftex.def Info: images/lightfromphong1.png used on input line 569.
+Package pdftex.def Info: images/lightfromphong1.png used on input line 570.
 (pdftex.def)             Requested size: 187.89912pt x 143.70892pt.
 
-<images/lightfromphong2.png, id=342, 577.15625pt x 445.665pt>
+<images/lightfromphong2.png, id=214, 577.15625pt x 445.665pt>
 File: images/lightfromphong2.png Graphic file (type png)
 
 <use images/lightfromphong2.png>
-Package pdftex.def Info: images/lightfromphong2.png used on input line 574.
+Package pdftex.def Info: images/lightfromphong2.png used on input line 575.
 (pdftex.def)             Requested size: 187.89912pt x 145.09102pt.
 
-<images/specular1.png, id=343, 547.04375pt x 478.78876pt>
+<images/specular1.png, id=215, 547.04375pt x 478.78876pt>
 File: images/specular1.png Graphic file (type png)
 
 <use images/specular1.png>
-Package pdftex.def Info: images/specular1.png used on input line 586.
+Package pdftex.def Info: images/specular1.png used on input line 587.
 (pdftex.def)             Requested size: 187.89912pt x 164.45172pt.
 
-<images/specular2.png, id=344, 624.3325pt x 571.13374pt>
+<images/specular2.png, id=216, 624.3325pt x 571.13374pt>
 File: images/specular2.png Graphic file (type png)
 
 <use images/specular2.png>
-Package pdftex.def Info: images/specular2.png used on input line 591.
+Package pdftex.def Info: images/specular2.png used on input line 592.
 (pdftex.def)             Requested size: 187.89912pt x 171.88176pt.
 
-<images/specular3.png, id=345, 491.8375pt x 452.69125pt>
+<images/specular3.png, id=217, 491.8375pt x 452.69125pt>
 File: images/specular3.png Graphic file (type png)
 
 <use images/specular3.png>
-Package pdftex.def Info: images/specular3.png used on input line 596.
+Package pdftex.def Info: images/specular3.png used on input line 597.
 (pdftex.def)             Requested size: 187.89912pt x 172.94316pt.
 
-<images/specular4.png, id=346, 596.2275pt x 577.15625pt>
+<images/specular4.png, id=218, 596.2275pt x 577.15625pt>
 File: images/specular4.png Graphic file (type png)
 
 <use images/specular4.png>
-Package pdftex.def Info: images/specular4.png used on input line 601.
+Package pdftex.def Info: images/specular4.png used on input line 602.
 (pdftex.def)             Requested size: 187.89912pt x 181.88443pt.
 
-<images/specular5.png, id=347, 528.97626pt x 485.815pt>
+<images/specular5.png, id=219, 528.97626pt x 485.815pt>
 File: images/specular5.png Graphic file (type png)
 
 <use images/specular5.png>
-Package pdftex.def Info: images/specular5.png used on input line 606.
+Package pdftex.def Info: images/specular5.png used on input line 607.
 (pdftex.def)             Requested size: 187.89912pt x 172.5656pt.
- [15 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong1
-.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lig
-htfromphong2.png (PNG copy)>]
+
+
+LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 613.
+
+[15 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong1.
+png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/ligh
+tfromphong2.png (PNG copy)>]
 Overfull \vbox (5.17229pt too high) has occurred while \output is active []
 
+
+
+LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 613.
 
 [16 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/specular1.png (P
 NG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/specular2.
@@ -1099,169 +1097,242 @@ png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/spec
 ular3.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/image
 s/specular4.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
 /images/specular5.png (PNG copy)>]
-<images/lightfromphong3.png, id=360, 1226.5825pt x 372.39125pt>
+<images/lightfromphong3.png, id=231, 1226.5825pt x 372.39125pt>
 File: images/lightfromphong3.png Graphic file (type png)
 
 <use images/lightfromphong3.png>
-Package pdftex.def Info: images/lightfromphong3.png used on input line 618.
+Package pdftex.def Info: images/lightfromphong3.png used on input line 619.
 (pdftex.def)             Requested size: 187.89912pt x 57.04385pt.
 
-<images/lightfromphong4.png, id=361, 835.12pt x 305.14pt>
+<images/lightfromphong4.png, id=232, 835.12pt x 305.14pt>
 File: images/lightfromphong4.png Graphic file (type png)
 
 <use images/lightfromphong4.png>
-Package pdftex.def Info: images/lightfromphong4.png used on input line 623.
+Package pdftex.def Info: images/lightfromphong4.png used on input line 624.
 (pdftex.def)             Requested size: 187.89912pt x 68.65353pt.
 
-<images/earthtilt1.png, id=362, 921.4425pt x 239.89626pt>
+<images/earthtilt1.png, id=233, 921.4425pt x 239.89626pt>
 File: images/earthtilt1.png Graphic file (type png)
 
 <use images/earthtilt1.png>
-Package pdftex.def Info: images/earthtilt1.png used on input line 636.
+Package pdftex.def Info: images/earthtilt1.png used on input line 637.
 (pdftex.def)             Requested size: 234.87749pt x 61.14894pt.
 
-<images/earthtilt2.png, id=363, 879.285pt x 193.72375pt>
+<images/earthtilt2.png, id=234, 879.285pt x 193.72375pt>
 File: images/earthtilt2.png Graphic file (type png)
 
 <use images/earthtilt2.png>
-Package pdftex.def Info: images/earthtilt2.png used on input line 640.
+Package pdftex.def Info: images/earthtilt2.png used on input line 641.
 (pdftex.def)             Requested size: 234.87749pt x 51.74742pt.
 
-<images/earthtilt3.png, id=364, 887.315pt x 162.6075pt>
+<images/earthtilt3.png, id=235, 887.315pt x 162.6075pt>
 File: images/earthtilt3.png Graphic file (type png)
 
 <use images/earthtilt3.png>
-Package pdftex.def Info: images/earthtilt3.png used on input line 644.
+Package pdftex.def Info: images/earthtilt3.png used on input line 645.
 (pdftex.def)             Requested size: 234.87749pt x 43.04115pt.
- [17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong3
-.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lig
-htfromphong4.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repor
-t/images/earthtilt1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-Syste
-m/Report/images/earthtilt2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moo
-n-System/Report/images/earthtilt3.png (PNG copy)>]
-<images/moonorbittilt2.png, id=372, 904.37875pt x 273.02pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 652.
+
+[17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong3.
+png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/ligh
+tfromphong4.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
+/images/earthtilt1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System
+/Report/images/earthtilt2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon
+-System/Report/images/earthtilt3.png (PNG copy)>]
+<images/moonorbittilt2.png, id=243, 904.37875pt x 273.02pt>
 File: images/moonorbittilt2.png Graphic file (type png)
 
 <use images/moonorbittilt2.png>
-Package pdftex.def Info: images/moonorbittilt2.png used on input line 663.
+Package pdftex.def Info: images/moonorbittilt2.png used on input line 664.
 (pdftex.def)             Requested size: 234.87749pt x 70.90437pt.
- [18 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moonorbittilt2.
-png (PNG copy)>] [19]
-<images/earthelliptical.png, id=440, 838.13126pt x 761.84625pt>
+
+
+LaTeX Warning: Citation `assignment' on page 18 undefined on input line 689.
+
+
+LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 690.
+
+[18 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moonorbittilt2.p
+ng (PNG copy)>]
+
+LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 729.
+
+[19] <images/earthelliptical.png, id=310, 838.13126pt x 761.84625pt>
 File: images/earthelliptical.png Graphic file (type png)
 
 <use images/earthelliptical.png>
-Package pdftex.def Info: images/earthelliptical.png used on input line 735.
+Package pdftex.def Info: images/earthelliptical.png used on input line 736.
 (pdftex.def)             Requested size: 187.89912pt x 170.79189pt.
 
-<images/moonelliptical.png, id=441, 621.32124pt x 643.40375pt>
+<images/moonelliptical.png, id=311, 621.32124pt x 643.40375pt>
 File: images/moonelliptical.png Graphic file (type png)
 
 <use images/moonelliptical.png>
-Package pdftex.def Info: images/moonelliptical.png used on input line 740.
+Package pdftex.def Info: images/moonelliptical.png used on input line 741.
 (pdftex.def)             Requested size: 187.89912pt x 194.57378pt.
 
-<images/moonellipticalbig.png, id=442, 501.875pt x 402.50375pt>
+<images/moonellipticalbig.png, id=312, 501.875pt x 402.50375pt>
 File: images/moonellipticalbig.png Graphic file (type png)
 
 <use images/moonellipticalbig.png>
-Package pdftex.def Info: images/moonellipticalbig.png used on input line 745.
+Package pdftex.def Info: images/moonellipticalbig.png used on input line 746.
 (pdftex.def)             Requested size: 253.66454pt x 203.44395pt.
- [20 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthelliptical
-.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moo
-nelliptical.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
-/images/moonellipticalbig.png (PNG copy)>]
-<images/eclipse1.png, id=451, 577.15625pt x 456.70625pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 754.
+
+[20 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthelliptical.
+png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moon
+elliptical.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/
+images/moonellipticalbig.png (PNG copy)>]
+<images/eclipse1.png, id=320, 577.15625pt x 456.70625pt>
 File: images/eclipse1.png Graphic file (type png)
 
 <use images/eclipse1.png>
-Package pdftex.def Info: images/eclipse1.png used on input line 759.
+Package pdftex.def Info: images/eclipse1.png used on input line 760.
 (pdftex.def)             Requested size: 187.89912pt x 148.68561pt.
- <images/eclipse2.png, id=452, 345.29pt x 285.065pt>
+ <images/eclipse2.png, id=321, 345.29pt x 285.065pt>
 File: images/eclipse2.png Graphic file (type png)
 
 <use images/eclipse2.png>
-Package pdftex.def Info: images/eclipse2.png used on input line 764.
+Package pdftex.def Info: images/eclipse2.png used on input line 765.
 (pdftex.def)             Requested size: 187.89912pt x 155.12898pt.
- [21 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse1.png (P
-NG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse2.p
-ng (PNG copy)>]
-<images/shadowcamera.png, id=470, 452.69125pt x 396.48125pt>
+
+
+LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 789.
+
+[21 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse1.png (PN
+G copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse2.pn
+g (PNG copy)>] <images/shadowcamera.png, id=339, 452.69125pt x 396.48125pt>
 File: images/shadowcamera.png Graphic file (type png)
 
 <use images/shadowcamera.png>
-Package pdftex.def Info: images/shadowcamera.png used on input line 800.
+Package pdftex.def Info: images/shadowcamera.png used on input line 801.
 (pdftex.def)             Requested size: 234.87749pt x 205.71164pt.
- [22 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamera.pn
-g (PNG copy)>] [23] [24] [25] [26] [27
+
+
+LaTeX Warning: Citation `shadow1' on page 22 undefined on input line 809.
+
+
+LaTeX Warning: Citation `shadow2' on page 22 undefined on input line 809.
+
+
+LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 813.
+
+[22 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamera.png
+ (PNG copy)>]
+
+LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 828.
+
+[23]
+
+LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 874.
+
+[24]
+
+LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 919.
+
+[25]
+
+LaTeX Warning: Reference `LastPage' on page 26 undefined on input line 983.
+
+[26]
+
+LaTeX Warning: Reference `LastPage' on page 27 undefined on input line 990.
+
+[27
 
 ]
-Underfull \hbox (badness 2521) in paragraph at lines 986--988
+Underfull \hbox (badness 2521) in paragraph at lines 1000--1002
 []\OT1/cmr/m/n/12 XAMPP In-stallers and Down-loads for Apache Friends, \OT1/cmr
 /m/it/12 apachefriends\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 989--991
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1005
 []\OT1/cmr/m/n/12 Planet Tex-ture Map Col-lec-tion, \OT1/cmr/m/it/12 plan-et-pi
 x-elem-po-rium\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Overfull \hbox (116.83655pt too wide) in paragraph at lines 992--994
+Overfull \hbox (116.83655pt too wide) in paragraph at lines 1006--1008
 []\OT1/cmr/m/n/12 NASA, \OT1/cmr/m/it/12 NASA\OT1/cmr/m/n/12 , [on-line], https
 ://www.nasa.gov/sites/default/files/images/700328main[]20121014[]003615[]flat.j
 pg
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 995--997
+Underfull \hbox (badness 2990) in paragraph at lines 1009--1011
 []\OT1/cmr/m/n/12 Computational Con-tem-pla-tions: Us-ing Shaders and Se-lec-ti
 ve Glow Ef-fects in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--1000
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1014
 []\OT1/cmr/m/n/12 three.js/dat.gui.min.js at mas-ter . mr-doob/three.js, \OT1/c
 mr/m/it/12 github\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--1000
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1014
 \OT1/cmr/m/n/12 https://github.com/mrdoob/three.js/blob/master/examples/js/libs
 /dat.gui.min.js
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 1015--1017
+[]\OT1/cmr/m/n/12 three.js/OrbitControls.js at mas-ter . mr-doob/three.js \OT1/
+cmr/m/it/12 github\OT1/cmr/m/n/12 , [on-line],
+ []
+
+
+Overfull \hbox (6.3109pt too wide) in paragraph at lines 1015--1017
+\OT1/cmr/m/n/12 https://github.com/mrdoob/three.js/blob/master/examples/js/cont
+rols/OrbitControls.js
+ []
+
+
+Package lastpage Warning: Rerun to get the references right on input line 1031.
+
+
+
 AED: lastpage setting LastPage
+
+LaTeX Warning: Reference `LastPage' on page 28 undefined on input line 1031.
+
 [28
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1014.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1014.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1031.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1031.
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1014.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1014.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1031.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1031.
 
 Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 .out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1014.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1031.
  ) 
 Here is how much of TeX's memory you used:
- 9774 strings out of 493921
- 149218 string characters out of 3144866
- 320402 words of memory out of 3000000
- 12575 multiletter control sequences out of 15000+200000
+ 9754 strings out of 493921
+ 148326 string characters out of 3144866
+ 314146 words of memory out of 3000000
+ 12552 multiletter control sequences out of 15000+200000
  14031 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,12n,43p,882b,1819s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,12n,43p,879b,1819s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Narctiss\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
 00\tcrm1200.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
@@ -1271,9 +1342,9 @@ cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
 >
 Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (28 pages,
- 4976939 bytes).
+ 4960911 bytes).
 PDF statistics:
- 727 PDF objects out of 1000 (max. 8388607)
- 352 named destinations out of 1000 (max. 500000)
- 415 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 610 PDF objects out of 1000 (max. 8388607)
+ 363 named destinations out of 1000 (max. 500000)
+ 231 words of extra memory for PDF output out of 10000 (max. 10000000)
 

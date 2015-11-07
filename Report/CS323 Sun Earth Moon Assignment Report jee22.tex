@@ -496,7 +496,6 @@ var params = {
 
 function setupGUI() {
     var gui = new dat.GUI();
-
     gui.add( params, "speed" ).min(1).max(10).step(1).name('Change speed').onChange( function( value ) {
         updateControlValues(value);
     } );
@@ -530,6 +529,8 @@ function setupGUI() {
 }
 \end{lstlisting}
 
+The user can also navigate around the simulation using their mouse or the arrow keys using OrbitControls\cite{orbitcontrols}.
+
 \subsection{Synchronous orbital and axial rotation of the Moon}
 By using the same speed for the Moon's orbital and axial rotation in the simulation, the Moon can be set so that the same face is always shown to the Sun. When I was updating the Moon's orbit by computing the next step every animation frame, I would use the same speed value for both the rotation update and orbit update. However, since I change to pre-computing the elliptical orbit, the speeds no longer had a way to match up.
 
@@ -540,17 +541,17 @@ One option I could take is to continue computing the axial rotation every animat
  
  \begin{figure}[H]
         \centering
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.38\textwidth}
                 \includegraphics[width=\textwidth]{images/syncrotation1}
                 \caption{Synchronus axial and orbital rotation of the Moon 1.}
                 \label{fig: Synchronus axial and orbital rotation of the Moon.}
 	 \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.38\textwidth}
                 \includegraphics[width=\textwidth]{images/syncrotation2}
                 \caption{Synchronus axial and orbital rotation of the Moon 2.}
                 \label{fig: Synchronus axial and orbital rotation of the Moon.}
 	 \end{subfigure}
-	 \begin{subfigure}[b]{0.4\textwidth}
+	 \begin{subfigure}[b]{0.38\textwidth}
                 \includegraphics[width=\textwidth]{images/syncrotation3}
                 \caption{Synchronus axial and orbital rotation of the Moon 3.}
                 \label{fig: Synchronus axial and orbital rotation of the Moon.}
@@ -913,6 +914,17 @@ var rotationYTransformation = function (angle) {
     ]; 
 }
 
+var rotationYMatrix4 = function (angle) {     
+        tempMatrix4.set(
+            Math.cos(angle), 0, Math.sin(angle), 0,
+            0,1,0,0,
+            -Math.sin(angle), 0, Math.cos(angle), 0,
+            0,0,0,1
+            );
+        
+        return tempMatrix4;
+}
+
 function applyHomogeneousToPhysical(homogeneous, physical){
     for(var x = 0; x < homogeneous[0].length; x++){
         physical[x].setX(homogeneous[0][x] / homogeneous[3][x]);
@@ -939,9 +951,11 @@ function updateFaceAndVertexNormals(normalMatrix, geometry){
 }
 \end{lstlisting}
 
-While this may not be the most efficient way, it was how I found I was able to extract the data from the WebGL/three.js objects, modify it and then put it back in using my own code, to show that this is something I am capable of doing and have greater control over the objects. I am aware that there are better methods of applying matrices provided by three.js, and that for just rotation matrices I could also remove the step of converting to and from homogeneous coordinates. However, for the sake of the simulation, the potential for expansion in the future and my own challenge, I have kept the process this way.
+While this may not be the most efficient way, it was how I found I was able to extract the data from the WebGL/three.js objects, modify it and then put it back in using my own code, to show that this is something I am capable of doing and have greater control over the objects.
 
- Also cool star map because it looks a little more `real'. Idea for this came from here: CITE LINK.
+I am aware that there are better methods of applying matrices provided by three.js, and that for just rotation matrices I could also remove the step of converting to and from homogeneous coordinates. However, for the sake of the simulation, the potential for expansion in the future and my own challenge, I have kept the process this way.
+
+ As a final additional step, I added a star map to surround the simulation, to help the user navigate around the scene easier and give a tiny bit more visual interest and realism. CODE AND IMAGE
 
 %--------------------------------------------
 
@@ -996,7 +1010,10 @@ https://www.nasa.gov/sites/default/files/images/700328main\_20121014\_003615\_fl
 http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html (Accessed 11/06/2015)
 
 \bibitem{datgui} three.js/dat.gui.min.js at master . mrdoob/three.js, {\em github}, [online],
-https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/205)
+https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/2015)
+
+\bibitem{orbitcontrols} three.js/OrbitControls.js at master . mrdoob/three.js {\em github}, [online],
+https://github.com/mrdoob/three.js/blob/master/examples/js/controls/OrbitControls.js (Accessed 11/06/2015)
 
 \bibitem{shadow1} webgl - THREE.JS Shadow on opposite side of light - Stack Overflow, {\em stackoverflow}, [online],
 http://stackoverflow.com/a/12602143 (Accessed 11/07/2015)
