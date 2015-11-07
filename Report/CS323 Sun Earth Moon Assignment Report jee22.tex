@@ -560,11 +560,40 @@ One option I could take is to continue computing the axial rotation every animat
 
 
 
-\subsection{Lighting of the Earth and Moon in Phong shading}
-I didn't write my own Phong shader, but here, I used three.js to use Phone Mesh and have used the SpotLight to get Shadows and stuff. Is that enough? Idk what you want from me. Used a specular map to do this cool reflection on the water thing, while the rest absorbs the light better. Shiny.
+\subsection{Lighting of the Earth and Moon in Phong shading \& Non-illuminated parts of the Earth and Moon to be shown in shadow}
+The Materials of the Earth and Moon are made from PhongMaterial, and so Phong lighting and shading is applied through this. Through using Phong shading I was able to better represent how the system looks in reality, with the parts of the Earth and Moon not in the light shown in shadow, and those in the light being brighter. In particular, where I have used a specular map for the Earth's ocean, you can see the shiny light reflection. During my testing, I changed the value of the shininess of the Earth to see how it would look, which can be seen below.
 
-\subsection{Non-illuminated parts of the Earth and Moon to be shown in shadow}
-Due to the dark colour of the ambient light and the light source in the Sun being quite intense, this effect is achieved, see this picture here. Always darker on the side facing away from the Sun. Cool!
+ \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/lightfromphong1}
+                \caption{Light from the SpotLight on the PhongMaterial.}
+                \label{fig: Light from the SpotLight on the PhongMaterial.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/lightfromphong2}
+                \caption{Shadows from the absence of light from SpotLight on the PhongMaterial.}
+                \label{fig: Shadows from the absence of light from SpotLight on the PhongMateria.}
+	 \end{subfigure}
+	 \caption{The effect of light on the PhongMaterial causing phong shading.}
+\end{figure}
+
+As an effect of using a SpotLight and Phong Material, the sides facing away from the Sun are non-illuminated, and so shown in shadow, no matter where the objects are in relation to the Sun (and so the light), the opposite side is in shadow. There is still Ambient Light to display some detail of the shadow sections, but otherwise they are shown to be dark.
+
+ \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/lightfromphong3}
+                \caption{The side of the Earth facing the Sun is bright, while the side not illuminated is in shadow.}
+                \label{fig: The side of the Earth facing the Sun is bright, while the side not illuminated is in shadow.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/lightfromphong4}
+                \caption{The side of the Moon facing the Sun is bright, while the side not illuminated is in shadow.}
+                \label{fig: The side of the Moon facing the Sun is bright, while the side not illuminated is in shadow.}
+	 \end{subfigure}
+	 \caption{The non-illuminated sides of the Earth and Moon are shown in shadow.}
+\end{figure}
 
 \subsection{Constant tilt of the Earth's axis}
 Look, see this with Axis Helper. This is super simple to achieve. We just set the Earth's rotation on the z axis to be 23.4 once, when we create it, and it's like that and always in that direction. It spins upon this axis with the transformation matrix to have the correct axial rotation, but the tilt always stays in the one direction, to be a proper representation of the Earth and how it doesn't wobble on it's axis. See here, on each side of the Sun, the axis stays the same direction.

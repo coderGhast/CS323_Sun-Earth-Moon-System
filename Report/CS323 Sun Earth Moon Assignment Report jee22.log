@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 13:28
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 14:04
 entering extended mode
 **CS323*Sun*Earth*Moon*Assignment*Report*jee22.tex
 
@@ -809,7 +809,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 [2]
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 205.
- [3] <images/scales.png, id=172, 1170.3725pt x 624.3325pt>
+ [3] <images/scales.png, id=168, 1170.3725pt x 624.3325pt>
 File: images/scales.png Graphic file (type png)
 
 <use images/scales.png>
@@ -817,28 +817,28 @@ Package pdftex.def Info: images/scales.png used on input line 235.
 (pdftex.def)             Requested size: 234.87749pt x 125.29298pt.
  [4 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/scales.png (PNG 
 copy)>]
-<images/earthorbitsun1.png, id=185, 665.48625pt x 575.14874pt>
+<images/earthorbitsun1.png, id=181, 665.48625pt x 575.14874pt>
 File: images/earthorbitsun1.png Graphic file (type png)
 
 <use images/earthorbitsun1.png>
 Package pdftex.def Info: images/earthorbitsun1.png used on input line 263.
 (pdftex.def)             Requested size: 187.89912pt x 162.39206pt.
 
-<images/earthorbitsun2.png, id=186, 708.6475pt x 551.05875pt>
+<images/earthorbitsun2.png, id=182, 708.6475pt x 551.05875pt>
 File: images/earthorbitsun2.png Graphic file (type png)
 
 <use images/earthorbitsun2.png>
 Package pdftex.def Info: images/earthorbitsun2.png used on input line 270.
 (pdftex.def)             Requested size: 187.89912pt x 146.11395pt.
 
-<images/moonorbitearth1.png, id=187, 511.9125pt x 502.87875pt>
+<images/moonorbitearth1.png, id=183, 511.9125pt x 502.87875pt>
 File: images/moonorbitearth1.png Graphic file (type png)
 
 <use images/moonorbitearth1.png>
 Package pdftex.def Info: images/moonorbitearth1.png used on input line 285.
 (pdftex.def)             Requested size: 187.89912pt x 184.58127pt.
 
-<images/moonorbitearth2.png, id=188, 687.56876pt x 477.785pt>
+<images/moonorbitearth2.png, id=184, 687.56876pt x 477.785pt>
 File: images/moonorbitearth2.png Graphic file (type png)
 
 <use images/moonorbitearth2.png>
@@ -849,21 +849,21 @@ ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earth
 orbitsun2.png (PNG copy)>] [6 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
 rt/images/moonorbitearth1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon
 -System/Report/images/moonorbitearth2.png (PNG copy)>] <images/earthtexture.png
-, id=208, 767.86874pt x 721.69624pt>
+, id=204, 767.86874pt x 721.69624pt>
 File: images/earthtexture.png Graphic file (type png)
 
 <use images/earthtexture.png>
 Package pdftex.def Info: images/earthtexture.png used on input line 320.
 (pdftex.def)             Requested size: 187.89912pt x 176.59137pt.
 
-<images/suntexture.png, id=209, 565.11125pt x 559.08875pt>
+<images/suntexture.png, id=205, 565.11125pt x 559.08875pt>
 File: images/suntexture.png Graphic file (type png)
 
 <use images/suntexture.png>
 Package pdftex.def Info: images/suntexture.png used on input line 327.
 (pdftex.def)             Requested size: 187.89912pt x 185.8904pt.
 
-<images/moontexture.png, id=210, 764.8575pt x 805.0075pt>
+<images/moontexture.png, id=206, 764.8575pt x 805.0075pt>
 File: images/moontexture.png Graphic file (type png)
 
 <use images/moontexture.png>
@@ -873,7 +873,7 @@ Package pdftex.def Info: images/moontexture.png used on input line 332.
  (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/suntext
 ure.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/
 moontexture.png (PNG copy)>]
-<images/earthandmoonaxisspin1.png, id=220, 859.21pt x 720.6925pt>
+<images/earthandmoonaxisspin1.png, id=216, 859.21pt x 720.6925pt>
 File: images/earthandmoonaxisspin1.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin1.png>
@@ -881,7 +881,7 @@ Package pdftex.def Info: images/earthandmoonaxisspin1.png used on input line 35
 0.
 (pdftex.def)             Requested size: 187.89912pt x 157.6071pt.
 
-<images/earthandmoonaxisspin2.png, id=221, 932.48375pt x 701.62125pt>
+<images/earthandmoonaxisspin2.png, id=217, 932.48375pt x 701.62125pt>
 File: images/earthandmoonaxisspin2.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin2.png>
@@ -889,7 +889,7 @@ Package pdftex.def Info: images/earthandmoonaxisspin2.png used on input line 35
 5.
 (pdftex.def)             Requested size: 187.89912pt x 141.37093pt.
 
-<images/earthandmoonaxisspin3.png, id=222, 806.01125pt x 740.7675pt>
+<images/earthandmoonaxisspin3.png, id=218, 806.01125pt x 740.7675pt>
 File: images/earthandmoonaxisspin3.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin3.png>
@@ -897,7 +897,7 @@ Package pdftex.def Info: images/earthandmoonaxisspin3.png used on input line 36
 0.
 (pdftex.def)             Requested size: 187.89912pt x 172.6901pt.
 
-<images/earthandmoonaxisspin4.png, id=223, 808.01875pt x 725.71124pt>
+<images/earthandmoonaxisspin4.png, id=219, 808.01875pt x 725.71124pt>
 File: images/earthandmoonaxisspin4.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin4.png>
@@ -909,7 +909,7 @@ spin1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/image
 s/earthandmoonaxisspin2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-S
 ystem/Report/images/earthandmoonaxisspin3.png (PNG copy)> <D:/xampp/htdocs/CS32
 3_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspin4.png (PNG copy)>]
-<images/earthandmoonaxisspinabove1.png, id=232, 644.4075pt x 636.3775pt>
+<images/earthandmoonaxisspinabove1.png, id=228, 644.4075pt x 636.3775pt>
 File: images/earthandmoonaxisspinabove1.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove1.png>
@@ -917,7 +917,7 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove1.png used on input li
 ne 377.
 (pdftex.def)             Requested size: 187.89912pt x 185.55461pt.
 
-<images/earthandmoonaxisspinabove2.png, id=233, 492.84125pt x 460.72125pt>
+<images/earthandmoonaxisspinabove2.png, id=229, 492.84125pt x 460.72125pt>
 File: images/earthandmoonaxisspinabove2.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove2.png>
@@ -925,7 +925,7 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove2.png used on input li
 ne 382.
 (pdftex.def)             Requested size: 187.89912pt x 175.65236pt.
 
-<images/earthandmoonaxisspinabove3.png, id=234, 578.16pt x 573.14125pt>
+<images/earthandmoonaxisspinabove3.png, id=230, 578.16pt x 573.14125pt>
 File: images/earthandmoonaxisspinabove3.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove3.png>
@@ -933,7 +933,7 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove3.png used on input li
 ne 387.
 (pdftex.def)             Requested size: 187.89912pt x 186.26869pt.
 
-<images/earthandmoonaxisspinabove4.png, id=235, 493.845pt x 463.7325pt>
+<images/earthandmoonaxisspinabove4.png, id=231, 493.845pt x 463.7325pt>
 File: images/earthandmoonaxisspinabove4.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove4.png>
@@ -941,21 +941,21 @@ Package pdftex.def Info: images/earthandmoonaxisspinabove4.png used on input li
 ne 392.
 (pdftex.def)             Requested size: 187.89912pt x 176.43953pt.
 
-<images/sunaxialrotation1.png, id=236, 624.3325pt x 610.28pt>
+<images/sunaxialrotation1.png, id=232, 624.3325pt x 610.28pt>
 File: images/sunaxialrotation1.png Graphic file (type png)
 
 <use images/sunaxialrotation1.png>
 Package pdftex.def Info: images/sunaxialrotation1.png used on input line 404.
 (pdftex.def)             Requested size: 187.89912pt x 183.66275pt.
 
-<images/sunaxialrotation2.png, id=237, 565.11125pt x 537.00626pt>
+<images/sunaxialrotation2.png, id=233, 565.11125pt x 537.00626pt>
 File: images/sunaxialrotation2.png Graphic file (type png)
 
 <use images/sunaxialrotation2.png>
 Package pdftex.def Info: images/sunaxialrotation2.png used on input line 409.
 (pdftex.def)             Requested size: 187.89912pt x 178.54823pt.
 
-<images/sunaxialrotation3.png, id=238, 563.10374pt x 548.0475pt>
+<images/sunaxialrotation3.png, id=234, 563.10374pt x 548.0475pt>
 File: images/sunaxialrotation3.png Graphic file (type png)
 
 <use images/sunaxialrotation3.png>
@@ -967,14 +967,14 @@ images/earthandmoonaxisspinabove2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Ea
 rth-Moon-System/Report/images/earthandmoonaxisspinabove3.png (PNG copy)> <D:/xa
 mpp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspinabove4
 .png (PNG copy)>]
-<images/sunemissive.png, id=246, 516.93124pt x 489.83pt>
+<images/sunemissive.png, id=242, 516.93124pt x 489.83pt>
 File: images/sunemissive.png Graphic file (type png)
 
 <use images/sunemissive.png>
 Package pdftex.def Info: images/sunemissive.png used on input line 427.
 (pdftex.def)             Requested size: 187.89912pt x 178.05025pt.
 
-<images/sunemissiveandambient.png, id=247, 588.1975pt x 558.085pt>
+<images/sunemissiveandambient.png, id=243, 588.1975pt x 558.085pt>
 File: images/sunemissiveandambient.png Graphic file (type png)
 
 <use images/sunemissiveandambient.png>
@@ -982,7 +982,7 @@ Package pdftex.def Info: images/sunemissiveandambient.png used on input line 43
 4.
 (pdftex.def)             Requested size: 187.89912pt x 178.27577pt.
 
-<images/sunwithglow.png, id=248, 640.3925pt x 646.415pt>
+<images/sunwithglow.png, id=244, 640.3925pt x 646.415pt>
 File: images/sunwithglow.png Graphic file (type png)
 
 <use images/sunwithglow.png>
@@ -996,14 +996,14 @@ eport/images/sunaxialrotation3.png (PNG copy)>]
 (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunemiss
 iveandambient.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
 rt/images/sunwithglow.png (PNG copy)>]
-<images/userinterface.png, id=263, 1186.4325pt x 634.37pt>
+<images/userinterface.png, id=259, 1186.4325pt x 634.37pt>
 File: images/userinterface.png Graphic file (type png)
 
 <use images/userinterface.png>
 Package pdftex.def Info: images/userinterface.png used on input line 476.
 (pdftex.def)             Requested size: 187.89912pt x 100.46555pt.
 
-<images/closeupui.png, id=264, 254.9525pt x 196.735pt>
+<images/closeupui.png, id=260, 254.9525pt x 196.735pt>
 File: images/closeupui.png Graphic file (type png)
 
 <use images/closeupui.png>
@@ -1012,59 +1012,97 @@ Package pdftex.def Info: images/closeupui.png used on input line 481.
  [12 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/userinterface.p
 ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/close
 upui.png (PNG copy)>] [13]
-<images/syncrotation1.png, id=334, 793.96625pt x 809.0225pt>
+<images/syncrotation1.png, id=330, 793.96625pt x 809.0225pt>
 File: images/syncrotation1.png Graphic file (type png)
 
 <use images/syncrotation1.png>
 Package pdftex.def Info: images/syncrotation1.png used on input line 544.
 (pdftex.def)             Requested size: 187.89912pt x 191.45354pt.
 
-<images/syncrotation2.png, id=335, 839.135pt x 766.865pt>
+<images/syncrotation2.png, id=331, 839.135pt x 766.865pt>
 File: images/syncrotation2.png Graphic file (type png)
 
 <use images/syncrotation2.png>
 Package pdftex.def Info: images/syncrotation2.png used on input line 549.
 (pdftex.def)             Requested size: 187.89912pt x 171.70638pt.
 
-<images/syncrotation3.png, id=336, 794.97pt x 783.92876pt>
+<images/syncrotation3.png, id=332, 794.97pt x 783.92876pt>
 File: images/syncrotation3.png Graphic file (type png)
 
 <use images/syncrotation3.png>
 Package pdftex.def Info: images/syncrotation3.png used on input line 554.
 (pdftex.def)             Requested size: 187.89912pt x 185.28787pt.
- [14 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncrotation1.p
-ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncr
-otation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/im
-ages/syncrotation3.png (PNG copy)>] [15]
-<images/shadowcamera.png, id=351, 452.69125pt x 396.48125pt>
+
+Overfull \hbox (8.55112pt too wide) in paragraph at lines 563--563
+[][]\OT1/cmr/bx/n/14.4 Lighting of the Earth and Moon in Phong shad-ing & Non-i
+lluminated
+ []
+
+[14 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncrotation1.pn
+g (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncro
+tation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/ima
+ges/syncrotation3.png (PNG copy)>]
+<images/lightfromphong1.png, id=341, 793.96625pt x 607.26875pt>
+File: images/lightfromphong1.png Graphic file (type png)
+
+<use images/lightfromphong1.png>
+Package pdftex.def Info: images/lightfromphong1.png used on input line 569.
+(pdftex.def)             Requested size: 187.89912pt x 143.70892pt.
+
+<images/lightfromphong2.png, id=342, 577.15625pt x 445.665pt>
+File: images/lightfromphong2.png Graphic file (type png)
+
+<use images/lightfromphong2.png>
+Package pdftex.def Info: images/lightfromphong2.png used on input line 574.
+(pdftex.def)             Requested size: 187.89912pt x 145.09102pt.
+
+<images/lightfromphong3.png, id=343, 1226.5825pt x 372.39125pt>
+File: images/lightfromphong3.png Graphic file (type png)
+
+<use images/lightfromphong3.png>
+Package pdftex.def Info: images/lightfromphong3.png used on input line 586.
+(pdftex.def)             Requested size: 187.89912pt x 57.04385pt.
+
+<images/lightfromphong4.png, id=344, 835.12pt x 305.14pt>
+File: images/lightfromphong4.png Graphic file (type png)
+
+<use images/lightfromphong4.png>
+Package pdftex.def Info: images/lightfromphong4.png used on input line 591.
+(pdftex.def)             Requested size: 187.89912pt x 68.65353pt.
+ [15 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong1
+.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lig
+htfromphong2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repor
+t/images/lightfromphong3.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-
+System/Report/images/lightfromphong4.png (PNG copy)>] [16] <images/shadowcamera
+.png, id=358, 452.69125pt x 396.48125pt>
 File: images/shadowcamera.png Graphic file (type png)
 
 <use images/shadowcamera.png>
-Package pdftex.def Info: images/shadowcamera.png used on input line 596.
+Package pdftex.def Info: images/shadowcamera.png used on input line 625.
 (pdftex.def)             Requested size: 234.87749pt x 205.71164pt.
- [16] [17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcame
-ra.png (PNG copy)>] [18] [19
+ [17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamera.pn
+g (PNG copy)>] [18] [19
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 661--662
+Underfull \hbox (badness 10000) in paragraph at lines 690--691
 []\OT1/cmr/m/n/12 https://www.nasa.gov/sites/default/files/images/700328main[]2
 0121014[]003615[]flat.jpg
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 670--672
+Underfull \hbox (badness 2990) in paragraph at lines 699--701
 []\OT1/cmr/m/n/12 Computational Con-tem-pla-tions: Us-ing Shaders and Se-lec-ti
 ve Glow Ef-fects in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--675
+Underfull \hbox (badness 10000) in paragraph at lines 702--704
 []\OT1/cmr/m/n/12 three.js/dat.gui.min.js at mas-ter . mr-doob/three.js, \OT1/c
 mr/m/it/12 github\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 673--675
+Underfull \hbox (badness 10000) in paragraph at lines 702--704
 \OT1/cmr/m/n/12 https://github.com/mrdoob/three.js/blob/master/examples/js/libs
 /dat.gui.min.js
  []
@@ -1078,15 +1116,15 @@ ur}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.682 \end{document}
+l.711 \end{document}
                     ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 682.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 682.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 711.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 711.
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 682.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 682.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 711.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 711.
 Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 .out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -1094,26 +1132,29 @@ Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 682.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 711.
  ) 
 Here is how much of TeX's memory you used:
- 9386 strings out of 493921
- 141437 string characters out of 3144866
- 303510 words of memory out of 3000000
- 12392 multiletter control sequences out of 15000+200000
+ 9415 strings out of 493921
+ 142690 string characters out of 3144866
+ 304380 words of memory out of 3000000
+ 12415 multiletter control sequences out of 15000+200000
  13694 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,12n,43p,1496b,1815s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+pdfTeX warning (dest): name{page.21} has been referenced but does not exist, 
+replaced by a fixed one
+
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
 Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (20 pages,
- 3412680 bytes).
+ 3714823 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 166 named destinations out of 1000 (max. 500000)
- 333 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 451 PDF objects out of 1000 (max. 8388607)
+ 168 named destinations out of 1000 (max. 500000)
+ 345 words of extra memory for PDF output out of 10000 (max. 10000000)
 
