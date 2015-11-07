@@ -201,7 +201,7 @@ This assignment tasked me with using WebGL to create and display a simple animat
 %----------------------------------------------------------------------------------------
 \section{Simulation}
 \subsection{Parameters}
-In order to create the simple model, I used some arbitary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything, as real values would leave the Sun too large compared to a miniscule Earth and Moon that would also be very, very far away from the camera focus. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
+In order to create the simple model, I used some arbitrary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything, as real values would leave the Sun too large compared to a minuscule Earth and Moon that would also be very, very far away from the camera focus. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
 
 \begin{lstlisting}
 // Large, so we can actually see something with our model.
@@ -242,14 +242,18 @@ As you can see, the Sun is much smaller than it should be, as are the distances 
 \end{figure}
 
 \subsection{Structure}
-I have structured my JavaScript code such that there are files for each major component of the model (user interface, Sun-Earth-Moon in one file, Controller, etc) that handles the responsibilty of those components, for initiation and updating on each animation loop. For the Sun, Earth and Moon, each is held in their own object, which contains data of their Mesh, a constant reference to their homogeneous coordinates and their update methods.
+I have structured my JavaScript code such that there are files for each major component of the model (user interface, Sun-Earth-Moon in one file, Controller, etc) that handles the responsibility of those components, for initiation and updating on each animation loop. For the Sun, Earth and Moon, each is held in their own object, which contains data of their Mesh, a constant reference to their homogeneous coordinates and their update methods.
 
 Most of the parameters for controlling speed, size and the tilts of the planets are contained in a single global variable file, for easy access when I was building and testing my simulation. The setup and main rendering loop are in a single Controller file, and this calls to methods in the other files in the order that things should be initialised and updated. This made it easier to ensure the correct ordering of events.
 
 The Earth and Moon mesh objects have also been added into one single Object3D, earthAndMoon, and then that object has been added to the scene, instead of adding the two individually. This increases the efficiency of the rendering, as they are rendered as one item. While not necessary for such a small simulation, if the application were expanded upon in the future to include many, maybe thousands, of additional planets, this style of structure would be much easier to maintain. It would also help group planets and their moons together, meaning they could be added and removed with their satellites easily.
 
 \subsection{Running the program}
-To run the simulation for demonstation, visit: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/}, hosted on my university filestore. For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56, best seen with the Firefox browser. No additional downloading is required. There is also a Credits page for any third party textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}.
+To run the simulation for demonstration, visit: 
+
+\url{http://users.aber.ac.uk/jee22/cs323/virtual-system/}
+
+hosted on my university file store. For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56, best seen with the Firefox browser. No additional downloading is required. There is also a Credits page for any third party textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}.
 
 
 %----------------------------------------------------------------------------------------
@@ -274,13 +278,13 @@ The Earth has a clear orbit around the centre of the Sun, although it is an elli
                 \caption{View from the side.}
                 \label{fig:The Earth orbiting the Sun}
        \end{subfigure}
-       \caption{Views of the Earth's Orbit around the centre of the Sun (elliptical), shown by the orbit lines.}\label{fig: The Earth orbitng the centre of the Sun}
+       \caption{Views of the Earth's Orbit around the centre of the Sun (elliptical), shown by the orbit lines.}\label{fig: The Earth orbiting the centre of the Sun}
 \end{figure}
 
 Originally, the Earth orbited the Sun through updating the x and z coordinates, each animation frame updating the new position of the Earth by shifting it a certain amount, using the distance from the Sun, the speed of rotation the current x and z position and using radians to create the next step on the full anti-clockwise orbit.
 
 \subsection{The moon orbits the centre of the Earth}
-The Moon orbits the centre of the Earth in much the same way that the Earth orbits the Sun. The points are pre-computed, yet take into account the Earth's current position too. The orbit is ellipitcal, and as in reality, doesn't sit squarely 'centrally circling' the Earth. More information can be found out about this later in the report.
+The Moon orbits the centre of the Earth in much the same way that the Earth orbits the Sun. The points are precomputed, yet take into account the Earth's current position too. The orbit is elliptical, and as in reality, doesn't sit squarely 'centrally circling' the Earth. More information can be found out about this later in the report.
 
 \begin{figure}[H]
         \centering
@@ -296,7 +300,7 @@ The Moon orbits the centre of the Earth in much the same way that the Earth orbi
                 \caption{View from the side.}
                 \label{fig:The Earth orbiting the Sun}
        \end{subfigure}
-       \caption{Views of the Moon's Orbit around the centre of the Earth (elliptical), shown by the orbit lines.}\label{fig: The Moon orbitng the centre of the Earth}
+       \caption{Views of the Moon's Orbit around the centre of the Earth (elliptical), shown by the orbit lines.}\label{fig: The Moon orbiting the centre of the Earth}
 \end{figure}
 
 \subsection{Circular orbits}
@@ -312,7 +316,7 @@ Where objectToUpdate was the Earth or Moon, pivotPosition is the centre of the o
  
 If I were to do this in matrix transformations, I would do a similar process to updating the x and z position, but rather than updating them with .x and .z =, I would turn the coordinates into a homogeneous matrix and then multiply a shift on the x matrix and z matrix transformations together, apply that to the homogeneous coordinates, then convert them back to physical coordinates, update the object's vertices with its new position and then update the face and vertex normals with the normal of the transformation matrix. 
  
-Doing this is not necessary for the orbital rotations as they are pre-computed. I have, however, done this for axial rotations and this can be seen in the subsection for the Sun, Earth and Moon spinning on their own axes.
+Doing this is not necessary for the orbital rotations as they are precomputed. I have, however, done this for axial rotations and this can be seen in the subsection for the Sun, Earth and Moon spinning on their own axes.
 
 \subsection{The Sun, Earth and Moon shown as texture mapped spheres}
 As shown below, each object has its own texture mapped to the surface. As an addition to this, the Earth and Moon have bump maps which make it look like their surfaces are not completely smooth, as in reality. The Earth additionally has a specular map, which allows the light from the Phong lighting and shading to reflect off of the reflective water of the Earth but not so much the land masses. The textures for the Earth and Moon come from planetpixel\cite{earthtextures}, while the Sun texture is credited to NASA\cite{suntexture}
@@ -340,7 +344,7 @@ As shown below, each object has its own texture mapped to the surface. As an add
 \end{figure}
 
 \subsection{The Sun, Earth and Moon each spinning on their own axes}
-The Sun, Earth and Moon each spin on their own axis by a rotation on the Y axis. In my first version of the application, this was done through updating the object.rotation.y in increments, based on the objets rotation speed, every animation frame.
+The Sun, Earth and Moon each spin on their own axis by a rotation on the Y axis. In my first version of the application, this was done through updating the object.rotation.y in increments, based on the objects rotation speed, every animation frame.
 \begin{lstlisting}
 earthMesh.rotation.y += controlValues.earthAxisRotationSpeed * (Math.PI / 180); // rotate Earth on axis
 \end{lstlisting}
@@ -428,7 +432,7 @@ To present the Sun as a self-illuminated sphere, I first used an emissive map, w
         \centering
         \begin{subfigure}[b]{0.4\textwidth}
                 \includegraphics[width=\textwidth]{images/sunemissive}
-                \caption{The Sun with just an emissive map for self-illiminating}
+                \caption{The Sun with just an emissive map for self-illuminating}
                 \label{fig:Self-illuminating Sun with emissive map.}
        \end{subfigure}
        %add desired spacing between images, e. g. ~, \quad, \qquad etc.
@@ -447,7 +451,7 @@ To present the Sun as a self-illuminated sphere, I first used an emissive map, w
 \end{figure}
 
 \subsection{Earth and Moon lit by a single point light source located at the centre of the Sun}
-All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows. 
+All objects in the scene are lit slightly by a dark AmbientLight for the purpose of the animation. The light source from the Sun is a SpotLight, not a PointLight as requested by the Basic Features. The main reason for this is that Point Lights in three.js do not cast shadows (note: As of writing this, PointLights may now cast shadows, or at least a solution for this is being made. For the sake of computation costs, I have stuck with using a SpotLight). 
 
 In order to light the Earth and Moon with the Spot Light, I have the light starting at the centre of the Sun (0,0,0) and added as part of the SunMesh for rendering efficiency, and its target set as the position of the Earth, tracking it every animation frame to give the illusion of a single light source at the centre of the Sun.
 
@@ -471,7 +475,7 @@ function buildSunLight(){
 
 \section{Additional Features}
 \subsection{User Interface}
-To help the user control and veiw the simulation, I added a number of user interface controls. Using the sidebar interface, a user can change the animation speed, change the camera focus to look at the Sun, Earth or Moon, reset the camera, pause the simulation (pauses the updating of values while still rendering the scene) and turn on or off helpers to visually see the orbital rotations and the axes of the objects. The side bar user interface is made using dat.gui\cite{datgui}, which makes for quick and easy gui by adding controls and parameters for them, including values and functions.
+To help the user control and view the simulation, I added a number of user interface controls. Using the sidebar interface, a user can change the animation speed, change the camera focus to look at the Sun, Earth or Moon, reset the camera, pause the simulation (pauses the updating of values while still rendering the scene) and turn on or off helpers to visually see the orbital rotations and the axes of the objects. The side bar user interface is made using dat.gui\cite{datgui}, which makes for quick and easy gui by adding controls and parameters for them, including values and functions.
 
 \begin{figure}[H]
         \centering
@@ -535,7 +539,7 @@ function setupGUI() {
 The user can also navigate around the simulation using their mouse or the arrow keys using OrbitControls\cite{orbitcontrols}.
 
 \subsection{Synchronous orbital and axial rotation of the Moon}
-By using the same speed for the Moon's orbital and axial rotation in the simulation, the Moon can be set so that the same face is always shown to the Sun. When I was updating the Moon's orbit by computing the next step every animation frame, I would use the same speed value for both the rotation update and orbit update. However, since I change to pre-computing the elliptical orbit, the speeds no longer had a way to match up.
+By using the same speed for the Moon's orbital and axial rotation in the simulation, the Moon can be set so that the same face is always shown to the Sun. When I was updating the Moon's orbit by computing the next step every animation frame, I would use the same speed value for both the rotation update and orbit update. However, since I change to precomputing the elliptical orbit, the speeds no longer had a way to match up.
 
 One option I could take is to continue computing the axial rotation every animation step, but only as often as I update the orbital rotation step, to ensure they stayed in sync. However, doing this, plus with the Moon's rotation being titled, requires a fair amount of computation to try and get the synchronisation correct. In order to save time on coding and avoid a `wobbly' Moon, I used the three.js function 
 \begin{lstlisting}
@@ -546,18 +550,18 @@ One option I could take is to continue computing the axial rotation every animat
         \centering
         \begin{subfigure}[b]{0.38\textwidth}
                 \includegraphics[width=\textwidth]{images/syncrotation1}
-                \caption{Synchronus axial and orbital rotation of the Moon 1.}
-                \label{fig: Synchronus axial and orbital rotation of the Moon.}
+                \caption{Synchronous axial and orbital rotation of the Moon 1.}
+                \label{fig: Synchronous axial and orbital rotation of the Moon.}
 	 \end{subfigure}
         \begin{subfigure}[b]{0.38\textwidth}
                 \includegraphics[width=\textwidth]{images/syncrotation2}
-                \caption{Synchronus axial and orbital rotation of the Moon 2.}
-                \label{fig: Synchronus axial and orbital rotation of the Moon.}
+                \caption{Synchronous axial and orbital rotation of the Moon 2.}
+                \label{fig: Synchronous axial and orbital rotation of the Moon.}
 	 \end{subfigure}
 	 \begin{subfigure}[b]{0.38\textwidth}
                 \includegraphics[width=\textwidth]{images/syncrotation3}
-                \caption{Synchronus axial and orbital rotation of the Moon 3.}
-                \label{fig: Synchronus axial and orbital rotation of the Moon.}
+                \caption{Synchronous axial and orbital rotation of the Moon 3.}
+                \label{fig: Synchronous axial and orbital rotation of the Moon.}
 	 \end{subfigure}
 	 \caption{You can see the blue axial line, always pointing out from the same face, is always pointing at the Earth.}
 \end{figure}
@@ -577,7 +581,7 @@ The Materials of the Earth and Moon are made from PhongMaterial, and so Phong li
                 \caption{Shadows from the absence of light from SpotLight on the PhongMaterial.}
                 \label{fig: Shadows from the absence of light from SpotLight on the PhongMateria.}
 	 \end{subfigure}
-	 \caption{The effect of light on the PhongMaterial causing phong shading.}
+	 \caption{The effect of light on the PhongMaterial causing Phong shading.}
 \end{figure}
 
 In particular, where I have used a specular map for the Earth's ocean, you can see the shiny light reflection. During my testing, I changed the value of the shininess of the Earth to see how it would look, which can be seen in figure 12.
@@ -715,7 +719,7 @@ function calculateR(semiMajorAxis, eccentricity, theta){
 }
 \end{lstlisting}
 
-To use the function, the points are calculated by providing a timeStep (fFor the sake of the simulation and scale, this is set as 1000, and just means how many steps there will be for a complete orbit from starting point to end), the orbit eccentricity and the semi-major axis of the objects rotation, which is the maximum distance of the orbit of the pivot point to the object rotating around it. Once the points have been made, every time the update function is called during the animation loop, the object moves to the next point of orbit, based on the speed of animation.
+To use the function, the points are calculated by providing a timeStep (for the sake of the simulation and scale, this is set as 1000, and just means how many steps there will be for a complete orbit from starting point to end), the orbit eccentricity and the semi-major axis of the objects rotation, which is the maximum distance of the orbit of the pivot point to the object rotating around it. Once the points have been made, every time the update function is called during the animation loop, the object moves to the next point of orbit, based on the speed of animation.
 
 \begin{lstlisting}
 var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity, earthDistanceFromSun);
@@ -729,7 +733,7 @@ updateEarth : function(){
     earthMesh.position.set(currentPosition.x, currentPosition.y, currentPosition.z);
 }
 \end{lstlisting}
-You can see the results of the orbital point calculations in figure 16. By changing the eccentricy, we can change the size of the ellipse, and in effect the speed of the object in its orbit as it reaches points closer to the object it is orbiting around.
+You can see the results of the orbital point calculations in figure 16. By changing the eccentricity, we can change the size of the ellipse, and in effect the speed of the object in its orbit as it reaches points closer to the object it is orbiting around.
 
  \begin{figure}[H]
         \centering
@@ -808,7 +812,7 @@ You can see the ShadowCamera of the SpotLight in figure 18, as displayed by the 
 When I first enabled the casting and receiving of shadows I encountered issues with double shadows, where a shadow would be shown on the correct side of the object shadowed but also on the reverse side. I struggled with the problem for a long time, trying to debug where I had gone wrong within my code to cause this effect. I wasn't sure if I had slightly transparent objects, if there was an issue recalculating the face and vertex normals or if I had set up my shadow camera incorrectly. In the end, it turned out that it was something I couldn't do anything about, as it was a WebGL issue\cite{shadow1}\cite{shadow2} within three.js that was only fixed a couple of weeks after the version of three.js I was using was downloaded for my application. Updating to the latest version of three.js fixed this issue!
 
 \subsection{Other features of my choice}
-As an addition to the previously mentioned features, I also wanted to implement something we'd discussed in lectures. The most obvious choice for this was matrix transformations. I implemented a number of different transformations for shifts and rotations, and started my project with using them to compute orbit. After I moved to pre-computing the orbital rotations for Elliptical orbits and using Kepler's 2nd Law, the matrix transformations are now just used for the axial rotations of each object and the initial setup for the tilt of the Moon's orbit.
+As an addition to the previously mentioned features, I also wanted to implement something we'd discussed in lectures. The most obvious choice for this was matrix transformations. I implemented a number of different transformations for shifts and rotations, and started my project with using them to compute orbit. After I moved to precomputing the orbital rotations for Elliptical orbits and using Kepler's 2nd Law, the matrix transformations are now just used for the axial rotations of each object and the initial setup for the tilt of the Moon's orbit.
 
 I came across a number of problems when I first started using matrices, and while I don't have screenshots to display some of the strange graphical errors encountered, I have described the most notable below:
 \begin{itemize}
