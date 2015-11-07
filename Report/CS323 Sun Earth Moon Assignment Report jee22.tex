@@ -767,7 +767,20 @@ Through the use of a SpotLight and its shadow camera and turning the ShadowMap o
 	 \end{subfigure}
 	 \caption{The Earth and Moon casting their shadows on each other, which can result in an eclipse of the Sun.}
 \end{figure}
-Very easy to achieve. However, previously encountered issues with double shadows, with a WebGL issue that I couldn't fix in my own code. Struggled for a long time with it (others did too, see this link and this link), until an update to three.js fixed it. Relief at fixing it, also frustration at it being something I thought was in my code but turned out not to be. Much time wasted. But it works now, and it's super pretty how it does it with the spot light. Here, you can see my testing with the ShadowCamera, how the shadows are presented within the camera, but not outside of it. COOL!
+
+To get this effect is very simple, as just a couple of flags need to be set for the objects that need to be affected by this. There must be the correct materials (Lambert and Phong) and lighting (Spot, Directional - Although as of writing this, I believe PointLight either works now or a solution is being worked on) in order for this effect to work.
+\begin{lstlisting}
+  renderer.shadowMap.enabled = true;
+  sunLight.castShadow = true;
+  
+  earthMesh.castShadow = true;
+  earthMesh.receiveShadow = true;
+  
+  moonMesh.castShadow = true;
+  moonMesh.receiveShadow = true;
+\end{lstlisting}
+
+In order to test that the eclipse shadows worked, I used the CameraHelper class of three.js with the shadow camera of the simulations SpotLight.
 \begin{lstlisting}
 sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
 sunLight.castShadow = true;
@@ -790,12 +803,143 @@ sunMesh.add(sunLight);
       
 \end{figure}
 
-You can see the ShadowCamera of the Spot Light in the figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
+You can see the ShadowCamera of the SpotLight in the figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
+
+When I first enabled the casting and receiving of shadows I encountered issues with double shadows, where a shadow would be shown on the correct side of the object shadowed but also on the reverse side. I struggled with the problem for a long time, trying to debug where I had gone wrong within my code to cause this effect. I wasn't sure if I had slightly transparent objects, if there was an issue recalculating the face and vertex normals or if I had set up my shadow camera incorrectly. In the end, it turned out that it was something I couldn't do anything about, as it was a WebGL issue\cite{shadow1}\cite{shadow2} within three.js that was only fixed a couple of weeks after the version of three.js I was using was downloaded for my application. Updating to the latest version of three.js fixed this issue!
 
 \subsection{Other features of my choice}
-Mainly matrix transformations. Previously mentioned them, but I want to express that I wanted to fit them into my assignment. Before I pre-computed the orbits of the Earth and Moon, I was also working on their orbits with matrix transformations, but it became unnecessary once I changed how the orbit was calculated. I still stuck with using matrix transformations for axial rotations, however (where appropriate) and spent some time learning about how to do this. One problem I encountered when working with them was my lighting would not update during an Object's orbit around the light source. This was due to me updating the Geometries vertices but not the face and vertex normals. Once I started updating the Face and Vertex normals (like in three.js own method) see this code here: CODE, it worked as expected. I did test my transformations to check they gave the expected results too (4x4 matrix calculation for each matrix with result HERE PLZ). Many weird attempts with matrix transformations: Working directily with vertices, or working with the Matrix of the object, or working with the Mesh - Flying away Earth, Earth eventually shrinking at the middle (becoming a tube), irregular orbits, etc - Most overcome through looking at the matrix multiply method where I'd inccorectly done the multiplication ordering, or not properly applied the w coordinate on shift translations for the orbital rotations. Happy with the results though.
+As an addition to the previously mentioned features, I also wanted to implement something we'd discussed in lectures. The most obvious choice for this was matrix transformations. I implemented a number of different transformations for shifts and rotations, and started my project with using them to compute orbit. After I moved to pre-computing the orbital rotations for Elliptical orbits and using Kepler's 2nd Law, the matrix transformations are now just used for the axial rotations of each object and the initial setup for the tilt of the Moon's orbit.
 
-We turn Object geometry vertices into homogeneous coordinates (unnecessary for rotation, but for the sake of allowing for future adaptations that may wish to use translate transformations that need the 'w' coordinate too, we do this), multiply by the rotation this step (which is multiplied by the speed of the objects rotation) and then applied back to the Object geometries coordinates. Rotation!
+I came across a number of problems when I first started using matrices, and while I don't have screenshots to display some of the strange graphical errors encountered, I have described the most notable below:
+\begin{itemize}
+ \item The Earth gradually shrank into a cylinder - Caused by an incorrect rotation matrix that wasn't applying the `w' coordinate properly after a shift and rotation.
+ \item The Earth and Moon not being captured in the Sun's gravitational pull - Caused by the way my matrices were multiplied being completely incorrect, as the way that coordinates are stored in three.js are not the same as I was expecting when I first wrote my matrix multiplication method. This also caused some issues where the Earth would become a mess of pixels.
+ \item The lighting of the Earth and Moon staying in a constant position, even as the Earth and Moon rotated on their axis and moved around on their orbital rotation, the direction of the light would stay where it was when the simulation first started. - Caused by not correctly re-calculating the face and vertex normals after a matrix transformation.
+ \item The vertices correctly updating after a matrix transformation but no actual difference being rendered - Caused by too much computation on each render step and creating too many new Vector3 objects. This got the system stuck in updating the data of the objects, but the renderer still waiting and not updating the objects after transformation.
+\end{itemize}
+
+There were many other smaller issues along the way, and multiple different ways of attempting to apply my own matrices to the objects, but in the end the method that works the best for me is to:
+\begin{itemize}
+\item After initialization, get the physical coordinates of the vertices of the objects and hold them in memory
+\item Turn the coordinates into homogeneous coordinates
+\item During every run step, multiple the homogeneous coordinates with the next transformation matrix for this step
+\item Turn the homogeneous coordinates into physical coordinates, keeping the updated homogeneous coordinates in memory
+\item Update the object with the new vertices
+\item Update the face and vertex normals with the normal of the transformation matrix
+\item Set flags on the object that it has been updated and needs to be rendered
+\end{itemize}
+
+In code using the Earth as an example, this looks somewhat like this (this is extracted from multiple methods in order to be demonstrated here):
+
+\begin{lstlisting}
+// initiate - Get homogeneous coordinates in memory
+computableEarthVertices = convertPhysicalToHomogeneous(earthMesh.geometry.vertices);
+
+function convertPhysicalToHomogeneous(coordinateArray){
+    var result = rearrangeVertices(coordinateArray);
+    result[3] = [];
+    for(var i=0; i < result[0].length; i++){
+        result[3][i] = 1;
+    }
+    return result;
+}
+
+function rearrangeVertices(coordinateArray){
+    var result = [];
+    for(var x = 0; x < 3; x++){
+        result[x] = [];    
+        for(var y = 0; y < coordinateArray.length; y++){ 
+            result[x][y] = 0;
+        }  
+    } 
+    for(var i=0; i < coordinateArray.length; i++){
+        result[0][i] = coordinateArray[i].x;
+    }
+    for(var i=0; i < coordinateArray.length; i++){
+        result[1][i] = coordinateArray[i].y;
+    }
+    for(var i=0; i < coordinateArray.length; i++){
+        result[2][i] = coordinateArray[i].z;
+    }
+    return result;
+}
+\end{lstlisting}
+\begin{lstlisting}
+// update the computable vertices (homogeneous) and apply it to the object
+// Once per animation frame
+computableEarthVertices = updateYRotation(controlValues.earthAxisRotationSpeed * (Math.PI / 180), earthMesh.geometry, computableEarthVertices);
+
+function updateYRotation(rotation, geometry, computableVertices){
+    computableVertices = multiplyMatrices(rotationYTransformation(rotation), computableVertices);
+    applyHomogeneousToPhysical(computableVertices, geometry.vertices);
+    var normalMatrix = tempMatrix3.getNormalMatrix(rotationYMatrix4(rotation));
+    updateFaceAndVertexNormals(normalMatrix, geometry);
+    geometry.verticesNeedUpdate = true;
+    geometry.normalsNeedUpdate = true;
+
+    return computableVertices;
+}
+
+function multiplyMatrices(matrixOne, matrixTwo){
+    if(matrixOne[0].length != matrixTwo.length){
+        alert("MatrixOne columns do not match MatrixTwo rows. Cannot compute!");
+    } else {
+        var result = [];
+    for(var x = 0; x < matrixOne.length; x++){
+        result[x] = [];    
+        for(var y = 0; y < matrixTwo[0].length; y++){ 
+            result[x][y] = 0;    
+        }    
+    }
+
+    for(var r=0; r < matrixTwo.length; r++){
+        for(var c=0; c < matrixTwo[0].length; c++){
+            for(var i=0; i < matrixOne[0].length; i++){
+                result[r][c] += (matrixOne[r][i] * matrixTwo[i][c]);
+            }
+        }
+    }
+
+    return result;
+    }
+}
+
+var rotationYTransformation = function (angle) {
+    return [
+        [Math.cos(angle), 0, Math.sin(angle), 0],
+        [0,1,0,0],
+        [-Math.sin(angle), 0, Math.cos(angle), 0],
+        [0,0,0,1]
+    ]; 
+}
+
+function applyHomogeneousToPhysical(homogeneous, physical){
+    for(var x = 0; x < homogeneous[0].length; x++){
+        physical[x].setX(homogeneous[0][x] / homogeneous[3][x]);
+        physical[x].setY(homogeneous[1][x] / homogeneous[3][x]);
+        physical[x].setZ(homogeneous[2][x] / homogeneous[3][x]); 
+    }
+}
+
+function updateFaceAndVertexNormals(normalMatrix, geometry){
+    for ( var i = 0, il = geometry.faces.length; i < il; i ++ ) {
+        var face = geometry.faces[ i ];
+        face.normal.applyMatrix3( normalMatrix ).normalize();
+        for ( var j = 0, jl = face.vertexNormals.length; j < jl; j ++ ) {
+            face.vertexNormals[ j ].applyMatrix3( normalMatrix ).normalize();
+        }
+    }
+
+    if ( geometry.boundingBox !== null ) {
+        geometry.computeBoundingBox();
+    }
+    if ( geometry.boundingSphere !== null ) {
+        geometry.computeBoundingSphere();
+    }
+}
+\end{lstlisting}
+
+While this may not be the most efficient way, it was how I found I was able to extract the data from the WebGL/three.js objects, modify it and then put it back in using my own code, to show that this is something I am capable of doing and have greater control over the objects. I am aware that there are better methods of applying matrices provided by three.js, and that for just rotation matrices I could also remove the step of converting to and from homogeneous coordinates. However, for the sake of the simulation, the potential for expansion in the future and my own challenge, I have kept the process this way.
 
  Also cool star map because it looks a little more `real'. Idea for this came from here: CITE LINK.
 
@@ -853,6 +997,12 @@ http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html (A
 
 \bibitem{datgui} three.js/dat.gui.min.js at master . mrdoob/three.js, {\em github}, [online],
 https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/205)
+
+\bibitem{shadow1} webgl - THREE.JS Shadow on opposite side of light - Stack Overflow, {\em stackoverflow}, [online],
+http://stackoverflow.com/a/12602143 (Accessed 11/07/2015)
+
+\bibitem{shadow2} Three.js DoubleSided material doesn't cast shadow on both sides of planar parametric geometry, {\em stackoverflow}, [online],
+http://stackoverflow.com/a/20473174 (Accessed 11/07/2015)
 
 \bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: 
 javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online],
