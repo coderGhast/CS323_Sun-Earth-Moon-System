@@ -198,7 +198,7 @@ This assignment tasked me with using WebGL to create and display a simple animat
 %----------------------------------------------------------------------------------------
 \section{Simulation}
 \subsection{Parameters}
-In order to create the simple model, I used some arbitary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
+In order to create the simple model, I used some arbitary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything, as real values would leave the Sun too large compared to a miniscule Earth and Moon that would also be very, very far away from the camera focus. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
 
 \begin{lstlisting}
 // Large, so we can actually see something with our model.
@@ -234,10 +234,10 @@ I have structured my JavaScript code such that there are files for each major co
 
 Most of the values that parameters for controlling speed, size and the tilts of the planets are contained in a single global variable file, for easy access when I was building and testing my simulation. The setup and main rendering loop are in a single Controller file, and this calls to methods in the other files in the order that things should be initialised and updated. This made it easier to ensure the correct ordering of events.
 
-The Earth and Moon mesh objects have also been added into one single Object3D, earthAndMoon, and then that object has been added to the scene, instead of adding the two individually. Originally, this helped me with orbital rotations, acting on both of the objects using one object, however it is not necessary with my final version of the application. I have kept them as part of the same Object3D though, as this increases the efficiency of the rendering, as they are rendered as one item. While not necessary for such a small simulation, if the application were expanded upon in the future to include many, maybe thousands, of additional planets, this style of structure would be much easier to maintain. It would also help group planets and their moons together, meaning they could be added and removed with their satellites easily.
+The Earth and Moon mesh objects have also been added into one single Object3D, earthAndMoon, and then that object has been added to the scene, instead of adding the two individually. This increases the efficiency of the rendering, as they are rendered as one item. While not necessary for such a small simulation, if the application were expanded upon in the future to include many, maybe thousands, of additional planets, this style of structure would be much easier to maintain. It would also help group planets and their moons together, meaning they could be added and removed with their satellites easily.
 
 \subsection{Running the program}
-For demonstation, go to this address, hosted on my university filestore: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/}. For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56 using any of the provided browsers. Chrome and Firefox are recommended. No additional downloading is required. There is also a Credits page any textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}.
+To run the simulation for demonstation, visit: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/}, hosted on my university filestore. For building and testing, I ran the application locally using xampp\cite{xampp} . You should be able to see the application in full working order in both B59 and C56, best seen in Firefox browser. No additional downloading is required. There is also a Credits page any textures and code used in the application here: \url{http://users.aber.ac.uk/jee22/cs323/virtual-system/credits.html}.
 
 
 %----------------------------------------------------------------------------------------
@@ -246,7 +246,7 @@ For demonstation, go to this address, hosted on my university filestore: \url{ht
 
 \section{Basic Features}
 \subsection{The earth orbits the centre of the Sun}
-The Earth has a clear orbit around the centre of the Sun, although it is an elliptical orbit and so looks a little off centre, it is not. If you view the images below, you can see how the orbit is set up around the Sun. This is achieved through pre-computed points on the orbital rotation using Kepler's 2nd Law of planetary motion (more on this in Additional Features section), which generates an elliptical orbit with varying speeds depending on the point of orbit.
+The Earth has a clear orbit around the centre of the Sun, although it is an elliptical orbit and so may look a little off centre in the screenshot. If you view the images below, you can see how the orbit is set up around the Sun. This is achieved through pre-computed points of the orbital rotation using Kepler's 2nd Law of planetary motion (more on this in Additional Features section), which generates an elliptical orbit with varying speeds depending on the point of orbit.
 
 \begin{figure}[H]
         \centering
@@ -303,7 +303,7 @@ If I were to do this in matrix transformations, I would do a similar process to 
 Doing this is not necessary for the orbital rotations as they are pre-computed. I have, however, done this for axial rotations and this can be seen in the subsection for the Sun, Earth and Moon spinning on their own axes.
 
 \subsection{The Sun, Earth and Moon shown as texture mapped spheres}
-As shown below, each object has it's own texture mapped to the surface. As an addition to this, the Earth and Moon have bump maps which make it look like their surfaces are not completely flat. The Earth additionally has a specular map, which allows the light from the Phong lighting and shading to reflect off of the reflective water of the Earth but not so much the land masses. The textures for the Earth and Moon come from planetpixel \cite{earthtextures}, while the Sun texture comes from NASA\cite{suntexture}
+As shown below, each object has it's own texture mapped to the surface. As an addition to this, the Earth and Moon have bump maps which make it look like their surfaces are not completely smooth, as in reality. The Earth additionally has a specular map, which allows the light from the Phong lighting and shading to reflect off of the reflective water of the Earth but not so much the land masses. The textures for the Earth and Moon come from planetpixel \cite{earthtextures}, while the Sun texture is credited to NASA\cite{suntexture}
 
 \begin{figure}[H]
         \centering
