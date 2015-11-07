@@ -27,7 +27,7 @@ function buildEarthMesh(){
     specularMap: textures.earthSpecularMap,
      } );
 
-  earthMaterial.shininess = 1000;
+  earthMaterial.shininess = 40;
 
   earthMesh = new THREE.Mesh( earthGeometry, earthMaterial );
   earthMesh.castShadow = true;
