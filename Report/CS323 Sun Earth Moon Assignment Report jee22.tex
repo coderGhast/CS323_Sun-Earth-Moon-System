@@ -38,6 +38,9 @@
 \usepackage{textcomp}
 \usepackage{color}
 \usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
 
 \definecolor{lightgray}{rgb}{.9,.9,.9}
 \definecolor{darkgray}{rgb}{.4,.4,.4}
@@ -343,7 +346,7 @@ earthMesh.rotation.y += controlValues.earthAxisRotationSpeed * (Math.PI / 180); 
 \end{lstlisting}
 This ensured that each planet would rotate (anti-clockwise) based on the global variables provided (combined with the speed of animation via controlValues) and not affect the position or the axial tilt. Later, I changed the process of updating the rotation to using Matrix transformations, and this is covered in Additional Features.
 
-While difficult to show in just images, you can see from the figure below that the Earth spins on it's own axis.
+While difficult to show in just images, you can see from figure 5 that the Earth spins on it's own axis.
 \begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.4\textwidth}
@@ -369,7 +372,7 @@ While difficult to show in just images, you can see from the figure below that t
        \caption{Collections of images to present the Earth spinning on its own axis.}\label{fig: The Earth's individual rotation.}
 \end{figure}
 
-To see the Moon's axial rotation, we can best view it from above, such as with the figure below, showing the full axial rotation (in this case in sync with the orbital rotation around the Earth too. This is covered in more detail in Additional Features).
+To see the Moon's axial rotation, we can best view it from above, such as with figure 6, showing the full axial rotation (in this case in sync with the orbital rotation around the Earth too. This is covered in more detail in Additional Features).
 
 \begin{figure}[H]
         \centering
@@ -396,7 +399,7 @@ To see the Moon's axial rotation, we can best view it from above, such as with t
        \caption{Collections of images to present the Moon spinning on its own axis.}\label{fig: The Moon's axial rotation.}
 \end{figure}
 
-The Sun also spins on its own axis, as seen below.
+The Sun also spins on its own axis, as seen in figure 7.
 
 \begin{figure}[H]
         \centering
@@ -577,31 +580,31 @@ The Materials of the Earth and Moon are made from PhongMaterial, and so Phong li
 	 \caption{The effect of light on the PhongMaterial causing phong shading.}
 \end{figure}
 
-In particular, where I have used a specular map for the Earth's ocean, you can see the shiny light reflection. During my testing, I changed the value of the shininess of the Earth to see how it would look, which can be seen below.
+In particular, where I have used a specular map for the Earth's ocean, you can see the shiny light reflection. During my testing, I changed the value of the shininess of the Earth to see how it would look, which can be seen in figure 12.
 
  \begin{figure}[H]
         \centering
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/specular1}
                 \caption{How the specular light is set on my simulation.}
                 \label{fig:Specular 1.}
 	 \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/specular2}
                 \caption{With no shininess.}
                 \label{fig:Specular 2.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.4\textwidth}
+	         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/specular3}
                 \caption{High shininess.}
                 \label{fig:Specular 3.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.4\textwidth}
+	         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/specular4}
                 \caption{Maximum shininess.}
                 \label{fig:Specular 4.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.4\textwidth}
+	         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/specular5}
                 \caption{Showing the landmasses do no reflect the light as much.}
                 \label{fig:Specular 5.}
@@ -726,7 +729,7 @@ updateEarth : function(){
     earthMesh.position.set(currentPosition.x, currentPosition.y, currentPosition.z);
 }
 \end{lstlisting}
-You can see the results of the orbital point calculations in the figure below. By changing the eccentricy, we can change the size of the ellipse, and in effect the speed of the object in its orbit as it reaches points closer to the object it is orbiting around.
+You can see the results of the orbital point calculations in figure 16. By changing the eccentricy, we can change the size of the ellipse, and in effect the speed of the object in its orbit as it reaches points closer to the object it is orbiting around.
 
  \begin{figure}[H]
         \centering
@@ -800,7 +803,7 @@ sunMesh.add(sunLight);
                 \label{fig: The Shadow Camera.}
 \end{figure}
 
-You can see the ShadowCamera of the SpotLight in the figure above, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
+You can see the ShadowCamera of the SpotLight in figure 18, as displayed by the ShadowCameraHelper. This helper shows us what the catchment area of the cast shadows will be. Computing where shadows should fall is expensive, and so I've made the shadow camera area small, in order to reduce the cost of computation.
 
 When I first enabled the casting and receiving of shadows I encountered issues with double shadows, where a shadow would be shown on the correct side of the object shadowed but also on the reverse side. I struggled with the problem for a long time, trying to debug where I had gone wrong within my code to cause this effect. I wasn't sure if I had slightly transparent objects, if there was an issue recalculating the face and vertex normals or if I had set up my shadow camera incorrectly. In the end, it turned out that it was something I couldn't do anything about, as it was a WebGL issue\cite{shadow1}\cite{shadow2} within three.js that was only fixed a couple of weeks after the version of three.js I was using was downloaded for my application. Updating to the latest version of three.js fixed this issue!
 
@@ -977,12 +980,39 @@ function buildStarMapMesh(){
 %----------------------------------------------------------------------------------------
 
 \section{Self Assessment}
-\begin{tabular}{ | l | c | r |}
+\begin{tabular}{ | l | l | l | c | r | r | r |}
 \hline	
- 1 & 2 & 3 \\
+Task &  documented & implemented &  & Extension & documented & implemented \\
+\hline
+1 & \checkmark & \checkmark & & a) &\checkmark  &\checkmark  \\
+ \hline
+2 & \checkmark & \checkmark & & b) & \checkmark &\checkmark  \\
+ \hline
+3 & \checkmark & \checkmark & & c) & \checkmark &\checkmark  \\
+ \hline
+4 &\checkmark  & \checkmark & & d) & \checkmark &\checkmark  \\
+ \hline
+5 &\checkmark  &\checkmark  & & e) & \checkmark &\checkmark  \\
+ \hline
+6 & \checkmark & \checkmark & & f) & \checkmark &\checkmark  \\
+ \hline
+7 & \checkmark &\checkmark  & & g) &\checkmark  &\checkmark  \\
+ \hline
+ & & & & h) &\checkmark  &\checkmark  \\
+  \hline
+ & & & & i) &\checkmark  &\checkmark  \\
+  \hline
+ & & & & j) &\checkmark  &\checkmark  \\
+ \hline
+ \multicolumn{6}{|l|}{Animation can be viewed in B57, C56 without additional software} & \checkmark \\
+  \hline
+  \multicolumn{6}{|l|}{All reference sources are acknowledged} & \checkmark \\
  \hline	
+ \multicolumn{7}{l}{Your overall self-assessment out of 50:    \textbf{47/50}}
 \end{tabular}
 
+
+From implementing all of the basic features as requested and then all of the additional features, I feel my grade for those sections should be high. I have a feeling that my report may bring my mark down slightly, due to my style of writing and my tests being mainly visual rather than data tables, and that it is very long in length. Through this, I would award myself the mark shown above.
 
 %----------------------------------------------------------------------------------------
 \clearpage
