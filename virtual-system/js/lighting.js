@@ -15,7 +15,6 @@ function buildSunLight(){
    //scene.add(new THREE.CameraHelper( sunLight.shadow.camera ));
 
   sunLight.target = earthMesh;    
-  sunLight.position.set(0, 0, 0);
+  sunLight.position.set(sunMesh.position.x, sunMesh.position.y, sunMesh.position.z);
   sunMesh.add(sunLight);
-
 }
