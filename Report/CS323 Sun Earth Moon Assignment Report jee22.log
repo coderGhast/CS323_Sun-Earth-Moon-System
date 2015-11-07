@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 14:17
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 16:10
 entering extended mode
 **CS323*Sun*Earth*Moon*Assignment*Report*jee22.tex
 
@@ -712,9 +712,6 @@ multiply defined.
 LaTeX Warning: Label `sub@fig: Synchronus axial and orbital rotation of the Moo
 n.' multiply defined.
 
-
-LaTeX Warning: Label `codecolour' multiply defined.
-
 )
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 173.
 LaTeX Font Info:    ... okay on input line 173.
@@ -1115,60 +1112,138 @@ File: images/lightfromphong4.png Graphic file (type png)
 <use images/lightfromphong4.png>
 Package pdftex.def Info: images/lightfromphong4.png used on input line 623.
 (pdftex.def)             Requested size: 187.89912pt x 68.65353pt.
+
+<images/earthtilt1.png, id=362, 921.4425pt x 239.89626pt>
+File: images/earthtilt1.png Graphic file (type png)
+
+<use images/earthtilt1.png>
+Package pdftex.def Info: images/earthtilt1.png used on input line 636.
+(pdftex.def)             Requested size: 234.87749pt x 61.14894pt.
+
+<images/earthtilt2.png, id=363, 879.285pt x 193.72375pt>
+File: images/earthtilt2.png Graphic file (type png)
+
+<use images/earthtilt2.png>
+Package pdftex.def Info: images/earthtilt2.png used on input line 640.
+(pdftex.def)             Requested size: 234.87749pt x 51.74742pt.
+
+<images/earthtilt3.png, id=364, 887.315pt x 162.6075pt>
+File: images/earthtilt3.png Graphic file (type png)
+
+<use images/earthtilt3.png>
+Package pdftex.def Info: images/earthtilt3.png used on input line 644.
+(pdftex.def)             Requested size: 234.87749pt x 43.04115pt.
  [17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong3
 .png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lig
-htfromphong4.png (PNG copy)>]
-<images/shadowcamera.png, id=369, 452.69125pt x 396.48125pt>
+htfromphong4.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repor
+t/images/earthtilt1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-Syste
+m/Report/images/earthtilt2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moo
+n-System/Report/images/earthtilt3.png (PNG copy)>]
+<images/moonorbittilt2.png, id=372, 904.37875pt x 273.02pt>
+File: images/moonorbittilt2.png Graphic file (type png)
+
+<use images/moonorbittilt2.png>
+Package pdftex.def Info: images/moonorbittilt2.png used on input line 663.
+(pdftex.def)             Requested size: 234.87749pt x 70.90437pt.
+ [18 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moonorbittilt2.
+png (PNG copy)>] [19]
+<images/earthelliptical.png, id=440, 838.13126pt x 761.84625pt>
+File: images/earthelliptical.png Graphic file (type png)
+
+<use images/earthelliptical.png>
+Package pdftex.def Info: images/earthelliptical.png used on input line 735.
+(pdftex.def)             Requested size: 187.89912pt x 170.79189pt.
+
+<images/moonelliptical.png, id=441, 621.32124pt x 643.40375pt>
+File: images/moonelliptical.png Graphic file (type png)
+
+<use images/moonelliptical.png>
+Package pdftex.def Info: images/moonelliptical.png used on input line 740.
+(pdftex.def)             Requested size: 187.89912pt x 194.57378pt.
+
+<images/moonellipticalbig.png, id=442, 501.875pt x 402.50375pt>
+File: images/moonellipticalbig.png Graphic file (type png)
+
+<use images/moonellipticalbig.png>
+Package pdftex.def Info: images/moonellipticalbig.png used on input line 745.
+(pdftex.def)             Requested size: 253.66454pt x 203.44395pt.
+ [20 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthelliptical
+.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moo
+nelliptical.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
+/images/moonellipticalbig.png (PNG copy)>]
+<images/eclipse1.png, id=451, 577.15625pt x 456.70625pt>
+File: images/eclipse1.png Graphic file (type png)
+
+<use images/eclipse1.png>
+Package pdftex.def Info: images/eclipse1.png used on input line 759.
+(pdftex.def)             Requested size: 187.89912pt x 148.68561pt.
+ <images/eclipse2.png, id=452, 345.29pt x 285.065pt>
+File: images/eclipse2.png Graphic file (type png)
+
+<use images/eclipse2.png>
+Package pdftex.def Info: images/eclipse2.png used on input line 764.
+(pdftex.def)             Requested size: 187.89912pt x 155.12898pt.
+ [21 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse1.png (P
+NG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse2.p
+ng (PNG copy)>]
+<images/shadowcamera.png, id=469, 452.69125pt x 396.48125pt>
 File: images/shadowcamera.png Graphic file (type png)
 
 <use images/shadowcamera.png>
-Package pdftex.def Info: images/shadowcamera.png used on input line 657.
+Package pdftex.def Info: images/shadowcamera.png used on input line 787.
 (pdftex.def)             Requested size: 234.87749pt x 205.71164pt.
- [18] [19 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcame
-ra.png (PNG copy)>] [20] [21
+ [22 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamera.pn
+g (PNG copy)>] [23] [24
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
-[]\OT1/cmr/m/n/12 https://www.nasa.gov/sites/default/files/images/700328main[]2
-0121014[]003615[]flat.jpg
+Underfull \hbox (badness 2521) in paragraph at lines 842--844
+[]\OT1/cmr/m/n/12 XAMPP In-stallers and Down-loads for Apache Friends, \OT1/cmr
+/m/it/12 apachefriends\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 2990) in paragraph at lines 731--733
+Underfull \hbox (badness 10000) in paragraph at lines 845--847
+[]\OT1/cmr/m/n/12 Planet Tex-ture Map Col-lec-tion, \OT1/cmr/m/it/12 plan-et-pi
+x-elem-po-rium\OT1/cmr/m/n/12 , [on-line],
+ []
+
+
+Overfull \hbox (116.83655pt too wide) in paragraph at lines 848--850
+[]\OT1/cmr/m/n/12 NASA, \OT1/cmr/m/it/12 NASA\OT1/cmr/m/n/12 , [on-line], https
+://www.nasa.gov/sites/default/files/images/700328main[]20121014[]003615[]flat.j
+pg
+ []
+
+
+Underfull \hbox (badness 2990) in paragraph at lines 851--853
 []\OT1/cmr/m/n/12 Computational Con-tem-pla-tions: Us-ing Shaders and Se-lec-ti
 ve Glow Ef-fects in
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--736
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
 []\OT1/cmr/m/n/12 three.js/dat.gui.min.js at mas-ter . mr-doob/three.js, \OT1/c
 mr/m/it/12 github\OT1/cmr/m/n/12 , [on-line],
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 734--736
+Underfull \hbox (badness 10000) in paragraph at lines 854--856
 \OT1/cmr/m/n/12 https://github.com/mrdoob/three.js/blob/master/examples/js/libs
 /dat.gui.min.js
  []
 
 
 AED: lastpage setting LastPage
-[22
+[25
 
-pdfTeX warning (ext4): destination with the same identifier (name{cite.codecolo
-ur}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.743 \end{document}
-                    ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 743.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 743.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 864.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 864.
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 743.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 743.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 864.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 864.
 Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 .out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
@@ -1176,13 +1251,13 @@ Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 743.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 864.
  ) 
 Here is how much of TeX's memory you used:
- 9452 strings out of 493921
- 143464 string characters out of 3144866
- 305026 words of memory out of 3000000
- 12445 multiletter control sequences out of 15000+200000
+ 9606 strings out of 493921
+ 146595 string characters out of 3144866
+ 320344 words of memory out of 3000000
+ 12527 multiletter control sequences out of 15000+200000
  13694 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  36i,12n,43p,1496b,1815s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1192,10 +1267,10 @@ Here is how much of TeX's memory you used:
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (22 pages,
- 4480122 bytes).
+Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (25 pages,
+ 4948435 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 170 named destinations out of 1000 (max. 500000)
- 370 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 566 PDF objects out of 1000 (max. 8388607)
+ 233 named destinations out of 1000 (max. 500000)
+ 415 words of extra memory for PDF output out of 10000 (max. 10000000)
 

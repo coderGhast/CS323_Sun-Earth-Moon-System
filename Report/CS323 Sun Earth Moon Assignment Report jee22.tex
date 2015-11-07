@@ -628,16 +628,146 @@ As an effect of using a SpotLight and Phong Material, the sides facing away from
 \end{figure}
 
 \subsection{Constant tilt of the Earth's axis}
-Look, see this with Axis Helper. This is super simple to achieve. We just set the Earth's rotation on the z axis to be 23.4 once, when we create it, and it's like that and always in that direction. It spins upon this axis with the transformation matrix to have the correct axial rotation, but the tilt always stays in the one direction, to be a proper representation of the Earth and how it doesn't wobble on it's axis. See here, on each side of the Sun, the axis stays the same direction.
+With the aid of Axis Helper, we can see that the Earth's axis is constantly tilted by 23.44. No matter where it is on it's orbital rotation, the Earth is always tilted in the same direction, simulating the reality of the earth being `flung' around the Sun by the orbit, not turned with it.
+
+ \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{images/earthtilt1}
+                \label{fig: Earth tilt1.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{images/earthtilt2}
+                \label{fig: Earth tilt2.}
+	 \end{subfigure}
+	         \begin{subfigure}[b]{0.5\textwidth}
+                \includegraphics[width=\textwidth]{images/earthtilt3}
+                \label{fig: Earth tilt3.}
+	 \end{subfigure}
+	 \caption{The Earth is tilted the same direction and angle at each point during its orbit, shown by the green line of the Axis Helper.}
+\end{figure}
+
+This is super simple to achieve. We just set the Earth's rotation on the z axis to be 23.4 once, when we create it, and then it will always be tilted in that direction, no matter where it is or how the axial rotation on the y axis or orbital rotation and Earth position changes.
+
+\begin{lstlisting}
+  earthMesh.rotation.x = (earthAxialTilt/180)*Math.PI;
+  earthAxisHelper = new THREE.AxisHelper( earthSize * 2 );
+  earthAxisHelper.visible = true;
+  earthMesh.add( earthAxisHelper );
+\end{lstlisting}
 
 \subsection{Constant tilt of the Moon's orbit}
-Here, look, it does this! See in this image, and in this image on the other side of the orbit, the rotation is a constant tilt. This is achieved through the pre-computed points then being multiplied by a rotation on the z axis (could also be the z axis, but this is what I chose) with a transformation matrix. I chose to use three.js applyMatrix4 with my own rotation matrix. I could have written my own Matrix transformation method, as I did for the rotation on the Y axis, however, since this is multiplying a Vector3 by a Matrix4, and I have already shown that I have mastered the command of matrix transformations, I chose to cut down on the amount of code I would need to write for this simple simulation.
+\begin{figure}[H]
+        \centering
+       
+                \includegraphics[width=0.5\textwidth]{images/moonorbittilt2}
+                \caption{The constant orbital tilt of the Moon.}
+                \label{fig: The constant orbital tilt of the Moon.}
+      
+\end{figure}
+
+The Moon's orbit is always tilted, no matter where the Earth is, the orbit is tilted following the Earth, and doesn't wobble. To tilt the orbital rotation of the moon, when the pre-computed points of orbit are computed, they are then multiplied by a rotation on the z axis with a transformation matrix. I chose to use three.js applyMatrix4 with my own rotation matrix.
+\begin{lstlisting}
+var rotationYMatrix4 = function (angle) {     
+        tempMatrix4.set(
+            Math.cos(angle), 0, Math.sin(angle), 0,
+            0,1,0,0,
+            -Math.sin(angle), 0, Math.cos(angle), 0,
+            0,0,0,1
+            );
+        return tempMatrix4;
+}
+
+var moonOrbitPoints = calculateOrbitalPoints(orbitSteps, moonOrbitEccentricity, moonDistanceFromEarth);
+for(var i = 0; i < moonOrbitPoints.length; i++){
+  moonOrbitPoints[i].applyMatrix4(rotationZMatrix4(-(moonOrbitalTilt * (Math.PI / 180))));
+}
+\end{lstlisting}
 
 \subsection{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}
-For both of these additonal points, they tie together. Through calculating one, the other appears. I used the formula provided in the assignment brief \cite{assignment} in order to achieve this, and my code can be seen here: CODE INSERT LOL. This does this: Some cool stuff where we work out the theta for each angle of rotation, using the semi-major axis of the Earth and its distance from the Sun. This is the same for the Earth. You can see how the result looks here, using the Orbital Lines: During testing, I created just the orbital lines to see what the orbit path was like, and changing the number of time steps changed the speed of the orbit (as it was how many points it had to travel along to reach a full cycle) and changing the eccentricity changed how eccentric the ellipse of the orbit was. We can also see that at certain points, the Earth/Moon moves faster where the points are closer, simulating Kepler's 2nd Law of Planetary Motion.
+The calculating of the elliptical orbits and using Kepler's 2nd Law of Planetary Motion tie together, in that when calculating Kepler's 2nd Law we also get the points for an elliptical orbit. I used the formula provided in the assignment brief \cite{assignment} in order to achieve this, and my code can be seen here:
+\begin{lstlisting}
+// Kepler's 2nd Law calculations (for all points along an orbital rotation, in n (timeStep) steps).
+function calculateOrbitalPoints(timeStep, eccentricity, semiMajorAxis){
+	 // 2 * Pi is radians for 360 circle;
+	var completeCircle = Math.PI * 2;
+	var theta = 0;
+	var r;
+	var orbitPoints = [];
+	// +1 to ensure a complete circle with no gaps.
+	while(theta <= completeCircle){
+		theta += calculateTheta(timeStep, eccentricity, theta);
+		r = calculateR(semiMajorAxis, eccentricity, theta);
+		orbitPoints.push(new THREE.Vector3(r * -Math.cos(theta), 0, r * Math.sin(theta)));
+	}
+	return orbitPoints;
+}
+
+function calculateTheta(timeStep, eccentricity, theta){
+	return (2 / timeStep) * Math.pow((1 + eccentricity * Math.cos(theta)), 2) / Math.pow((1 - Math.pow(eccentricity), 2), (3 / 2));
+}
+
+function calculateR(semiMajorAxis, eccentricity, theta){
+	var r = (semiMajorAxis * (1 - Math.pow(eccentricity, 2)) / (1 + eccentricity * Math.cos(theta)));
+	return r;
+}
+\end{lstlisting}
+
+To use the function, the points are calculated by providing a timeStep (fFor the sake of the simulation and scale, this is set as 1000, and just means how many steps there will be for a complete orbit from starting point to end), the orbit eccentricity and the semi-major axis of the objects rotation, which is the maximum distance of the orbit of the pivot point to the object rotating around it. Once the points have been made, every time the update function is called during the animation loop, the object moves to the next point of orbit, based on the speed of animation.
+
+\begin{lstlisting}
+var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity, earthDistanceFromSun);
+
+updateEarth : function(){
+    earthStep+= speed;
+    if(earthStep >= earthOrbitPoints.length){
+      earthStep = 0;
+    }
+    var currentPosition = earthOrbitPoints[Math.floor(earthStep)];
+    earthMesh.position.set(currentPosition.x, currentPosition.y, currentPosition.z);
+}
+\end{lstlisting}
+You can see the results of the orbital point calculations in the figure below. By changing the eccentricy, we can change the size of the ellipse, and in effect the speed of the object in its orbit as it reaches points closer to the object it is orbiting around.
+
+ \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/earthelliptical}
+                \caption{Earth's elliptical orbit.}
+                \label{fig: Earth's elliptical orbit.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/moonelliptical}
+                \caption{Moon's elliptical orbit.}
+                \label{fig: Moon's elliptical orbit.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.54\textwidth}
+                \includegraphics[width=\textwidth]{images/moonellipticalbig}
+                \caption{Moon's elliptical orbit scaled larger for testing.}
+                \label{fig: Moon's elliptical orbit scaled larger for testing.}
+	 \end{subfigure}	 
+	 \caption{The Earth and Moon's rotations are slightly elliptical.}
+\end{figure}
+
+During testing, I created just the orbital lines to see what the orbit path was like, and changing the number of time steps changed the speed of the orbit by the amount of steps a planet had to take to complete an orbit. Once I found a number I thought was enough timeStep points, I set it to change the speed in animation based on how many steps through the orbit are jumped each frame. We can also see that at certain points, the Earth/Moon moves faster where the points are closer and the object is closer to the central point of the orbit, simulating Kepler's 2nd Law of Planetary Motion. This is, however, difficult to show in screenshots.
 
 \subsection{Eclipse Shadows}
-Through the use of a SpotLight and its shadow camera, turning the ShadowMap of the renderer on, we get this effect: Here, look at some screenshots of it happening. Very easy to achieve. However, previously encountered issues with double shadows, with a WebGL issue that I couldn't fix in my own code. Struggled for a long time with it (others did too, see this link and this link), until an update to three.js fixed it. Relief at fixing it, also frustration at it being something I thought was in my code but turned out not to be. Much time wasted. But it works now, and it's super pretty how it does it with the spot light. Here, you can see my testing with the ShadowCamera, how the shadows are presented within the camera, but not outside of it. COOL!
+Through the use of a SpotLight and its shadow camera and turning the ShadowMap of the renderer on, we get the effect of the objects casting shadows upon each other and causing an Eclipse once in a while.
+ \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/eclipse1}
+                \caption{The Moon casting its shadow on the Earth's surface.}
+                \label{fig: The Moon casting its shadow on the Earth's surface.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.4\textwidth}
+                \includegraphics[width=\textwidth]{images/eclipse2}
+                \caption{The Earth casting its shadow on the Moon's surface.}
+                \label{fig:The Earth casting its shadow on the Moon's surface.}
+	 \end{subfigure}
+	 \caption{The Earth and Moon casting their shadows on each other, which can result in an eclipse of the Sun.}
+\end{figure}
+Very easy to achieve. However, previously encountered issues with double shadows, with a WebGL issue that I couldn't fix in my own code. Struggled for a long time with it (others did too, see this link and this link), until an update to three.js fixed it. Relief at fixing it, also frustration at it being something I thought was in my code but turned out not to be. Much time wasted. But it works now, and it's super pretty how it does it with the spot light. Here, you can see my testing with the ShadowCamera, how the shadows are presented within the camera, but not outside of it. COOL!
 \begin{lstlisting}
 sunLight = new THREE.SpotLight(0xfff0e6, 1, 0);
 sunLight.castShadow = true;
@@ -710,32 +840,23 @@ Here is my self-assessment form, including what has been documented, implemented
 \bibitem{assignment} H. Holstein and Y. Liu, ``A virtual Sun-Earth-Moon system'', CS32310 Advanced Computer Graphics Assignment Semester 1 2015, October 14 2015
 
 \bibitem{xampp} XAMPP Installers and Downloads for Apache Friends, {\em apachefriends}, [online], 
-
 https://www.apachefriends.org/index.html (Accessed 11/06/2015)
 
 \bibitem{earthtextures} Planet Texture Map Collection, {\em planetpixelemporium}, [online],
-
 http://planetpixelemporium.com/planets.html (Accessed 11/06/2015)
 
 \bibitem{suntexture} NASA, {\em NASA}, [online], 
-
 https://www.nasa.gov/sites/default/files/images/700328main\_20121014\_003615\_flat.jpg (Accessed 11/06/2015)
 
-\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: 
-
-javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online],
-
-<<<<<<< HEAD
-  http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
-=======
 \bibitem{sunglow} Computational Contemplations: Using Shaders and Selective Glow Effects in Three.js, {\em stemkoski}, [online],
 http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selective-glow.html (Accessed 11/06/2015)
 
 \bibitem{datgui} three.js/dat.gui.min.js at master . mrdoob/three.js, {\em github}, [online],
 https://github.com/mrdoob/three.js/blob/master/examples/js/libs/dat.gui.min.js (Accessed 11/06/205)
 
-\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online], http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
->>>>>>> origin/master
+\bibitem{codecolour}  Acknowledgement for code colouring in this report using lstlisting LaTeX: 
+javascript - language option supported in listings - TeX - LaTeX Stack Exchange, {\em TeX - LaTeX Stack Exchange}, [online],
+http://tex.stackexchange.com/questions/89574/language-option-supported-in-listings (Accessed: 11/06/2015)
 
 \end{thebibliography}
 

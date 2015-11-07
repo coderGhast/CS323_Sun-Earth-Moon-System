@@ -16,8 +16,8 @@
 \contentsline {subsection}{Synchronous orbital and axial rotation of the Moon}{13}{section*.26}
 \contentsline {subsection}{Lighting of the Earth and Moon in Phong shading \& Non-illuminated parts of the Earth and Moon to be shown in shadow}{15}{section*.28}
 \contentsline {subsection}{Constant tilt of the Earth's axis}{17}{section*.32}
-\contentsline {subsection}{Constant tilt of the Moon's orbit}{17}{section*.33}
-\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{18}{section*.34}
-\contentsline {subsection}{Eclipse Shadows}{18}{section*.35}
-\contentsline {subsection}{Other features of my choice}{19}{section*.37}
-\contentsline {section}{Self Assessment}{21}{section*.38}
+\contentsline {subsection}{Constant tilt of the Moon's orbit}{18}{section*.34}
+\contentsline {subsection}{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}{18}{section*.36}
+\contentsline {subsection}{Eclipse Shadows}{21}{section*.38}
+\contentsline {subsection}{Other features of my choice}{22}{section*.41}
+\contentsline {section}{Self Assessment}{24}{section*.42}
