@@ -332,19 +332,19 @@ As shown below, each object has its own texture mapped to the surface. As an add
 
 \begin{figure}[H]
         \centering
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/earthtexture}
                 \caption{Earth texture maps}
                 \label{fig: The Earth texture mapped.}
        \end{subfigure}
        %add desired spacing between images, e. g. ~, \quad, \qquad etc.
          %(or a blank line to force the subfigure onto a new line)
-                 \begin{subfigure}[b]{0.4\textwidth}
+                 \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/suntexture}
                 \caption{Sun texture map}
                 \label{fig: The Sun texture mapped}
        \end{subfigure}
-        \begin{subfigure}[b]{0.4\textwidth}
+        \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{images/moontexture}
                 \caption{Moon texture maps}
                 \label{fig: The Moon texture mapped}
@@ -597,29 +597,29 @@ In particular, where I have used a specular map for the Earth's ocean, you can s
 
  \begin{figure}[H]
         \centering
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/specular1}
-                \caption{How the specular light is set on my simulation.}
+                \caption{Specular Lighting.}
                 \label{fig:Specular 1.}
 	 \end{subfigure}
-        \begin{subfigure}[b]{0.3\textwidth}
+        \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/specular2}
                 \caption{With no shininess.}
                 \label{fig:Specular 2.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.3\textwidth}
+	         \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/specular3}
                 \caption{High shininess.}
                 \label{fig:Specular 3.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.3\textwidth}
+	         \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/specular4}
                 \caption{Maximum shininess.}
                 \label{fig:Specular 4.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.3\textwidth}
+	         \begin{subfigure}[b]{0.25\textwidth}
                 \includegraphics[width=\textwidth]{images/specular5}
-                \caption{Showing the landmasses do no reflect the light as much.}
+                \caption{The landmasses do no reflect the light as much.}
                 \label{fig:Specular 5.}
 	 \end{subfigure}
 	 \caption{Testing what happens when the shininess is turned up on the Phong material with a specular map.}
@@ -647,15 +647,15 @@ With the aid of Axis Helper, we can see that the Earth's axis is constantly tilt
 
  \begin{figure}[H]
         \centering
-        \begin{subfigure}[b]{0.5\textwidth}
+        \begin{subfigure}[b]{0.6\textwidth}
                 \includegraphics[width=\textwidth]{images/earthtilt1}
                 \label{fig: Earth tilt1.}
 	 \end{subfigure}
-        \begin{subfigure}[b]{0.5\textwidth}
+        \begin{subfigure}[b]{0.6\textwidth}
                 \includegraphics[width=\textwidth]{images/earthtilt2}
                 \label{fig: Earth tilt2.}
 	 \end{subfigure}
-	         \begin{subfigure}[b]{0.5\textwidth}
+	         \begin{subfigure}[b]{0.6\textwidth}
                 \includegraphics[width=\textwidth]{images/earthtilt3}
                 \label{fig: Earth tilt3.}
 	 \end{subfigure}
@@ -740,10 +740,10 @@ function calculateR(semiMajorAxis, eccentricity, theta){
 }
 \end{lstlisting}
 
-To use the function, the points are calculated by providing a timeStep (for the sake of the simulation and scale, this is set as 1000, and just means how many steps there will be for a complete orbit from starting point to end), the orbit eccentricity and the semi-major axis of the objects rotation, which is the maximum distance of the orbit of the pivot point to the object rotating around it. Once the points have been made, every time the update function is called during the animation loop, the object moves to the next point of orbit, based on the speed of animation.
+To use the function, the points are calculated by providing a timeStep (this is the orbital period of the rotation, e.g. 365 for Earth, and just means how many steps there will be for a complete orbit from starting point to end), the orbit eccentricity and the semi-major axis of the objects rotation, which is the maximum distance of the orbit of the pivot point to the object rotating around it. Once the points have been made, every time the update function is called during the animation loop, the object moves to the next point of orbit, based on the speed of animation.
 
 \begin{lstlisting}
-var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity, earthDistanceFromSun);
+var earthOrbitPoints = calculateOrbitalPoints(earthOrbitalPeriod, earthOrbitEccentricity, earthDistanceFromSun);
 
 updateEarth : function(){
     earthStep+= speed;
