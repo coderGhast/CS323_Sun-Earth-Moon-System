@@ -201,33 +201,42 @@ This assignment tasked me with using WebGL to create and display a simple animat
 %----------------------------------------------------------------------------------------
 \section{Simulation}
 \subsection{Parameters}
-In order to create the simple model, I used some arbitrary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything, as real values would leave the Sun too large compared to a minuscule Earth and Moon that would also be very, very far away from the camera focus. With the changing of the scale of the Earth and Moon for display purposes and the assignment requesting a simple simulation, I took liberties to use values that looked good for the simulation while not impacting the main aspects of it (rotations, spinning on axes, orbital and axial tilts, etc). These parameters are:
+In order to create the simple model, I used some arbitrary values that made the system look somewhat accurate without truly being accurate. This was necessary in order for a viewer to see much of anything, as real values would leave the Sun too large compared to a minuscule Earth and Moon that would also be very, very far away from the camera focus. These parameters are:
 
 \begin{lstlisting}
-// Large, so we can actually see something with our model.
-var eccentricityModifier = 50; 
-// For Elliptical orbits/Kepler's 2nd Law. Number of steps for an orbit.
-var orbitSteps = 1000;
+// Large, so we can actually see something with our model. This controls the scaling of the Earth and Moon's orbital eccentricity.
+var eccentricityModifier = 50;
 
+// Size of the Earth, scaled larger for the visualisation.
 var earthSize = 10; // from -> 1 * 10; 
+// The distance between the Sun and Earth, scaled for the visualisation.
 var earthDistanceFromSun = 156; // from -> 23500 / 150; 
-var earthOrbitRotationSpeed = 0.089; // from -> 365.26 / 4000; 
-var earthAxisRotationSpeed= 4.5; // from -> 9.972 / 2; 
+// The orbital period of the Earth around the Sun (365 days).
+var earthOrbitalPeriod = 365;
+// The 'speed' of the rotation of the Earth on its axis - The period of time (9.9 days) it takes to complete a full orbital rotation.
+var earthAxisRotationSpeed= 9.972; 
 var earthAxialTilt = 23.44;
 var earthOrbitEccentricity = 0.00167 * eccentricityModifier;
 
+// Size of the Moon, scaled larger for the visualisation.
 var moonSize = 6; // from -> 0.277 * 21;
-var moonDistanceFromEarth = 40; // from -> 60.3 / 1.5
-var moonAxisRotationSpeed = 1.2; // from -> 2.732 / 2.4;
-// var moonOrbitRotationSpeed=moonAxisRotationSpeed; // No Longer needed!
+// The distance between the Moon and Earth, scaled for the visualisation.
+var moonDistanceFromEarth = 40; // from -> 60.3 / 1.5; 
+// The orbital period of the Moon around the Earth (365 / 12.175 days, the Moon completes a full orbital rotation in roughly 28 days).
+var moonOrbitalPeriod = 365.26 / 12.175;
+
 var moonOrbitEccentricity = 0.00549 * eccentricityModifier;
 var moonAxialTilt = 1.593;
 var moonOrbitalTilt = 5.145;
 
+// Size of the Moon, scaled smaller for the visualisation.
 var sunSize = 20; // from -> 109 / 7;
-var sunAxisRotationSpeed = 0.05; // from -> 0.25 / 4;
+var sunAxisRotationSpeed = 0.25;
 
 var starMapSize = 500;
+
+// The 'speed' of the animation. Increasing/decreasing this scales the time of the animation through the orbital and axial rotations.
+var speed = 1;
 \end{lstlisting}
 
 As you can see, the Sun is much smaller than it should be, as are the distances between the Sun, Earth and Moon. I felt these numbers gave a good representation for this model, but should not be used if the model were intended to be an accurate representation of the system.
@@ -539,7 +548,7 @@ function setupGUI() {
 The user can also navigate around the simulation using their mouse or the arrow keys using OrbitControls\cite{orbitcontrols}.
 
 \subsection{Synchronous orbital and axial rotation of the Moon}
-By using the same speed for the Moon's orbital and axial rotation in the simulation, the Moon can be set so that the same face is always shown to the Sun. When I was updating the Moon's orbit by computing the next step every animation frame, I would use the same speed value for both the rotation update and orbit update. However, since I change to precomputing the elliptical orbit, the speeds no longer had a way to match up.
+By using the same speed for the Moon's orbital and axial rotation in the simulation, the Moon can be set so that the same face is always shown to the Earth. When I was updating the Moon's orbit by computing the next step every animation frame, I would use the same speed value for both the rotation update and orbit update. However, since I change to precomputing the elliptical orbit, the speeds no longer had a way to match up.
 
 One option I could take is to continue computing the axial rotation every animation step, but only as often as I update the orbital rotation step, to ensure they stayed in sync. However, doing this, plus with the Moon's rotation being titled, requires a fair amount of computation to try and get the synchronisation correct. In order to save time on coding and avoid a `wobbly' Moon, I used the three.js function 
 \begin{lstlisting}
@@ -663,16 +672,9 @@ This is super simple to achieve. We just set the Earth's rotation on the z axis 
 \end{lstlisting}
 
 \subsection{Constant tilt of the Moon's orbit}
-\begin{figure}[H]
-        \centering
-       
-                \includegraphics[width=0.5\textwidth]{images/moonorbittilt2}
-                \caption{The constant orbital tilt of the Moon.}
-                \label{fig: The constant orbital tilt of the Moon.}
-      
-\end{figure}
 
 The Moon's orbit is always tilted, no matter where the Earth is, the orbit is tilted following the Earth, and doesn't wobble. To tilt the orbital rotation of the moon, when the pre-computed points of orbit are computed, they are then multiplied by a rotation on the z axis with a transformation matrix. I chose to use three.js applyMatrix4 with my own rotation matrix.
+
 \begin{lstlisting}
 var rotationYMatrix4 = function (angle) {     
         tempMatrix4.set(
@@ -689,6 +691,25 @@ for(var i = 0; i < moonOrbitPoints.length; i++){
   moonOrbitPoints[i].applyMatrix4(rotationZMatrix4(-(moonOrbitalTilt * (Math.PI / 180))));
 }
 \end{lstlisting}
+
+This constant tilt can be seen in Figure 15.
+
+\begin{figure}[H]
+ \centering
+        \begin{subfigure}[b]{0.9\textwidth}
+                \includegraphics[width=\textwidth]{images/moonorbitaltilt1}
+                \label{fig: Moon orbital tilt 1.}
+	 \end{subfigure}
+        \begin{subfigure}[b]{0.9\textwidth}
+                \includegraphics[width=\textwidth]{images/moonorbitaltilt2}
+                \label{fig: Moon orbital tilt 2.}
+	 \end{subfigure}
+	  \begin{subfigure}[b]{0.9\textwidth}
+                \includegraphics[width=\textwidth]{images/moonorbitaltilt3}
+                \label{fig: Moon orbital tilt 3.}
+	 \end{subfigure}
+	 \caption{The constant orbital tilt of the Moon.}
+\end{figure}
 
 \subsection{Elliptical Orbits \& Non-uniform orbital velocities: Kepler's 2nd Law of Planetary Motion}
 The calculating of the elliptical orbits and using Kepler's 2nd Law of Planetary Motion tie together, in that when calculating Kepler's 2nd Law we also get the points for an elliptical orbit. I used the formula provided in the assignment brief \cite{assignment} in order to achieve this, and my code can be seen here:

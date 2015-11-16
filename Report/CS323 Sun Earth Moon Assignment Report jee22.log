@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.26)  7 NOV 2015 18:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2013.11.17)  16 NOV 2015 16:19
 entering extended mode
 **CS323*Sun*Earth*Moon*Assignment*Report*jee22.tex
 
@@ -8,10 +8,10 @@ LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
 croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
-lician, german, german-x-2012-05-30, greek, gujarati, hindi, hungarian, iceland
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
 ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
  lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
-german-x-2012-05-30, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
@@ -249,7 +249,7 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty"
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -260,12 +260,13 @@ Now handling font encoding U ...
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\lastpage\lastpage.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lastpage\lastpage.sty"
 Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\extramarks.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancyhdr\extramarks.sty"
 \@temptokenb=\toks16
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
@@ -297,10 +298,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\caption3.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen105
@@ -321,7 +322,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks19
 \@floatcapt=\box27
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count90
 \lst@gtempboxa=\box28
 \lst@token=\toks20
@@ -335,25 +336,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \lst@lineno=\count95
 \lst@maxwidth=\dimen115
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 \c@lstnumber=\count96
 \lst@skipnumbers=\count97
 \lst@framebox=\box29
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\listings.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\caption\subcaption.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\subcaption.sty"
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count98
 \c@subtable=\count99
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
@@ -639,92 +642,75 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\frontendlayer\tikz.
-sty
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgf.sty
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfrcs.st
-y
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
--common.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
+x"
 \pgfutil@everybye=\toks22
-\pgfutil@tempdima=\dimen120
-\pgfutil@tempdimb=\dimen121
-
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
--common-lists.tex))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
--latex.def
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
+"
 \pgfutil@abb=\box30
-
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\ms\everyshi.sty
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfrcs.
-code.tex
-Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfrcs.code.tex"
+Package: pgfrcs 2010/10/25 v2.10 (rcs-revision 1.24)
 ))
-Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
-
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\basiclayer\pgfcore.
-sty
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\systemlayer\pgfsys.
-sty
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-s.code.tex
-Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
-
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
-.code.tex
+Package: pgf 2008/01/15 v2.10 (rcs-revision 1.12)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgfcore.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\systemlayer\pgfsys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys.code.tex
+"
+Package: pgfsys 2010/06/30 v2.10 (rcs-revision 1.37)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex
+"
 \pgfkeys@pathtoks=\toks23
 \pgfkeys@temptoks=\toks24
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
-filtered.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeysfiltered.c
+ode.tex"
 \pgfkeys@tmptoks=\toks25
 ))
-\pgf@x=\dimen122
-\pgf@y=\dimen123
-\pgf@xa=\dimen124
-\pgf@ya=\dimen125
-\pgf@xb=\dimen126
-\pgf@yb=\dimen127
-\pgf@xc=\dimen128
-\pgf@yc=\dimen129
+\pgf@x=\dimen120
+\pgf@y=\dimen121
+\pgf@xa=\dimen122
+\pgf@ya=\dimen123
+\pgf@xb=\dimen124
+\pgf@yb=\dimen125
+\pgf@xc=\dimen126
+\pgf@yc=\dimen127
 \w@pgf@writea=\write3
 \r@pgf@reada=\read1
 \c@pgf@counta=\count110
 \c@pgf@countb=\count111
 \c@pgf@countc=\count112
 \c@pgf@countd=\count113
-\t@pgf@toka=\toks26
-\t@pgf@tokb=\toks27
-\t@pgf@tokc=\toks28
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgf.c
-fg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgf.cfg"
 File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
 )
-Driver file for pgf: pgfsys-pdftex.def
+Package pgfsys Info: Driver file for pgf: pgfsys-pdftex.def on input line 900.
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-s-pdftex.def
-File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-pdftex.d
+ef"
+File: pgfsys-pdftex.def 2009/05/22  (rcs-revision 1.26)
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-s-common-pdf.def
-File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsys-common-p
+df.def"
+File: pgfsys-common-pdf.def 2008/05/19  (rcs-revision 1.10)
 )))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-ssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
+code.tex"
+File: pgfsyssoftpath.code.tex 2008/07/18  (rcs-revision 1.7)
 \pgfsyssoftpath@smallbuffer@items=\count114
 \pgfsyssoftpath@bigbuffer@items=\count115
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\systemlayer\pgfsy
-sprotocol.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
+code.tex"
 File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
-))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
@@ -742,217 +728,198 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-e.code.tex
-Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
-
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code
-.tex
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.
-code.tex
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.
-code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparse
-r.code.tex
-\pgfmath@dimen=\dimen130
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcore.code.tex
+"
+Package: pgfcore 2010/04/11 v2.10 (rcs-revision 1.7)
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathcalc.code.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
+"
+\pgfmath@dimen=\dimen128
 \pgfmath@count=\count116
 \pgfmath@box=\box31
-\pgfmath@toks=\toks29
-\pgfmath@stack@operand=\toks30
-\pgfmath@stack@operation=\toks31
+\pgfmath@toks=\toks26
+\pgfmath@stack@operand=\toks27
+\pgfmath@stack@operation=\toks28
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.code.tex
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.basic.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.trigonometric.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.random.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.comparison.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.base.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.round.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.misc.code.tex)
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
-ions.integerarithmetics.code.tex)))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat
-.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.code.
+tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.basic
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.trigo
+nometric.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.rando
+m.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.compa
+rison.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.base.
+code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.round
+.code.tex")
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.misc.
+code.tex")))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
 \c@pgfmathroundto@lastzeros=\count117
 ))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epoints.code.tex
-File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen131
-\pgf@picmaxx=\dimen132
-\pgf@picminy=\dimen133
-\pgf@picmaxy=\dimen134
-\pgf@pathminx=\dimen135
-\pgf@pathmaxx=\dimen136
-\pgf@pathminy=\dimen137
-\pgf@pathmaxy=\dimen138
-\pgf@xx=\dimen139
-\pgf@xy=\dimen140
-\pgf@yx=\dimen141
-\pgf@yy=\dimen142
-\pgf@zx=\dimen143
-\pgf@zy=\dimen144
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
+de.tex"
+File: pgfcorepoints.code.tex 2010/04/09  (rcs-revision 1.20)
+\pgf@picminx=\dimen129
+\pgf@picmaxx=\dimen130
+\pgf@picminy=\dimen131
+\pgf@picmaxy=\dimen132
+\pgf@pathminx=\dimen133
+\pgf@pathmaxx=\dimen134
+\pgf@pathminy=\dimen135
+\pgf@pathmaxy=\dimen136
+\pgf@xx=\dimen137
+\pgf@xy=\dimen138
+\pgf@yx=\dimen139
+\pgf@yy=\dimen140
+\pgf@zx=\dimen141
+\pgf@zy=\dimen142
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epathconstruct.code.tex
-File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen145
-\pgf@path@lasty=\dimen146
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
+ruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2010/08/03  (rcs-revision 1.24)
+\pgf@path@lastx=\dimen143
+\pgf@path@lasty=\dimen144
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epathusage.code.tex
-File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen147
-\pgf@shorten@start@additional=\dimen148
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
+.code.tex"
+File: pgfcorepathusage.code.tex 2008/04/22  (rcs-revision 1.12)
+\pgf@shorten@end@additional=\dimen145
+\pgf@shorten@start@additional=\dimen146
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-escopes.code.tex
-File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
+de.tex"
+File: pgfcorescopes.code.tex 2010/09/08  (rcs-revision 1.34)
 \pgfpic=\box32
 \pgf@hbox=\box33
 \pgf@layerbox@main=\box34
 \pgf@picture@serial@count=\count118
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-egraphicstate.code.tex
-File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen149
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
+ate.code.tex"
+File: pgfcoregraphicstate.code.tex 2008/04/22  (rcs-revision 1.9)
+\pgflinewidth=\dimen147
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-etransformations.code.tex
-File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen150
-\pgf@pt@y=\dimen151
-\pgf@pt@temp=\dimen152
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
+ations.code.tex"
+File: pgfcoretransformations.code.tex 2009/06/10  (rcs-revision 1.11)
+\pgf@pt@x=\dimen148
+\pgf@pt@y=\dimen149
+\pgf@pt@temp=\dimen150
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-equick.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
+e.tex"
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eobjects.code.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreobjects.c
+ode.tex"
 File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epathprocessing.code.tex
-File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathproce
+ssing.code.tex"
+File: pgfcorepathprocessing.code.tex 2008/10/09  (rcs-revision 1.8)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-earrows.code.tex
-File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen153
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
+de.tex"
+File: pgfcorearrows.code.tex 2008/04/23  (rcs-revision 1.11)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eshade.code.tex
-File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen154
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
+e.tex"
+File: pgfcoreshade.code.tex 2008/11/23  (rcs-revision 1.13)
+\pgf@max=\dimen151
 \pgf@sys@shading@range@num=\count119
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eimage.code.tex
-File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
+e.tex"
+File: pgfcoreimage.code.tex 2010/03/25  (rcs-revision 1.16)
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-eexternal.code.tex
-File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
+code.tex"
+File: pgfcoreexternal.code.tex 2010/09/01  (rcs-revision 1.17)
 \pgfexternal@startupbox=\box35
 ))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-elayers.code.tex
-File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
+de.tex"
+File: pgfcorelayers.code.tex 2010/08/27  (rcs-revision 1.2)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-etransparency.code.tex
-File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretranspare
+ncy.code.tex"
+File: pgfcoretransparency.code.tex 2008/01/17  (rcs-revision 1.2)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\basiclayer\pgfcor
-epatterns.code.tex
-File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepatterns.
+code.tex"
+File: pgfcorepatterns.code.tex 2009/07/02  (rcs-revision 1.3)
 )))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
-shapes.code.tex
-File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
+e.tex"
+File: pgfmoduleshapes.code.tex 2010/09/09  (rcs-revision 1.13)
 \pgfnodeparttextbox=\box36
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
-plot.code.tex
-File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
+tex"
+File: pgfmoduleplot.code.tex 2010/10/22  (rcs-revision 1.8)
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfco
-mp-version-0-65.sty
-Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen155
-\pgf@nodesepend=\dimen156
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v2.10 (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen152
+\pgf@nodesepend=\dimen153
 )
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\compatibility\pgfco
-mp-version-1-18.sty
-Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
+-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v2.10 (rcs-revision 1.1)
 ))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgffor.st
-y
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\utilities\pgfkeys.s
-ty
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
-.code.tex))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\latex\pgf\math\pgfmath.sty
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code
-.tex))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.
-code.tex
-Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
-
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code
-.tex)
-\pgffor@iter=\dimen157
-\pgffor@skip=\dimen158
-\pgffor@stack=\toks32
-\pgffor@toks=\toks33
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgffor.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfkeys.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfkeys.code.tex"
+)) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgffor.code.te
+x"
+Package: pgffor 2010/03/23 v2.10 (rcs-revision 1.18)
+\pgffor@iter=\dimen154
+\pgffor@skip=\dimen155
+\pgffor@stack=\toks29
+\pgffor@toks=\toks30
 ))
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tik
-z\tikz.code.tex
-Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\tikz.cod
+e.tex"
+Package: tikz 2010/10/13 v2.10 (rcs-revision 1.76)
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\libraries\pgflibr
-aryplothandlers.code.tex
-File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
+dlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2010/05/31 v2.10 (rcs-revision 1.15)
 \pgf@plot@mark@count=\count120
-\pgfplotmarksize=\dimen159
+\pgfplotmarksize=\dimen156
 )
-\tikz@lastx=\dimen160
-\tikz@lasty=\dimen161
-\tikz@lastxsaved=\dimen162
-\tikz@lastysaved=\dimen163
-\tikzleveldistance=\dimen164
-\tikzsiblingdistance=\dimen165
+\tikz@lastx=\dimen157
+\tikz@lasty=\dimen158
+\tikz@lastxsaved=\dimen159
+\tikz@lastysaved=\dimen160
+\tikzleveldistance=\dimen161
+\tikzsiblingdistance=\dimen162
 \tikz@figbox=\box37
-\tikz@figbox@bg=\box38
-\tikz@tempbox=\box39
-\tikz@tempbox@bg=\box40
+\tikz@tempbox=\box38
 \tikztreelevel=\count121
 \tikznumberofchildren=\count122
 \tikznumberofcurrentchild=\count123
 \tikz@fig@count=\count124
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\modules\pgfmodule
-matrix.code.tex
-File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
+e.tex"
+File: pgfmodulematrix.code.tex 2010/08/24  (rcs-revision 1.4)
 \pgfmatrixcurrentrow=\count125
 \pgfmatrixcurrentcolumn=\count126
 \pgf@matrix@numberofcolumns=\count127
 )
 \tikz@expandcount=\count128
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\frontendlayer\tik
-z\libraries\tikzlibrarytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
+s\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v2.10 (rcs-revision 1.2)
 )))
 Package hyperref Info: Option `colorlinks' set `false' on input line 80.
 \c@homeworkProblemCounter=\count129
@@ -1057,19 +1024,19 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
 (lastpage)             ! on input line 176.
 
-(C:\Users\Narctiss\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count130
-\scratchdimen=\dimen166
-\scratchbox=\box41
+\scratchdimen=\dimen163
+\scratchbox=\box39
 \nofMPsegments=\count131
 \nofMParguments=\count132
-\everyMPshowfont=\toks34
+\everyMPshowfont=\toks31
 \MPscratchCnt=\count133
-\MPscratchDim=\dimen167
+\MPscratchDim=\dimen164
 \MPnumerator=\count134
 \makeMPintoPDFobject=\count135
-\everyMPtoPDFconversion=\toks35
+\everyMPtoPDFconversion=\toks32
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1077,7 +1044,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count136
-\AtBeginShipoutBox=\box42
+\AtBeginShipoutBox=\box40
 Package hyperref Info: Link coloring OFF on input line 176.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1108,7 +1075,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 179.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{C:/Users/Narctiss/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.toc")
 \tf@toc=\write5
@@ -1126,304 +1093,304 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 File: images/scales.png Graphic file (type png)
 
 <use images/scales.png>
-Package pdftex.def Info: images/scales.png used on input line 238.
+Package pdftex.def Info: images/scales.png used on input line 247.
 (pdftex.def)             Requested size: 234.87749pt x 125.29298pt.
  [4 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/scales.png (PNG 
 copy)>]
-<images/earthorbitsun1.png, id=183, 665.48625pt x 575.14874pt>
+<images/earthorbitsun1.png, id=190, 665.48625pt x 575.14874pt>
 File: images/earthorbitsun1.png Graphic file (type png)
 
 <use images/earthorbitsun1.png>
-Package pdftex.def Info: images/earthorbitsun1.png used on input line 270.
+Package pdftex.def Info: images/earthorbitsun1.png used on input line 279.
 (pdftex.def)             Requested size: 187.89912pt x 162.39206pt.
 
-<images/earthorbitsun2.png, id=184, 708.6475pt x 551.05875pt>
+<images/earthorbitsun2.png, id=191, 708.6475pt x 551.05875pt>
 File: images/earthorbitsun2.png Graphic file (type png)
 
 <use images/earthorbitsun2.png>
-Package pdftex.def Info: images/earthorbitsun2.png used on input line 277.
+Package pdftex.def Info: images/earthorbitsun2.png used on input line 286.
 (pdftex.def)             Requested size: 187.89912pt x 146.11395pt.
-
-<images/moonorbitearth1.png, id=185, 511.9125pt x 502.87875pt>
+ [5 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthorbitsun1.p
+ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earth
+orbitsun2.png (PNG copy)>]
+<images/moonorbitearth1.png, id=200, 511.9125pt x 502.87875pt>
 File: images/moonorbitearth1.png Graphic file (type png)
 
 <use images/moonorbitearth1.png>
-Package pdftex.def Info: images/moonorbitearth1.png used on input line 292.
+Package pdftex.def Info: images/moonorbitearth1.png used on input line 301.
 (pdftex.def)             Requested size: 187.89912pt x 184.58127pt.
 
-<images/moonorbitearth2.png, id=186, 687.56876pt x 477.785pt>
+<images/moonorbitearth2.png, id=201, 687.56876pt x 477.785pt>
 File: images/moonorbitearth2.png Graphic file (type png)
 
 <use images/moonorbitearth2.png>
-Package pdftex.def Info: images/moonorbitearth2.png used on input line 299.
+Package pdftex.def Info: images/moonorbitearth2.png used on input line 308.
 (pdftex.def)             Requested size: 187.89912pt x 130.56381pt.
- [5 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthorbitsun1.p
-ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earth
-orbitsun2.png (PNG copy)>] [6 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
-rt/images/moonorbitearth1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon
--System/Report/images/moonorbitearth2.png (PNG copy)>] <images/earthtexture.png
-, id=206, 767.86874pt x 721.69624pt>
+ [6 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moonorbitearth1.
+png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moon
+orbitearth2.png (PNG copy)>]
+<images/earthtexture.png, id=215, 767.86874pt x 721.69624pt>
 File: images/earthtexture.png Graphic file (type png)
 
 <use images/earthtexture.png>
-Package pdftex.def Info: images/earthtexture.png used on input line 327.
+Package pdftex.def Info: images/earthtexture.png used on input line 336.
 (pdftex.def)             Requested size: 187.89912pt x 176.59137pt.
 
-<images/suntexture.png, id=207, 565.11125pt x 559.08875pt>
+<images/suntexture.png, id=216, 565.11125pt x 559.08875pt>
 File: images/suntexture.png Graphic file (type png)
 
 <use images/suntexture.png>
-Package pdftex.def Info: images/suntexture.png used on input line 334.
+Package pdftex.def Info: images/suntexture.png used on input line 343.
 (pdftex.def)             Requested size: 187.89912pt x 185.8904pt.
 
-<images/moontexture.png, id=208, 764.8575pt x 805.0075pt>
+<images/moontexture.png, id=217, 764.8575pt x 805.0075pt>
 File: images/moontexture.png Graphic file (type png)
 
 <use images/moontexture.png>
-Package pdftex.def Info: images/moontexture.png used on input line 339.
+Package pdftex.def Info: images/moontexture.png used on input line 348.
 (pdftex.def)             Requested size: 187.89912pt x 197.7629pt.
- [7 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtexture.png
- (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/suntext
-ure.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/
-moontexture.png (PNG copy)>]
-<images/earthandmoonaxisspin1.png, id=218, 859.21pt x 720.6925pt>
+ [7] [8 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtexture
+.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sun
+texture.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/ima
+ges/moontexture.png (PNG copy)>]
+<images/earthandmoonaxisspin1.png, id=234, 859.21pt x 720.6925pt>
 File: images/earthandmoonaxisspin1.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin1.png>
-Package pdftex.def Info: images/earthandmoonaxisspin1.png used on input line 35
-7.
+Package pdftex.def Info: images/earthandmoonaxisspin1.png used on input line 36
+6.
 (pdftex.def)             Requested size: 187.89912pt x 157.6071pt.
 
-<images/earthandmoonaxisspin2.png, id=219, 932.48375pt x 701.62125pt>
+<images/earthandmoonaxisspin2.png, id=235, 932.48375pt x 701.62125pt>
 File: images/earthandmoonaxisspin2.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin2.png>
-Package pdftex.def Info: images/earthandmoonaxisspin2.png used on input line 36
-2.
+Package pdftex.def Info: images/earthandmoonaxisspin2.png used on input line 37
+1.
 (pdftex.def)             Requested size: 187.89912pt x 141.37093pt.
 
-<images/earthandmoonaxisspin3.png, id=220, 806.01125pt x 740.7675pt>
+<images/earthandmoonaxisspin3.png, id=236, 806.01125pt x 740.7675pt>
 File: images/earthandmoonaxisspin3.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin3.png>
-Package pdftex.def Info: images/earthandmoonaxisspin3.png used on input line 36
-7.
+Package pdftex.def Info: images/earthandmoonaxisspin3.png used on input line 37
+6.
 (pdftex.def)             Requested size: 187.89912pt x 172.6901pt.
 
-<images/earthandmoonaxisspin4.png, id=221, 808.01875pt x 725.71124pt>
+<images/earthandmoonaxisspin4.png, id=237, 808.01875pt x 725.71124pt>
 File: images/earthandmoonaxisspin4.png Graphic file (type png)
 
 <use images/earthandmoonaxisspin4.png>
-Package pdftex.def Info: images/earthandmoonaxisspin4.png used on input line 37
-2.
+Package pdftex.def Info: images/earthandmoonaxisspin4.png used on input line 38
+1.
 (pdftex.def)             Requested size: 187.89912pt x 168.74826pt.
- [8 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxis
-spin1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/image
-s/earthandmoonaxisspin2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-S
-ystem/Report/images/earthandmoonaxisspin3.png (PNG copy)> <D:/xampp/htdocs/CS32
-3_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspin4.png (PNG copy)>]
-<images/earthandmoonaxisspinabove1.png, id=230, 644.4075pt x 636.3775pt>
+
+<images/earthandmoonaxisspinabove1.png, id=238, 644.4075pt x 636.3775pt>
 File: images/earthandmoonaxisspinabove1.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove1.png>
 Package pdftex.def Info: images/earthandmoonaxisspinabove1.png used on input li
-ne 384.
+ne 393.
 (pdftex.def)             Requested size: 187.89912pt x 185.55461pt.
 
-<images/earthandmoonaxisspinabove2.png, id=231, 492.84125pt x 460.72125pt>
+<images/earthandmoonaxisspinabove2.png, id=239, 492.84125pt x 460.72125pt>
 File: images/earthandmoonaxisspinabove2.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove2.png>
 Package pdftex.def Info: images/earthandmoonaxisspinabove2.png used on input li
-ne 389.
+ne 398.
 (pdftex.def)             Requested size: 187.89912pt x 175.65236pt.
 
-<images/earthandmoonaxisspinabove3.png, id=232, 578.16pt x 573.14125pt>
+<images/earthandmoonaxisspinabove3.png, id=240, 578.16pt x 573.14125pt>
 File: images/earthandmoonaxisspinabove3.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove3.png>
 Package pdftex.def Info: images/earthandmoonaxisspinabove3.png used on input li
-ne 394.
+ne 403.
 (pdftex.def)             Requested size: 187.89912pt x 186.26869pt.
 
-<images/earthandmoonaxisspinabove4.png, id=233, 493.845pt x 463.7325pt>
+<images/earthandmoonaxisspinabove4.png, id=241, 493.845pt x 463.7325pt>
 File: images/earthandmoonaxisspinabove4.png Graphic file (type png)
 
 <use images/earthandmoonaxisspinabove4.png>
 Package pdftex.def Info: images/earthandmoonaxisspinabove4.png used on input li
-ne 399.
+ne 408.
 (pdftex.def)             Requested size: 187.89912pt x 176.43953pt.
-
-<images/sunaxialrotation1.png, id=234, 624.3325pt x 610.28pt>
+ [9 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxis
+spin1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/image
+s/earthandmoonaxisspin2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-S
+ystem/Report/images/earthandmoonaxisspin3.png (PNG copy)> <D:/xampp/htdocs/CS32
+3_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspin4.png (PNG copy)>]
+<images/sunaxialrotation1.png, id=248, 624.3325pt x 610.28pt>
 File: images/sunaxialrotation1.png Graphic file (type png)
 
 <use images/sunaxialrotation1.png>
-Package pdftex.def Info: images/sunaxialrotation1.png used on input line 411.
+Package pdftex.def Info: images/sunaxialrotation1.png used on input line 420.
 (pdftex.def)             Requested size: 187.89912pt x 183.66275pt.
 
-<images/sunaxialrotation2.png, id=235, 565.11125pt x 537.00626pt>
+<images/sunaxialrotation2.png, id=249, 565.11125pt x 537.00626pt>
 File: images/sunaxialrotation2.png Graphic file (type png)
 
 <use images/sunaxialrotation2.png>
-Package pdftex.def Info: images/sunaxialrotation2.png used on input line 416.
+Package pdftex.def Info: images/sunaxialrotation2.png used on input line 425.
 (pdftex.def)             Requested size: 187.89912pt x 178.54823pt.
 
-<images/sunaxialrotation3.png, id=236, 563.10374pt x 548.0475pt>
+<images/sunaxialrotation3.png, id=250, 563.10374pt x 548.0475pt>
 File: images/sunaxialrotation3.png Graphic file (type png)
 
 <use images/sunaxialrotation3.png>
-Package pdftex.def Info: images/sunaxialrotation3.png used on input line 421.
+Package pdftex.def Info: images/sunaxialrotation3.png used on input line 430.
 (pdftex.def)             Requested size: 187.89912pt x 182.8716pt.
- [9 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxis
-spinabove1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/
-images/earthandmoonaxisspinabove2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Ea
-rth-Moon-System/Report/images/earthandmoonaxisspinabove3.png (PNG copy)> <D:/xa
-mpp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspinabove4
-.png (PNG copy)>]
-<images/sunemissive.png, id=244, 516.93124pt x 489.83pt>
+ [10 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxi
+sspinabove1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
+/images/earthandmoonaxisspinabove2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-E
+arth-Moon-System/Report/images/earthandmoonaxisspinabove3.png (PNG copy)> <D:/x
+ampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthandmoonaxisspinabove
+4.png (PNG copy)>]
+<images/sunemissive.png, id=258, 516.93124pt x 489.83pt>
 File: images/sunemissive.png Graphic file (type png)
 
 <use images/sunemissive.png>
-Package pdftex.def Info: images/sunemissive.png used on input line 434.
+Package pdftex.def Info: images/sunemissive.png used on input line 443.
 (pdftex.def)             Requested size: 187.89912pt x 178.05025pt.
 
-<images/sunemissiveandambient.png, id=245, 588.1975pt x 558.085pt>
+<images/sunemissiveandambient.png, id=259, 588.1975pt x 558.085pt>
 File: images/sunemissiveandambient.png Graphic file (type png)
 
 <use images/sunemissiveandambient.png>
-Package pdftex.def Info: images/sunemissiveandambient.png used on input line 44
-1.
+Package pdftex.def Info: images/sunemissiveandambient.png used on input line 45
+0.
 (pdftex.def)             Requested size: 187.89912pt x 178.27577pt.
 
-<images/sunwithglow.png, id=246, 640.3925pt x 646.415pt>
+<images/sunwithglow.png, id=260, 640.3925pt x 646.415pt>
 File: images/sunwithglow.png Graphic file (type png)
 
 <use images/sunwithglow.png>
-Package pdftex.def Info: images/sunwithglow.png used on input line 446.
+Package pdftex.def Info: images/sunwithglow.png used on input line 455.
 (pdftex.def)             Requested size: 187.89912pt x 189.66496pt.
- [10 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunaxialrotatio
+ [11 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunaxialrotatio
 n1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/s
 unaxialrotation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/R
 eport/images/sunaxialrotation3.png (PNG copy)>]
-[11 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunemissive.png 
+[12 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunemissive.png 
 (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/sunemiss
 iveandambient.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repo
 rt/images/sunwithglow.png (PNG copy)>]
-<images/userinterface.png, id=261, 1186.4325pt x 634.37pt>
+<images/userinterface.png, id=275, 1186.4325pt x 634.37pt>
 File: images/userinterface.png Graphic file (type png)
 
 <use images/userinterface.png>
-Package pdftex.def Info: images/userinterface.png used on input line 483.
+Package pdftex.def Info: images/userinterface.png used on input line 492.
 (pdftex.def)             Requested size: 187.89912pt x 100.46555pt.
 
-<images/closeupui.png, id=262, 254.9525pt x 196.735pt>
+<images/closeupui.png, id=276, 254.9525pt x 196.735pt>
 File: images/closeupui.png Graphic file (type png)
 
 <use images/closeupui.png>
-Package pdftex.def Info: images/closeupui.png used on input line 488.
+Package pdftex.def Info: images/closeupui.png used on input line 497.
 (pdftex.def)             Requested size: 187.89912pt x 144.99922pt.
- [12 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/userinterface.p
+ [13 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/userinterface.p
 ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/close
-upui.png (PNG copy)>] [13]
-<images/syncrotation1.png, id=333, 793.96625pt x 809.0225pt>
+upui.png (PNG copy)>] [14]
+<images/syncrotation1.png, id=347, 793.96625pt x 809.0225pt>
 File: images/syncrotation1.png Graphic file (type png)
 
 <use images/syncrotation1.png>
-Package pdftex.def Info: images/syncrotation1.png used on input line 552.
+Package pdftex.def Info: images/syncrotation1.png used on input line 561.
 (pdftex.def)             Requested size: 178.50919pt x 181.88641pt.
 
-<images/syncrotation2.png, id=334, 839.135pt x 766.865pt>
+<images/syncrotation2.png, id=348, 839.135pt x 766.865pt>
 File: images/syncrotation2.png Graphic file (type png)
 
 <use images/syncrotation2.png>
-Package pdftex.def Info: images/syncrotation2.png used on input line 557.
+Package pdftex.def Info: images/syncrotation2.png used on input line 566.
 (pdftex.def)             Requested size: 178.50919pt x 163.12926pt.
 
-<images/syncrotation3.png, id=335, 794.97pt x 783.92876pt>
+<images/syncrotation3.png, id=349, 794.97pt x 783.92876pt>
 File: images/syncrotation3.png Graphic file (type png)
 
 <use images/syncrotation3.png>
-Package pdftex.def Info: images/syncrotation3.png used on input line 562.
+Package pdftex.def Info: images/syncrotation3.png used on input line 571.
 (pdftex.def)             Requested size: 178.50919pt x 176.02946pt.
- [14]
-Overfull \hbox (8.55112pt too wide) in paragraph at lines 569--569
+ [15]
+Overfull \hbox (8.55112pt too wide) in paragraph at lines 578--578
 [][]\OT1/cmr/bx/n/14.4 Lighting of the Earth and Moon in Phong shad-ing & Non-i
 lluminated
  []
 
-<images/lightfromphong1.png, id=343, 793.96625pt x 607.26875pt>
+<images/lightfromphong1.png, id=357, 793.96625pt x 607.26875pt>
 File: images/lightfromphong1.png Graphic file (type png)
 
 <use images/lightfromphong1.png>
-Package pdftex.def Info: images/lightfromphong1.png used on input line 575.
+Package pdftex.def Info: images/lightfromphong1.png used on input line 584.
 (pdftex.def)             Requested size: 187.89912pt x 143.70892pt.
 
-<images/lightfromphong2.png, id=344, 577.15625pt x 445.665pt>
+<images/lightfromphong2.png, id=358, 577.15625pt x 445.665pt>
 File: images/lightfromphong2.png Graphic file (type png)
 
 <use images/lightfromphong2.png>
-Package pdftex.def Info: images/lightfromphong2.png used on input line 580.
+Package pdftex.def Info: images/lightfromphong2.png used on input line 589.
 (pdftex.def)             Requested size: 187.89912pt x 145.09102pt.
- [15 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncrotation1.p
+ [16 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncrotation1.p
 ng (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/syncr
 otation2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/im
 ages/syncrotation3.png (PNG copy)>]
-<images/specular1.png, id=351, 547.04375pt x 478.78876pt>
+<images/specular1.png, id=365, 547.04375pt x 478.78876pt>
 File: images/specular1.png Graphic file (type png)
 
 <use images/specular1.png>
-Package pdftex.def Info: images/specular1.png used on input line 592.
+Package pdftex.def Info: images/specular1.png used on input line 601.
 (pdftex.def)             Requested size: 140.92792pt x 123.34244pt.
 
-<images/specular2.png, id=352, 624.3325pt x 571.13374pt>
+<images/specular2.png, id=366, 624.3325pt x 571.13374pt>
 File: images/specular2.png Graphic file (type png)
 
 <use images/specular2.png>
-Package pdftex.def Info: images/specular2.png used on input line 597.
+Package pdftex.def Info: images/specular2.png used on input line 606.
 (pdftex.def)             Requested size: 140.92792pt x 128.91785pt.
 
-<images/specular3.png, id=353, 491.8375pt x 452.69125pt>
+<images/specular3.png, id=367, 491.8375pt x 452.69125pt>
 File: images/specular3.png Graphic file (type png)
 
 <use images/specular3.png>
-Package pdftex.def Info: images/specular3.png used on input line 602.
+Package pdftex.def Info: images/specular3.png used on input line 611.
 (pdftex.def)             Requested size: 140.92792pt x 129.70909pt.
 
-<images/specular4.png, id=354, 596.2275pt x 577.15625pt>
+<images/specular4.png, id=368, 596.2275pt x 577.15625pt>
 File: images/specular4.png Graphic file (type png)
 
 <use images/specular4.png>
-Package pdftex.def Info: images/specular4.png used on input line 607.
+Package pdftex.def Info: images/specular4.png used on input line 616.
 (pdftex.def)             Requested size: 140.92792pt x 136.41553pt.
 
-<images/specular5.png, id=355, 528.97626pt x 485.815pt>
+<images/specular5.png, id=369, 528.97626pt x 485.815pt>
 File: images/specular5.png Graphic file (type png)
 
 <use images/specular5.png>
-Package pdftex.def Info: images/specular5.png used on input line 612.
+Package pdftex.def Info: images/specular5.png used on input line 621.
 (pdftex.def)             Requested size: 140.92792pt x 129.42976pt.
 
-Underfull \hbox (badness 1755) in paragraph at lines 613--613
+Underfull \hbox (badness 1755) in paragraph at lines 622--622
 \OT1/cmr/m/n/10.95 do no re-flect the light as
  []
 
-[16 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong1.
+[17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/lightfromphong1.
 png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/ligh
 tfromphong2.png (PNG copy)>]
-<images/lightfromphong3.png, id=362, 1226.5825pt x 372.39125pt>
+<images/lightfromphong3.png, id=376, 1226.5825pt x 372.39125pt>
 File: images/lightfromphong3.png Graphic file (type png)
 
 <use images/lightfromphong3.png>
-Package pdftex.def Info: images/lightfromphong3.png used on input line 624.
+Package pdftex.def Info: images/lightfromphong3.png used on input line 633.
 (pdftex.def)             Requested size: 187.89912pt x 57.04385pt.
 
-<images/lightfromphong4.png, id=363, 835.12pt x 305.14pt>
+<images/lightfromphong4.png, id=377, 835.12pt x 305.14pt>
 File: images/lightfromphong4.png Graphic file (type png)
 
 <use images/lightfromphong4.png>
-Package pdftex.def Info: images/lightfromphong4.png used on input line 629.
+Package pdftex.def Info: images/lightfromphong4.png used on input line 638.
 (pdftex.def)             Requested size: 187.89912pt x 68.65353pt.
- [17 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/specular1.png (
+ [18 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/specular1.png (
 PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/specular2
 .png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/spe
 cular3.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/imag
@@ -1431,146 +1398,162 @@ es/specular4.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Repor
 t/images/specular5.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System
 /Report/images/lightfromphong3.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth
 -Moon-System/Report/images/lightfromphong4.png (PNG copy)>] <images/earthtilt1.
-png, id=371, 921.4425pt x 239.89626pt>
+png, id=385, 921.4425pt x 239.89626pt>
 File: images/earthtilt1.png Graphic file (type png)
 
 <use images/earthtilt1.png>
-Package pdftex.def Info: images/earthtilt1.png used on input line 642.
+Package pdftex.def Info: images/earthtilt1.png used on input line 651.
 (pdftex.def)             Requested size: 234.87749pt x 61.14894pt.
 
-<images/earthtilt2.png, id=372, 879.285pt x 193.72375pt>
+<images/earthtilt2.png, id=386, 879.285pt x 193.72375pt>
 File: images/earthtilt2.png Graphic file (type png)
 
 <use images/earthtilt2.png>
-Package pdftex.def Info: images/earthtilt2.png used on input line 646.
+Package pdftex.def Info: images/earthtilt2.png used on input line 655.
 (pdftex.def)             Requested size: 234.87749pt x 51.74742pt.
 
-<images/earthtilt3.png, id=373, 887.315pt x 162.6075pt>
+<images/earthtilt3.png, id=387, 887.315pt x 162.6075pt>
 File: images/earthtilt3.png Graphic file (type png)
 
 <use images/earthtilt3.png>
-Package pdftex.def Info: images/earthtilt3.png used on input line 650.
+Package pdftex.def Info: images/earthtilt3.png used on input line 659.
 (pdftex.def)             Requested size: 234.87749pt x 43.04115pt.
-
-<images/moonorbittilt2.png, id=374, 904.37875pt x 273.02pt>
-File: images/moonorbittilt2.png Graphic file (type png)
-
-<use images/moonorbittilt2.png>
-Package pdftex.def Info: images/moonorbittilt2.png used on input line 669.
-(pdftex.def)             Requested size: 234.87749pt x 70.90437pt.
- [18 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtilt1.png 
+ [19 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtilt1.png 
 (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthtil
 t2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/e
-arthtilt3.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/i
-mages/moonorbittilt2.png (PNG copy)>] [19]
-<images/earthelliptical.png, id=424, 838.13126pt x 761.84625pt>
+arthtilt3.png (PNG copy)>]
+<images/moonorbitaltilt1.png, id=404, 980.66376pt x 154.5775pt>
+File: images/moonorbitaltilt1.png Graphic file (type png)
+
+<use images/moonorbitaltilt1.png>
+Package pdftex.def Info: images/moonorbitaltilt1.png used on input line 700.
+(pdftex.def)             Requested size: 422.77661pt x 66.63919pt.
+
+<images/moonorbitaltilt2.png, id=405, 1064.97874pt x 157.58875pt>
+File: images/moonorbitaltilt2.png Graphic file (type png)
+
+<use images/moonorbitaltilt2.png>
+Package pdftex.def Info: images/moonorbitaltilt2.png used on input line 704.
+(pdftex.def)             Requested size: 422.77661pt x 62.55826pt.
+
+<images/moonorbitaltilt3.png, id=406, 969.6225pt x 158.5925pt>
+File: images/moonorbitaltilt3.png Graphic file (type png)
+
+<use images/moonorbitaltilt3.png>
+Package pdftex.def Info: images/moonorbitaltilt3.png used on input line 708.
+(pdftex.def)             Requested size: 422.77661pt x 69.14929pt.
+ [20 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moonorbitaltilt
+1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/mo
+onorbitaltilt2.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Rep
+ort/images/moonorbitaltilt3.png (PNG copy)>]
+[21] <images/earthelliptical.png, id=466, 838.13126pt x 761.84625pt>
 File: images/earthelliptical.png Graphic file (type png)
 
 <use images/earthelliptical.png>
-Package pdftex.def Info: images/earthelliptical.png used on input line 741.
+Package pdftex.def Info: images/earthelliptical.png used on input line 762.
 (pdftex.def)             Requested size: 187.89912pt x 170.79189pt.
 
-<images/moonelliptical.png, id=425, 621.32124pt x 643.40375pt>
+<images/moonelliptical.png, id=467, 621.32124pt x 643.40375pt>
 File: images/moonelliptical.png Graphic file (type png)
 
 <use images/moonelliptical.png>
-Package pdftex.def Info: images/moonelliptical.png used on input line 746.
+Package pdftex.def Info: images/moonelliptical.png used on input line 767.
 (pdftex.def)             Requested size: 187.89912pt x 194.57378pt.
 
-<images/moonellipticalbig.png, id=426, 501.875pt x 402.50375pt>
+<images/moonellipticalbig.png, id=468, 501.875pt x 402.50375pt>
 File: images/moonellipticalbig.png Graphic file (type png)
 
 <use images/moonellipticalbig.png>
-Package pdftex.def Info: images/moonellipticalbig.png used on input line 751.
+Package pdftex.def Info: images/moonellipticalbig.png used on input line 772.
 (pdftex.def)             Requested size: 253.66454pt x 203.44395pt.
- [20]
-<images/eclipse1.png, id=453, 577.15625pt x 456.70625pt>
+ [22 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthelliptical
+.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moo
+nelliptical.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
+/images/moonellipticalbig.png (PNG copy)>]
+<images/eclipse1.png, id=475, 577.15625pt x 456.70625pt>
 File: images/eclipse1.png Graphic file (type png)
 
 <use images/eclipse1.png>
-Package pdftex.def Info: images/eclipse1.png used on input line 765.
+Package pdftex.def Info: images/eclipse1.png used on input line 786.
 (pdftex.def)             Requested size: 187.89912pt x 148.68561pt.
- <images/eclipse2.png, id=454, 345.29pt x 285.065pt>
+ <images/eclipse2.png, id=476, 345.29pt x 285.065pt>
 File: images/eclipse2.png Graphic file (type png)
 
 <use images/eclipse2.png>
-Package pdftex.def Info: images/eclipse2.png used on input line 770.
+Package pdftex.def Info: images/eclipse2.png used on input line 791.
 (pdftex.def)             Requested size: 187.89912pt x 155.12898pt.
- [21 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/earthelliptical
-.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/moo
-nelliptical.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report
-/images/moonellipticalbig.png (PNG copy)>] [22 <D:/xampp/htdocs/CS323_Sun-Earth
--Moon-System/Report/images/eclipse1.png (PNG copy)> <D:/xampp/htdocs/CS323_Sun-
-Earth-Moon-System/Report/images/eclipse2.png (PNG copy)>] <images/shadowcamera.
-png, id=484, 452.69125pt x 396.48125pt>
+ [23 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse1.png (P
+NG copy)> <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/eclipse2.p
+ng (PNG copy)>]
+<images/shadowcamera.png, id=498, 452.69125pt x 396.48125pt>
 File: images/shadowcamera.png Graphic file (type png)
 
 <use images/shadowcamera.png>
-Package pdftex.def Info: images/shadowcamera.png used on input line 805.
+Package pdftex.def Info: images/shadowcamera.png used on input line 826.
 (pdftex.def)             Requested size: 234.87749pt x 205.71164pt.
- [23 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamera.pn
-g (PNG copy)>] [24] [25] [26]
-<images/stars.png, id=608, 591.20876pt x 506.89375pt>
+ [24 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/shadowcamera.pn
+g (PNG copy)>] [25] [26] [27]
+<images/stars.png, id=622, 591.20876pt x 506.89375pt>
 File: images/stars.png Graphic file (type png)
  <use images/stars.png>
-Package pdftex.def Info: images/stars.png used on input line 965.
+Package pdftex.def Info: images/stars.png used on input line 986.
 (pdftex.def)             Requested size: 234.87749pt x 201.37715pt.
 
-[27] [28 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/stars.png (
-PNG copy)>] [29]
-Underfull \hbox (badness 3098) in paragraph at lines 1035--1037
+[28] [29 <D:/xampp/htdocs/CS323_Sun-Earth-Moon-System/Report/images/stars.png (
+PNG copy)>] [30]
+Underfull \hbox (badness 3098) in paragraph at lines 1056--1058
 []\OT1/cmr/m/n/12 PlanetPixelEmporium.com, \OT1/cmr/m/it/12 `Planet Tex-ture Ma
 p Col-lec-tion'\OT1/cmr/m/n/12 , [on-line], Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
+Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
 []\OT1/cmr/m/n/12 https://www.nasa.gov/sites/default/files/images/700328main[]2
 0121014[]003615[]flat.jpg
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1044
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1065
 []\OT1/cmr/m/n/12 Stemkoski.Blogspot.co.uk, \OT1/cmr/m/it/12 `Com-pu-ta-tional 
 Con-tem-pla-tions: Us-ing
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1044
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1065
 \OT1/cmr/m/it/12 Shaders and Se-lec-tive Glow Ef-fects in Three.js'\OT1/cmr/m/n
 /12 , [on-line], Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1042--1044
+Underfull \hbox (badness 10000) in paragraph at lines 1063--1065
 \OT1/cmr/m/n/12 http://stemkoski.blogspot.co.uk/2013/03/using-shaders-and-selec
 tive-glow.html [Ac-
  []
 
 
-Overfull \hbox (6.3109pt too wide) in paragraph at lines 1048--1050
+Overfull \hbox (6.3109pt too wide) in paragraph at lines 1069--1071
 \OT1/cmr/m/n/12 https://github.com/mrdoob/three.js/blob/master/examples/js/cont
 rols/OrbitControls.js
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1060--1062
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1083
 []\OT1/cmr/m/n/12 PaulBourke.net, \OT1/cmr/m/it/12 `Rep-re-sent-ing star fields
 '\OT1/cmr/m/n/12 , [on-line], Avail-able:
  []
 
-[30
+[31
 
 ] 
 AED: lastpage setting LastPage
-[31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1072.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1072.
+[32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1093.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1093.
 
 ("D:\xampp\htdocs\CS323_Sun-Earth-Moon-System\Report\CS323 Sun Earth Moon Assig
 nment Report jee22.aux")
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1072.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1072.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1093.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1093.
 
 Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 .out' has not changed.
@@ -1579,28 +1562,28 @@ Package rerunfilecheck Info: File `CS323*Sun*Earth*Moon*Assignment*Report*jee22
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1072.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1093.
  ) 
 Here is how much of TeX's memory you used:
- 19618 strings out of 493921
- 362116 string characters out of 3144866
- 502251 words of memory out of 3000000
- 22182 multiletter control sequences out of 15000+200000
+ 18051 strings out of 493921
+ 316272 string characters out of 3144875
+ 468964 words of memory out of 3000000
+ 20617 multiletter control sequences out of 15000+200000
  14031 words of font info for 54 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,12n,54p,882b,1821s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Narctiss\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi6
-00\tcrm1200.pk><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.p
-fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
->
-Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (31 pages,
- 5016394 bytes).
+ 56i,12n,55p,882b,1848s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "CS323 Sun Earth Moon Assignment Report jee22.pdf" (32 pages,
+ 5047385 bytes).
 PDF statistics:
- 780 PDF objects out of 1000 (max. 8388607)
- 380 named destinations out of 1000 (max. 500000)
- 432 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 797 PDF objects out of 1000 (max. 8388607)
+ 390 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 

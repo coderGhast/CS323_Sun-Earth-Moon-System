@@ -1,6 +1,6 @@
 var earthAxisHelper;
 var earthStep = 0;
-var earthOrbitPoints = calculateOrbitalPoints(orbitSteps, earthOrbitEccentricity, earthDistanceFromSun);
+var earthOrbitPoints = calculateOrbitalPoints(earthOrbitalPeriod, earthOrbitEccentricity, earthDistanceFromSun);
 var earth = {
   earthMesh : buildEarthMesh(),
   computableEarthVertices : [],
@@ -44,7 +44,7 @@ function buildEarthMesh(){
 var moonStep = 0;
 var moonAxisHelper;
 var moonOrbitLine;
-var moonOrbitPoints = calculateOrbitalPoints(orbitSteps, moonOrbitEccentricity, moonDistanceFromEarth);
+var moonOrbitPoints = calculateOrbitalPoints(moonOrbitalPeriod, moonOrbitEccentricity, moonDistanceFromEarth);
 for(var i = 0; i < moonOrbitPoints.length; i++){
   moonOrbitPoints[i].applyMatrix4(rotationZMatrix4(-(moonOrbitalTilt * (Math.PI / 180))));
 }
@@ -54,7 +54,7 @@ var moon = {
     computableMoonVertices : [],
     moonOrbitAngleThisStep : 0.0,
     updateMoon : function(){
-      moonStep+= speed * 15;
+      moonStep+= speed;
       if(moonStep >= moonOrbitPoints.length){
         moonStep = 0;
       }
