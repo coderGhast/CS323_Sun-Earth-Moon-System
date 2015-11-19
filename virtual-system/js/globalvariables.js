@@ -7,7 +7,7 @@ var earthSize = 10; // from -> 1 * 10;
 var earthDistanceFromSun = 156; // from -> 23500 / 150; 
 // The orbital period of the Earth around the Sun (365 days).
 var earthOrbitalPeriod = 365;
-// The 'speed' of the rotation of the Earth on its axis - The period of time (9.9 days) it takes to complete a full orbital rotation.
+// The 'speed' of the rotation of the Earth on its axis - The period of time it takes to complete a full axial rotation (0.9972 days, increased for the visualisation).
 var earthAxisRotationSpeed= 9.972; 
 var earthAxialTilt = 23.44;
 var earthOrbitEccentricity = 0.00167 * eccentricityModifier;
